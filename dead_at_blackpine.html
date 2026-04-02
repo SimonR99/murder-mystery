@@ -1,619 +1,586 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dead at Blackpine Lodge — A Murder Mystery</title>
+<title>Mort au Refuge Prud'homme — Meurtre et mystère</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/dead_at_blackpine.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-ornament">A Murder Mystery for 6 Players + 1 Host</div>
-  <h1 class="header-title"><span>Dead</span> at Blackpine Lodge</h1>
-  <div class="header-sub">One night. Patchy signal. No way out.</div>
+  <div class="header-ornament">Jeu d'enquete pour 6 joueurs + 1 maitre du jeu</div>
+  <h1 class="header-title"><span>Mort</span> au Refuge Prud'homme</h1>
+  <div class="header-sub">Une nuit. Du reseau instable. Aucune sortie.</div>
   <div class="header-divider"><span>✦</span></div>
 </header>
 
 <nav class="nav-wrap">
   <div class="nav" role="tablist">
     <button class="nav-btn host-btn active" onclick="showPage('intro')" id="tab-intro">📜 Intro</button>
-    <button class="nav-btn host-btn" onclick="showPage('host')" id="tab-host">🕯 Host Guide</button>
+    <button class="nav-btn host-btn" onclick="showPage('host')" id="tab-host">🕯 Guide MJ</button>
     <button class="nav-btn" onclick="showPage('maggie')" id="tab-maggie">Maggie</button>
     <button class="nav-btn" onclick="showPage('owen')" id="tab-owen">Owen</button>
     <button class="nav-btn" onclick="showPage('sylvia')" id="tab-sylvia">Sylvia</button>
     <button class="nav-btn" onclick="showPage('rex')" id="tab-rex">Rex</button>
     <button class="nav-btn" onclick="showPage('nadia')" id="tab-nadia">Nadia</button>
     <button class="nav-btn" onclick="showPage('tom')" id="tab-tom">Tom</button>
-    <button class="nav-btn host-btn" onclick="showPage('clues')" id="tab-clues">🔍 Clues</button>
+    <button class="nav-btn host-btn" onclick="showPage('clues')" id="tab-clues">🔍 Indices</button>
     <button class="nav-btn host-btn" onclick="showPage('accuse')" id="tab-accuse">⚖ Accusation</button>
     <button class="nav-btn host-btn" onclick="showPage('solution')" id="tab-solution">🔒 Solution</button>
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════
-     INTRO PAGE
-══════════════════════════════════════════ -->
 <div class="page active" id="page-intro">
   <div class="intro-img">🦉</div>
 
   <div class="card gold">
-    <div class="section-label">The Setting</div>
-    <div class="victim-name">Blackpine Lodge</div>
-    <div class="victim-dates">A Remote Cabin — Ouareau Forest Regional Park, Quebec</div>
+    <div class="section-label">Le decor</div>
+    <div class="victim-name">Refuge Prud'homme</div>
+    <div class="victim-dates">Chalet isole — Parc regional de la Foret Ouareau, Quebec</div>
     <div class="scenario">
-      It is Saturday morning in mid-spring. The woodstove has burned out, rain taps the metal roof, and the forest road is deep mud.
-      The phones catch one bar, then none. Victor Crane — your host, your rival, your benefactor, your tormentor — 
-      was found dead in his study at 7:15am by the caretaker, Tom Briggs. 
-      A locked door. A half-empty wine glass. And six people who all had reason to want him gone.
+      Nous sommes samedi matin, en plein milieu du printemps. Le poele a bois est eteint, la pluie cogne sur le toit de metal et le chemin forestier est rendu bouetteux.
+      Le reseau cellulaire apparait une barre, puis disparait. Victor Crane — votre hote, votre rival, votre bienfaiteur, votre bourreau —
+      a ete retrouve mort dans son bureau a 7 h 15 par le gardien, Tom Briggs.
+      Une porte verrouillee. Un verre de vin a moitie vide. Et six personnes qui avaient toutes de bonnes raisons de le voir disparaitre.
     </div>
-    <p>The nearest town is over half an hour away, and overnight runoff has made the park access road nearly impassable. No one is coming soon. You will need to figure this out yourselves.</p>
+    <p>La ville la plus proche est a plus de trente minutes et le ruissellement de la nuit a rendu la route du parc presque impraticable. Personne n'arrivera rapidement. Vous devrez resoudre ca vous-memes.</p>
   </div>
 
   <div class="card">
-    <div class="section-label">The Victim</div>
+    <div class="section-label">La victime</div>
     <div class="victim-name">Victor Crane</div>
-    <div class="victim-dates">Age 52 · Tech Entrepreneur · Owner of Blackpine Lodge</div>
-    <p>Self-made, brilliant, ruthless. Victor built a tech empire and made enemies at every step. He invited everyone here this weekend for what he called a <em>"farewell gathering."</em> Nobody knew what he meant. Now nobody can ask him.</p>
-    <p>He was found slumped in the leather armchair in his locked study. A wine glass beside him. Cause of death: acute cardiac arrest — likely induced by poisoning.</p>
+    <div class="victim-dates">52 ans · Entrepreneur techno · Proprietaire du Refuge Prud'homme</div>
+    <p>Autodidacte, brillant, impitoyable. Victor a bati un empire techno et s'est fait des ennemis a chaque etape. Il a invite tout le monde ce week-end pour ce qu'il appelait un <em>"rassemblement d'adieu"</em>. Personne ne savait ce qu'il voulait dire. Maintenant, plus personne ne peut lui demander.</p>
+    <p>On l'a trouve affaisse dans un fauteuil en cuir, dans son bureau verrouille. Un verre de vin a ses cotes. Cause du deces: arret cardiaque aigu, probablement provoque par un empoisonnement.</p>
   </div>
 
   <div class="card">
-    <div class="section-label">The Suspects — 6 Players</div>
-    <h3>Who's Who</h3>
+    <div class="section-label">Les suspects — 6 joueurs</div>
+    <h3>Qui est qui</h3>
     <div class="player-list">
       <div class="player-item">
         <strong>Margaret "Maggie" Crane</strong>
-        <span>Victor's wife</span>
+        <span>Epouse de Victor</span>
       </div>
       <div class="player-item">
-        <strong>Dr. Owen Hale</strong>
-        <span>Physician & old friend</span>
+        <strong>Dr Owen Hale</strong>
+        <span>Medecin et vieil ami</span>
       </div>
       <div class="player-item">
         <strong>Sylvia Marsh</strong>
-        <span>Former co-founder</span>
+        <span>Ancienne cofondatrice</span>
       </div>
       <div class="player-item">
         <strong>Rex Crane</strong>
-        <span>Victor's brother</span>
+        <span>Frere de Victor</span>
       </div>
       <div class="player-item">
         <strong>Nadia Voss</strong>
-        <span>Personal assistant</span>
+        <span>Assistante personnelle</span>
       </div>
       <div class="player-item">
         <strong>Tom Briggs</strong>
-        <span>Cabin caretaker</span>
+        <span>Gardien du chalet</span>
       </div>
     </div>
-    <p style="font-size:0.82rem; color:#777; margin-top:0.5rem;"><span class="tag gold">Cast Split</span> 3 women and 3 men suspects.</p>
-    <p style="font-size:0.82rem; color:#777; margin-top:0.35rem;"><span class="tag gold">Host Role</span> The host does not play a suspect and controls pacing, clue reveals, and the final verdict readout.</p>
+    <p style="font-size:0.82rem; color:#777; margin-top:0.5rem;"><span class="tag gold">Repartition</span> 3 femmes et 3 hommes parmi les suspects.</p>
+    <p style="font-size:0.82rem; color:#777; margin-top:0.35rem;"><span class="tag gold">Role du MJ</span> Le maitre du jeu n'incarne pas de suspect. Il gere le rythme, la revelation des indices et la lecture finale du verdict.</p>
   </div>
 
   <div class="card">
-    <div class="section-label">How to Play</div>
-    <h3>The Structure</h3>
-    <div class="detail-row"><div class="detail-label">Setup</div><div class="detail-val">Host reads the opening scene aloud. Distribute character booklets (one per player). Allow 10 minutes to read privately.</div></div>
-    <div class="detail-row"><div class="detail-label">Act 1</div><div class="detail-val"><strong>Introductions & Open Evidence</strong> (~35 min) — Each player introduces their character and reveals their physical clue. Host reveals Round 1 clues.</div></div>
-    <div class="detail-row"><div class="detail-label">Act 2</div><div class="detail-val"><strong>Paired Interrogations</strong> (~40 min) — Run three 12-minute pairings (host assigns) plus transition time. Everyone must pressure someone outside their obvious rival.</div></div>
-    <div class="detail-row"><div class="detail-label">Act 3</div><div class="detail-val"><strong>Full-Table Crossfire</strong> (~35 min) — Open accusations, rebuttals, and timeline reconstruction. Host reveals Round 2 clues midway.</div></div>
-    <div class="detail-row"><div class="detail-label">Break</div><div class="detail-val"><strong>Intermission</strong> (~10 min) — Out-of-character reset. Host quietly checks if anyone is stuck and seeds pressure questions for restart.</div></div>
-    <div class="detail-row"><div class="detail-label">Act 4</div><div class="detail-val"><strong>Final Pressure</strong> (~25 min) — Host reveals Round 3 clues one by one. Players each get a 90-second closing argument.</div></div>
-    <div class="detail-row"><div class="detail-label">Act 5</div><div class="detail-val"><strong>The Accusation</strong> (~25 min) — Secret written accusations (who/how/why/evidence), dramatic readout, then solution reveal.</div></div>
-    <div class="detail-row"><div class="detail-label">Total</div><div class="detail-val"><strong>~170–180 minutes (target: 3 hours)</strong></div></div>
+    <div class="section-label">Comment jouer</div>
+    <h3>Structure de la partie</h3>
+    <div class="detail-row"><div class="detail-label">Mise en place</div><div class="detail-val">Le MJ lit la scene d'ouverture a voix haute. Distribuez les fiches personnage (une par joueur). Accordez 10 minutes de lecture privee.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 1</div><div class="detail-val"><strong>Presentations et indices ouverts</strong> (~35 min) — Chaque joueur presente son personnage et montre son indice physique. Le MJ revele les indices du round 1.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 2</div><div class="detail-val"><strong>Interrogatoires en duo</strong> (~40 min) — Faites trois rotations de 12 minutes (attribuees par le MJ), plus les transitions. Chacun doit mettre de la pression sur quelqu'un d'autre que son rival evident.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 3</div><div class="detail-val"><strong>Confrontation de groupe</strong> (~35 min) — Accusations ouvertes, contre-arguments et reconstruction de la chronologie. Le MJ revele les indices du round 2 au milieu.</div></div>
+    <div class="detail-row"><div class="detail-label">Pause</div><div class="detail-val"><strong>Intermission</strong> (~10 min) — Pause hors personnage. Le MJ verifie discretement si quelqu'un est bloque et relance avec des questions cibles.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 4</div><div class="detail-val"><strong>Pression finale</strong> (~25 min) — Le MJ revele les indices du round 3 un par un. Chaque joueur a 90 secondes de plaidoirie finale.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 5</div><div class="detail-val"><strong>L'accusation</strong> (~25 min) — Accusations ecrites (qui/comment/pourquoi/preuves), lecture dramatique, puis revelation de la solution.</div></div>
+    <div class="detail-row"><div class="detail-label">Total</div><div class="detail-val"><strong>~170 a 180 minutes (cible: 3 heures)</strong></div></div>
 
-    <h3>The Rules</h3>
-    <p>✦ Stay in character as much as possible — it's more fun for everyone.<br>
-    ✦ You may lie about your secret, your alibi, your feelings — but not about your physical clue.<br>
-    ✦ The murderer should not confess until the accusation round.<br>
-    ✦ Have drinks. Use candles. Lean into the atmosphere.</p>
+    <h3>Regles</h3>
+    <p>✦ Restez en personnage autant que possible, c'est plus le fun pour tout le monde.<br>
+    ✦ Vous pouvez mentir sur votre secret, votre alibi, vos emotions — mais pas sur votre indice physique.<br>
+    ✦ La meurtriere ne doit pas avouer avant le round d'accusation.<br>
+    ✦ Sortez les boissons. Allumez des chandelles. Jouez l'ambiance a fond.</p>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     HOST GUIDE
-══════════════════════════════════════════ -->
 <div class="page" id="page-host">
   <div class="card host">
-    <div class="section-label">For the Host's Eyes Only</div>
-    <h2>Host Guide</h2>
-    <p>As host, you know who the murderer is. Your role is to facilitate, not to play a character. Keep the mystery coherent, keep pressure moving, and protect the 3-hour pacing.</p>
+    <div class="section-label">Pour les yeux du MJ seulement</div>
+    <h2>Guide du MJ</h2>
+    <p>Comme MJ, vous connaissez l'identite de la meurtriere. Votre role est d'animer, pas de jouer un personnage. Gardez l'intrigue coherente, maintenez la pression et protegez le rythme de 3 heures.</p>
   </div>
 
   <div class="card">
-    <h3>Before the Game</h3>
-    <p>Print each character's page and fold it so the "Your Secret" section faces inward — or simply have each player navigate to their own tab privately. Make sure each player only reads their own character sheet before Round 1.</p>
-    <p>Prepare one "physical clue" per character — a written note, printout, or object to represent it. These are listed in each character tab. You can write them on index cards.</p>
-    <p>Set a visible timer. If a scene drifts, interrupt in-character with new evidence. This scenario is tuned for <strong>six suspects + one host</strong>; avoid adding extra characters.</p>
+    <h3>Avant la partie</h3>
+    <p>Imprimez la page de chaque personnage et pliez-la pour cacher la section "Votre secret" — ou laissez chaque joueur ouvrir son onglet en prive. Assurez-vous que chacun ne lit que sa propre fiche avant le round 1.</p>
+    <p>Preparez un "indice physique" par personnage — note manuscrite, impression papier ou objet. Ils sont listes dans chaque onglet personnage. Des fiches Bristol font tres bien l'affaire.</p>
+    <p>Utilisez un chronometre visible. Si une scene s'etire, coupez avec un nouvel indice en restant dans l'ambiance. Ce scenario est calibre pour <strong>six suspects + un MJ</strong>; n'ajoutez pas d'autres personnages.</p>
   </div>
 
   <div class="card">
-    <h3>3-Hour Pacing Blueprint</h3>
-    <div class="detail-row"><div class="detail-label">00:00–00:15</div><div class="detail-val">Welcome, rules, and private read time.</div></div>
-    <div class="detail-row"><div class="detail-label">00:15–00:50</div><div class="detail-val">Act 1: Introductions + Round 1 clues.</div></div>
-    <div class="detail-row"><div class="detail-label">00:50–01:30</div><div class="detail-val">Act 2: Paired interrogations (3 rotations).</div></div>
-    <div class="detail-row"><div class="detail-label">01:30–02:05</div><div class="detail-val">Act 3: Full-table crossfire + Round 2 clues.</div></div>
-    <div class="detail-row"><div class="detail-label">02:05–02:15</div><div class="detail-val">Break and host calibration.</div></div>
-    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Act 4: Final pressure + Round 3 clues.</div></div>
-    <div class="detail-row"><div class="detail-label">02:40–03:00</div><div class="detail-val">Act 5: Written accusations, readout, and solution.</div></div>
+    <h3>Plan de rythme sur 3 heures</h3>
+    <div class="detail-row"><div class="detail-label">00:00–00:15</div><div class="detail-val">Accueil, regles, lecture privee.</div></div>
+    <div class="detail-row"><div class="detail-label">00:15–00:50</div><div class="detail-val">Acte 1: Presentations + indices round 1.</div></div>
+    <div class="detail-row"><div class="detail-label">00:50–01:30</div><div class="detail-val">Acte 2: Interrogatoires en duo (3 rotations).</div></div>
+    <div class="detail-row"><div class="detail-label">01:30–02:05</div><div class="detail-val">Acte 3: Confrontation de groupe + indices round 2.</div></div>
+    <div class="detail-row"><div class="detail-label">02:05–02:15</div><div class="detail-val">Pause et recalibrage du MJ.</div></div>
+    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Acte 4: Pression finale + indices round 3.</div></div>
+    <div class="detail-row"><div class="detail-label">02:40–03:00</div><div class="detail-val">Acte 5: Accusations ecrites, lecture, solution.</div></div>
   </div>
 
   <div class="card">
-    <h3>Opening Scene — Read This Aloud</h3>
+    <h3>Scene d'ouverture — Lisez ceci a voix haute</h3>
     <div class="scenario">
-      "Last night's dinner was long and the wine flowed freely. Victor toasted to old friendships and new beginnings. Everyone went to bed at their own hour.
+      "Le souper d'hier a ete long et le vin coulait a flot. Victor a porte un toast aux vieilles amities et aux nouveaux departs. Tout le monde est alle se coucher a son heure.
       <br><br>
-      This morning, at 7:15am, Tom Briggs — the caretaker — noticed that the light in the study had been on all night. He knocked. No answer. He used his spare key and found Victor in the armchair, still dressed, cold to the touch. The wine glass on the side table was half full.
+      Ce matin, a 7 h 15, Tom Briggs — le gardien — a remarque que la lumiere du bureau etait restee allumee toute la nuit. Il a cogne. Aucune reponse. Il a utilise sa cle de secours et a trouve Victor dans le fauteuil, encore habille, froid au toucher. Le verre de vin sur la table d'appoint etait a moitie plein.
       <br><br>
-      Dr. Owen Hale confirmed it: Victor Crane is dead. The cause is not natural. The trails are mud, the river crossing is risky, and cell service keeps dropping. You are all here. And one of you did this."
+      Le Dr Owen Hale l'a confirme: Victor Crane est mort. Ce n'est pas naturel. Les sentiers sont en boue, la traversee de la riviere est risquee et le reseau cellulaire coupe sans arret. Vous etes tous ici. Et l'un de vous l'a fait."
     </div>
   </div>
 
   <div class="card">
-    <h3>Key Facts to Keep Straight</h3>
-    <div class="detail-row"><div class="detail-label">Time of Death</div><div class="detail-val">Approximately 12:15am Saturday. Victor was last seen alive at ~11:50pm.</div></div>
-    <div class="detail-row"><div class="detail-label">Cause of Death</div><div class="detail-val">Potassium chloride (KCl) dissolved in his wine. Causes cardiac arrest. Colorless and nearly tasteless in wine.</div></div>
-    <div class="detail-row"><div class="detail-label">The Locked Door</div><div class="detail-val">The study was locked from the inside. The key was in Victor's own jacket pocket. (Sylvia exited through the French window, which latched behind her — Tom can confirm the window was ajar this morning.)</div></div>
-    <div class="detail-row"><div class="detail-label">The Murderer</div><div class="detail-val"><strong>SYLVIA MARSH.</strong> She stole KCl from Owen's bag, met Victor at 11:30pm, poisoned his wine when he turned to the window, and exited via the side French door.</div></div>
-    <div class="detail-row"><div class="detail-label">False Alibi</div><div class="detail-val">Tom Briggs also lied — he WAS near the lodge around 11:55pm (Nadia saw him). But he's innocent; he was just checking on the building out of grief over the sale.</div></div>
+    <h3>Faits cles a garder en tete</h3>
+    <div class="detail-row"><div class="detail-label">Heure du deces</div><div class="detail-val">Environ 0 h 15, dans la nuit de vendredi a samedi. Victor a ete vu vivant vers 23 h 50.</div></div>
+    <div class="detail-row"><div class="detail-label">Cause du deces</div><div class="detail-val">Chlorure de potassium (KCl) dissous dans son vin. Provoque un arret cardiaque. Incolore et presque sans gout dans le vin.</div></div>
+    <div class="detail-row"><div class="detail-label">La piece verrouillee</div><div class="detail-val">Le bureau etait verrouille de l'interieur. La seule cle etait dans la poche de la veste de Victor. (Sylvia est sortie par la porte-fenetre, qui s'est rabattue derriere elle — Tom peut confirmer qu'elle etait entrouverte ce matin.)</div></div>
+    <div class="detail-row"><div class="detail-label">La meurtriere</div><div class="detail-val"><strong>SYLVIA MARSH.</strong> Elle a vole le KCl dans la trousse d'Owen, a rencontre Victor a 23 h 30, a empoisonne son vin pendant qu'il regardait vers la fenetre, puis est sortie par la porte-fenetre laterale.</div></div>
+    <div class="detail-row"><div class="detail-label">Faux alibi</div><div class="detail-val">Tom Briggs a aussi menti — il etait bien pres du lodge vers 23 h 55 (Nadia l'a vu). Mais il est innocent; il surveillait simplement les lieux, bouleverse par la vente.</div></div>
 
-    <h3>Tips for a Great Game</h3>
-    <p>✦ If crossfire slows down, force a 60-second answer limit and reveal the next clue early.<br>
-    ✦ Encourage players to move around the room as their characters.<br>
-    ✦ If someone accidentally reveals the murderer early, have Sylvia deny it convincingly — it's part of her character!<br>
-    ✦ Keep a strict clock. Short urgency speeches from the host are better than long dead air.<br>
-    ✦ The accusation round works best with dramatic readings aloud by each player.</p>
+    <h3>Conseils pour une excellente partie</h3>
+    <p>✦ Si la confrontation ralentit, imposez 60 secondes maximum par reponse et sortez l'indice suivant plus tot.<br>
+    ✦ Encouragez les joueurs a bouger dans la piece en restant en personnage.<br>
+    ✦ Si quelqu'un identifie trop tot la meurtriere, laissez Sylvia nier avec aplomb — ca fait partie du role.<br>
+    ✦ Gardez l'oeil sur l'horloge. De courtes relances urgentes valent mieux que de longs silences.<br>
+    ✦ Le round d'accusation fonctionne mieux avec lecture dramatique de chaque feuille.</p>
   </div>
 
   <div class="card">
-    <h3>Victor's Final Night — Timeline</h3>
+    <h3>Derniere nuit de Victor — Chronologie</h3>
     <div class="timeline">
-      <div class="tl-item"><div class="tl-time">7:00pm</div><div>Everyone arrives. Drinks on the porch. Victor is charming and vague about the weekend's purpose.</div></div>
-      <div class="tl-item"><div class="tl-time">8:30pm</div><div>Dinner. Victor makes a toast: <em>"To getting what you deserve."</em> Tension simmers.</div></div>
-      <div class="tl-item"><div class="tl-time">9:00pm</div><div>Sylvia slips into the hallway and takes KCl from Owen's unattended medical bag.</div></div>
-      <div class="tl-item"><div class="tl-time">10:00pm</div><div>Maggie confronts Victor privately. He brushes her off. She goes to bed, visibly upset.</div></div>
-      <div class="tl-item"><div class="tl-time">11:00pm</div><div>Rex asks Victor for money. Victor gives him the handwritten note and dismisses him coldly.</div></div>
-      <div class="tl-item"><div class="tl-time">11:25pm</div><div>Nadia steps outside for a walk. She passes the study window and hears raised voices — Victor and a woman.</div></div>
-      <div class="tl-item"><div class="tl-time">11:28pm</div><div>Victor texts an unknown contact: <em>"She's here. Pathetic. Nothing she can do."</em></div></div>
-      <div class="tl-item"><div class="tl-time">11:30pm</div><div>Sylvia meets Victor in the study (noted in his calendar: "S.M. — study"). He refuses to drop the lawsuit.</div></div>
-      <div class="tl-item"><div class="tl-time">11:45pm</div><div>Victor turns to the window. Sylvia dissolves KCl into his wine. He returns and drinks.</div></div>
-      <div class="tl-item"><div class="tl-time">11:52pm</div><div>Sylvia makes an excuse and leaves via the French window. She wipes her own glass clean.</div></div>
-      <div class="tl-item"><div class="tl-time">11:55pm</div><div>Tom Briggs — sitting behind the lodge — sees Sylvia exit calmly. He says nothing.</div></div>
-      <div class="tl-item"><div class="tl-time">12:15am</div><div>Victor Crane's heart stops. He slumps in the armchair.</div></div>
-      <div class="tl-item"><div class="tl-time">7:15am</div><div>Tom finds the body. The game begins.</div></div>
+      <div class="tl-item"><div class="tl-time">19 h 00</div><div>Tout le monde arrive. Verres sur la galerie. Victor est charmant, mais evasif sur le but du week-end.</div></div>
+      <div class="tl-item"><div class="tl-time">20 h 30</div><div>Souper. Victor porte un toast: <em>"A chacun ce qu'il merite."</em> La tension monte.</div></div>
+      <div class="tl-item"><div class="tl-time">21 h 00</div><div>Sylvia passe dans le corridor et prend du KCl dans la trousse medicale d'Owen, laissee sans surveillance.</div></div>
+      <div class="tl-item"><div class="tl-time">22 h 00</div><div>Maggie confronte Victor en prive. Il la balaie d'un revers. Elle monte se coucher, secouee.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 00</div><div>Rex demande de l'argent a Victor. Victor lui remet une note manuscrite et le renvoie secherement.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 25</div><div>Nadia sort prendre l'air. En passant devant la fenetre du bureau, elle entend des voix fortes — Victor et une femme.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 28</div><div>Victor envoie un dernier texto a un contact inconnu: <em>"Elle est ici. Pathetique. Elle ne peut rien faire."</em></div></div>
+      <div class="tl-item"><div class="tl-time">23 h 30</div><div>Sylvia rencontre Victor au bureau (inscrit dans son agenda: "S.M. — bureau"). Il refuse de retirer la poursuite.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 45</div><div>Victor se tourne vers la fenetre. Sylvia dissout le KCl dans son vin. Il revient et boit.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 52</div><div>Sylvia s'excuse poliment et sort par la porte-fenetre. Elle essuie son propre verre.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 55</div><div>Tom Briggs — assis derriere le lodge — voit Sylvia sortir calmement. Il ne dit rien.</div></div>
+      <div class="tl-item"><div class="tl-time">0 h 15</div><div>Le coeur de Victor Crane cesse de battre. Il s'affaisse dans le fauteuil.</div></div>
+      <div class="tl-item"><div class="tl-time">7 h 15</div><div>Tom trouve le corps. La partie commence.</div></div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: MAGGIE
-══════════════════════════════════════════ -->
 <div class="page" id="page-maggie">
   <div class="card">
     <div class="char-header">
       <div class="char-initial">M</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
+        <div class="section-label">Votre personnage</div>
         <h2>Margaret "Maggie" Crane</h2>
-        <div class="char-role">Victor's Wife · Age 49</div>
+        <div class="char-role">Epouse de Victor · 49 ans</div>
       </div>
     </div>
-    <p>Poised, composed, and quietly devastating. You've been Victor's wife for 22 years — through the startup years, the fortune, the affairs, and the cruelty dressed up as ambition. You run a charity foundation and you are very, very good at appearing unbothered.</p>
-    <p>You came this weekend because Victor demanded you be here. You still don't know why. Or rather — you're afraid you do.</p>
+    <p>Posee, maitrisee, d'une elegance tranchante. Vous etes l'epouse de Victor depuis 22 ans — des debuts en startup a la fortune, en passant par les liaisons et la cruaute deguisee en ambition. Vous dirigez une fondation caritative et vous etes tres, tres forte pour paraitre imperturbable.</p>
+    <p>Vous etes venue ce week-end parce que Victor l'exigeait. Vous ne savez toujours pas pourquoi. Ou plutot — vous craignez de le savoir.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
-      <p>Three days ago, you found a note in Victor's coat pocket. He is planning to divorce you this week and he has already drafted a new will cutting you out of everything. You confronted him Friday evening before dinner. He said: <em>"You'll be comfortable. That's more than you earned."</em></p>
-      <p>You did not kill him. But you are not grieving. And you are terrified this looks like motive.</p>
+      <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
+      <p>Il y a trois jours, vous avez trouve une note dans la poche du manteau de Victor. Il planifie de divorcer cette semaine et a deja fait preparer un nouveau testament qui vous coupe de tout. Vous l'avez confronte vendredi soir avant le souper. Il a repondu: <em>"Tu seras confortable. C'est deja plus que ce que tu as merite."</em></p>
+      <p>Vous ne l'avez pas tue. Mais vous n'etes pas en deuil. Et vous avez peur que votre mobile saute aux yeux.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I went to bed at around ten o'clock. I took a sleeping pill — I've been stressed. I didn't hear anything."</div></div>
-    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You heard Victor and Rex arguing at around 11pm from your bedroom. Rex sounded desperate.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je suis allee me coucher vers dix heures. J'ai pris un somnifere — j'etais a bout. Je n'ai rien entendu."</div></div>
+    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vers 23 h, vous avez entendu Victor et Rex se disputer depuis votre chambre. Rex avait l'air desespere.</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clue You Hold</span>
-      <p>A crumpled note, found in Victor's coat pocket. You've been carrying it all weekend.</p>
-      <span class="clue-quote">M — See my lawyer Monday. Don't make this harder than it needs to be. — V</span>
-      <p style="font-size:0.82rem; margin-top:0.5rem;">You may show this to others, or pretend you don't have it. Your choice.</p>
+      <span class="clue-label">📄 Indice physique que vous detenez</span>
+      <p>Une note froissee, trouvee dans la poche du manteau de Victor. Vous l'avez sur vous depuis tout le week-end.</p>
+      <span class="clue-quote">M — Vois mon avocat lundi. Ne rends pas ca plus difficile. — V</span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">Vous pouvez la montrer aux autres, ou faire comme si vous ne l'aviez pas. A vous de choisir.</p>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">I have been married to this man for twenty-two years. I know what grief looks like. This isn't it.</div>
-      <div class="line-item" style="margin-top:0.4rem;">Victor had many enemies. I was simply the one who had to live with him.</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">Je suis mariee a cet homme depuis vingt-deux ans. Je sais a quoi ressemble le deuil. Ce n'est pas ca.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Victor avait beaucoup d'ennemis. J'etais simplement celle qui devait vivre avec lui.</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: OWEN
-══════════════════════════════════════════ -->
 <div class="page" id="page-owen">
   <div class="card">
     <div class="char-header">
       <div class="char-initial">O</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
-        <h2>Dr. Owen Hale</h2>
-        <div class="char-role">Physician & Victor's Oldest Friend · Age 54</div>
+        <div class="section-label">Votre personnage</div>
+        <h2>Dr Owen Hale</h2>
+        <div class="char-role">Medecin et plus vieil ami de Victor · 54 ans</div>
       </div>
     </div>
-    <p>Warm, professorial, slightly rumpled. You've known Victor since university. You were best men at each other's weddings. You've watched him become someone you no longer recognize — and you've stayed, because leaving felt like losing something of yourself too.</p>
-    <p>You are also the first person who examined the body this morning. You recognized the symptoms immediately. And now you're very, very afraid.</p>
+    <p>Chaleureux, professoral, legerement depeigne. Vous connaissez Victor depuis l'universite. Vous avez ete temoins de mariage l'un de l'autre. Vous l'avez vu devenir quelqu'un que vous ne reconnaissez plus — et vous etes reste, parce que partir aurait ressemble a perdre une part de vous.</p>
+    <p>Vous etes aussi le premier a avoir examine le corps ce matin. Vous avez reconnu les symptomes tout de suite. Et maintenant, vous avez tres, tres peur.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
-      <p>In 2019, a patient of yours died from a prescription error you covered up. Victor found out — a mutual friend at the hospital told him. For five years, Victor has held this over you, occasionally asking for "favors": access to your prescriptions, medical records of people he wanted leverage on. You complied. You hated yourself for it.</p>
-      <p>This morning you noticed that your bottle of potassium chloride solution — a legitimate heart medication you carry for patients — is half empty. You didn't use it. Someone took it.</p>
+      <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
+      <p>En 2019, une de vos patientes est morte a cause d'une erreur de prescription que vous avez couverte. Victor l'a appris — un ami commun de l'hopital lui a dit. Depuis cinq ans, Victor vous tient par la gorge et exige parfois des "services": acces a des prescriptions, dossiers medicaux de personnes qu'il voulait faire chanter. Vous avez obei. Vous vous en voulez profondement.</p>
+      <p>Ce matin, vous avez constate que votre flacon de chlorure de potassium — un medicament cardiaque legitime que vous transportez — est a moitie vide. Vous ne l'avez pas utilise. Quelqu'un en a pris.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was reading in the armchair by the window in my room. I may have dozed off after midnight. I read until very late."</div></div>
-    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You know exactly how potassium chloride kills. In high doses dissolved in liquid, it stops the heart and leaves almost no trace unless you know to look. You did not tell the others this is what killed Victor — you said only "poisoning."</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je lisais dans le fauteuil pres de la fenetre de ma chambre. J'ai peut-etre sommeille apres minuit. J'ai lu tres tard."</div></div>
+    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous savez exactement comment le chlorure de potassium tue. A forte dose dans un liquide, il arrete le coeur et laisse peu de traces si on ne sait pas quoi chercher. Vous n'avez pas dit aux autres que c'etait le KCl — vous avez seulement dit "empoisonnement".</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clue You Hold</span>
-      <p>Your medical bag — and specifically, the KCl bottle inside it. You can show it to others. It is half empty, and you cannot explain why.</p>
-      <span class="clue-quote">Potassium Chloride Sol. — Dr. O. Hale, MD — FOR CARDIAC USE ONLY</span>
+      <span class="clue-label">📄 Indice physique que vous detenez</span>
+      <p>Votre trousse medicale — et surtout le flacon de KCl. Vous pouvez la montrer aux autres. Le flacon est a moitie vide, et vous ne savez pas pourquoi.</p>
+      <span class="clue-quote">Solution de chlorure de potassium — Dr O. Hale, MD — usage cardiaque seulement</span>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">I've known Victor longer than anyone in this room. He was not a good man. But he was my friend, and someone took him from us.</div>
-      <div class="line-item" style="margin-top:0.4rem;">I can tell you what killed him. I cannot tell you who.</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">Je connais Victor depuis plus longtemps que quiconque ici. Ce n'etait pas un homme bien. Mais c'etait mon ami, et quelqu'un me l'a enleve.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Je peux vous dire ce qui l'a tue. Pas qui l'a tue.</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: SYLVIA
-══════════════════════════════════════════ -->
 <div class="page" id="page-sylvia">
   <div class="card" style="border-top-color: var(--blood);">
     <div class="char-header">
       <div class="char-initial">S</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
+        <div class="section-label">Votre personnage</div>
         <h2>Sylvia Marsh</h2>
-        <div class="char-role">Former Co-Founder · Age 48</div>
+        <div class="char-role">Ancienne cofondatrice · 48 ans</div>
       </div>
     </div>
-    <p>Brilliant. Controlled. You and Victor built the company from nothing in a borrowed office in 2009. He pushed you out in 2018 through a series of maneuvers that were, at minimum, deeply unethical — and possibly criminal on his part.</p>
-    <p>You've spent six years rebuilding. You thought you were close to being free of him. Then, three days ago, the papers arrived.</p>
+    <p>Brillante. Controlee. Vous et Victor avez bati l'entreprise a partir de rien dans un bureau emprunte en 2009. Il vous a evincee en 2018 avec des manoeuvres, au minimum, tres douteuses — et possiblement criminelles de sa part.</p>
+    <p>Ca fait six ans que vous reconstruisez votre vie. Vous pensiez etre presque liberee de lui. Puis, il y a trois jours, les papiers sont arrives.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — You Are the Murderer</span>
-      <p>Three days ago: Victor's lawyers filed a new civil suit against you, alleging financial fraud. It would bankrupt you and, worse, trigger a criminal investigation. Prison. You came this weekend to beg him — quietly, privately — to drop it. You even considered offering him money you don't have.</p>
-      <p>At dinner, Victor looked at you across the table and smiled. That smile said everything.</p>
-      <p>After dinner, when you saw your chance, you took a vial from Dr. Hale's unattended medical bag. You knew what it was — you looked it up. At 11:30pm, you went to the study as Victor had noted in his calendar. You tried one last time. He laughed at you. When he turned to the window, you dissolved the contents into his wine glass and stirred it with your finger. Then you talked for a few minutes longer, made a polite excuse, and left through the French door. You wiped your wine glass before you left.</p>
-      <p>You are calm. You planned this. You feel, honestly, very little.</p>
+      <span class="secret-label">🔴 Votre secret — Vous etes la meurtriere</span>
+      <p>Il y a trois jours, les avocats de Victor ont depose une nouvelle poursuite civile contre vous pour fraude financiere. Ca vous ruinerait et, pire, pourrait declencher une enquete criminelle. La prison. Vous etes venue ce week-end pour le supplier — en prive — de tout laisser tomber. Vous avez meme pense lui offrir de l'argent que vous n'avez pas.</p>
+      <p>Au souper, Victor vous a regardee a travers la table et a souri. Ce sourire disait tout.</p>
+      <p>Apres le souper, quand vous avez vu votre chance, vous avez pris une fiole dans la trousse medicale laissee sans surveillance par le Dr Hale. Vous saviez ce que c'etait — vous aviez verifie. A 23 h 30, vous etes allee au bureau, comme note dans l'agenda de Victor. Vous avez tente une derniere fois. Il a ri de vous. Quand il s'est tourne vers la fenetre, vous avez dissous le contenu dans son verre de vin en remuant avec votre doigt. Vous avez parle encore quelques minutes, trouve une excuse polie, puis quitte par la porte-fenetre. Vous avez essuye votre verre avant de partir.</p>
+      <p>Vous etes calme. Vous aviez un plan. Et vous ne ressentez, honnetement, pas grand-chose.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I sat by the fireplace reading until around eleven, then went straight to bed. I sleep very soundly."</div></div>
-    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You claim you've known about the lawsuit "for weeks and had already moved on." In fact, you received the papers three days ago. Don't let this slip.</div></div>
-    <div class="detail-row"><div class="detail-label">Watch Out For</div><div class="detail-val">Victor's calendar entry. The fingerprint. Tom. Nadia seeing you leave. Stay calm — every other person here had motive too.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je lisais pres du foyer jusqu'a environ onze heures, puis je suis allee me coucher. Je dors tres profondement."</div></div>
+    <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous pretendez connaitre la poursuite "depuis des semaines" et avoir "tourne la page". En realite, vous avez recu les papiers il y a trois jours. Ne laissez pas ca vous echapper.</div></div>
+    <div class="detail-row"><div class="detail-label">Attention</div><div class="detail-val">L'entree d'agenda de Victor. L'empreinte. Tom. Nadia qui vous voit sortir. Restez calme — tout le monde ici a un mobile.</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clue You Hold</span>
-      <p>The legal papers. You should try to hide them or downplay them. If discovered, they prove you received them only three days ago — contradicting your "I've moved on" story.</p>
-      <span class="clue-quote">RE: Crane v. Marsh — Notice of Civil Suit. Filed: [3 days ago]. Damages sought: $4.7M + criminal referral.</span>
+      <span class="clue-label">📄 Indice physique que vous detenez</span>
+      <p>Les papiers judiciaires. Vous devriez tenter de les cacher ou de les minimiser. S'ils sortent, ils prouvent que vous les avez recus il y a seulement trois jours — ce qui contredit votre version "j'ai tourne la page".</p>
+      <span class="clue-quote">Objet: Crane c. Marsh — avis de poursuite civile. Depose: [il y a 3 jours]. Dommages reclames: 4,7 M$ + signalement criminel.</span>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">Victor and I had a complicated history. I won't pretend otherwise. But I haven't been part of his world in years. I came this weekend out of — I suppose — habit.</div>
-      <div class="line-item" style="margin-top:0.4rem;">We should focus on who had something to gain. I had already made my peace with the past.</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">Victor et moi avions un passe complique. Je ne le nierai pas. Mais je ne fais plus partie de son monde depuis des annees. Je suis venue ce week-end par... habitude, j'imagine.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Concentrons-nous sur ceux qui avaient quelque chose a gagner. Moi, j'avais deja fait la paix avec le passe.</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: REX
-══════════════════════════════════════════ -->
 <div class="page" id="page-rex">
   <div class="card">
     <div class="char-header">
       <div class="char-initial">R</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
+        <div class="section-label">Votre personnage</div>
         <h2>Rex Crane</h2>
-        <div class="char-role">Victor's Younger Brother · Age 44</div>
+        <div class="char-role">Frere cadet de Victor · 44 ans</div>
       </div>
     </div>
-    <p>Charming, a little disheveled, with the kind of easy laugh that used to get you out of everything. You and Victor grew up scrapping for the same scraps, and somehow he got everything. You're not bitter — you just have very large debts and very little time.</p>
-    <p>You had a conversation with Victor at 11pm last night. You haven't mentioned this yet.</p>
+    <p>Charmant, un peu debraye, avec ce rire facile qui vous sortait de tout. Vous et Victor avez grandi a vous battre pour les memes miettes, et somehow c'est lui qui a tout eu. Vous n'etes pas amer — vous avez juste de grosses dettes et plus beaucoup de temps.</p>
+    <p>Vous avez parle a Victor vers 23 h hier soir. Vous ne l'avez encore dit a personne.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
-      <p>You owe €60,000 to people who are not patient. Victor was your last option. He cut you from the will last year after you borrowed and never repaid $80,000. At 11pm, you went to him and asked one more time — not for charity, just a loan. He handed you the note and told you to go to bed.</p>
-      <p>You did not kill him. But you did leave your room around midnight — you went for a walk, furious, for about 20 minutes. You didn't mention this because it looks bad.</p>
+      <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
+      <p>Vous devez 60 000 EUR a des gens qui n'ont pas de patience. Victor etait votre derniere option. Il vous a retire du testament l'an dernier apres un pret de 80 000 $ jamais rembourse. Vers 23 h, vous lui avez redemande une derniere fois — pas de charite, juste un pret. Il vous a tendu la note et vous a renvoye vous coucher.</p>
+      <p>Vous ne l'avez pas tue. Mais vous avez quitte votre chambre vers minuit pour marcher une vingtaine de minutes, furieux. Vous l'avez cache parce que ca vous rend suspect.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was in my room with a bottle and an old hockey game replay. I couldn't sleep."</div></div>
-    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You didn't mention your walk outside (~midnight, ~20 min) or the conversation with Victor at 11pm.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"J'etais dans ma chambre avec une bouteille et une rediffusion de hockey. Impossible de dormir."</div></div>
+    <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous n'avez pas mentionne votre marche dehors (~minuit, ~20 min) ni la conversation avec Victor a 23 h.</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clue You Hold</span>
-      <p>A handwritten note, clearly recent, from Victor — handed to you last night.</p>
-      <span class="clue-quote">Rex — This is the last time I'll say it. Not one more cent, not ever. Don't embarrass yourself this weekend. — V</span>
+      <span class="clue-label">📄 Indice physique que vous detenez</span>
+      <p>Une note manuscrite recente de Victor — remise hier soir.</p>
+      <span class="clue-quote">Rex — C'est la derniere fois que je le dis. Pas un sou de plus, jamais. Ne te ridiculise pas ce week-end. — V</span>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">He was my brother. I know what everyone thinks. But I loved him, even when he made it very difficult.</div>
-      <div class="line-item" style="margin-top:0.4rem;">I was alone most of the night. If that's a crime now, go ahead and hang me for insomnia.</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">C'etait mon frere. Je sais ce que tout le monde pense. Mais je l'aimais, meme quand il rendait ca impossible.</div>
+      <div class="line-item" style="margin-top:0.4rem;">J'etais seul presque toute la nuit. Si c'est un crime, ben pendez-moi pour insomnie.</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: NADIA
-══════════════════════════════════════════ -->
 <div class="page" id="page-nadia">
   <div class="card">
     <div class="char-header">
       <div class="char-initial">N</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
+        <div class="section-label">Votre personnage</div>
         <h2>Nadia Voss</h2>
-        <div class="char-role">Personal Assistant & Secret Fiancée · Age 31</div>
+        <div class="char-role">Assistante personnelle et fiancee secrete · 31 ans</div>
       </div>
     </div>
-    <p>Efficient, professional, quietly devoted. You've worked for Victor for four years. Everyone in this room knows you as the assistant. No one — except Victor — knows the rest.</p>
+    <p>Efficace, professionnelle, discretement devouee. Vous travaillez pour Victor depuis quatre ans. Ici, tout le monde vous connait comme son assistante. Personne — sauf Victor — ne connait le reste.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
-      <p>Three months ago, Victor proposed. Secretly. He gave you a ring and said he was sorting out "some personal complications" before he could make it public — meaning Maggie. He had been updating his will to leave you everything.</p>
-      <p>Now he's dead and you are holding an engagement ring and an unsigned will, and if Maggie finds out, she will destroy you.</p>
-      <p>Also: at around 11:25pm, during your "walk outside," you passed the study window and heard raised voices — Victor and a woman. You couldn't see inside. You kept walking.</p>
+      <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
+      <p>Il y a trois mois, Victor vous a demandee en mariage. En secret. Il vous a donne une bague et a dit qu'il reglait "certaines complications personnelles" avant d'officialiser — c'est-a-dire Maggie. Il mettait a jour son testament pour tout vous laisser.</p>
+      <p>Maintenant, il est mort et vous avez une bague de fiancailles ainsi qu'un testament non signe dans vos poches. Si Maggie l'apprend, elle vous detruira.</p>
+      <p>Aussi: vers 23 h 25, pendant votre "marche dehors", vous etes passee devant la fenetre du bureau et avez entendu des voix fortes — Victor et une femme. Vous n'avez pas pu voir a l'interieur. Vous avez continue votre chemin.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I stepped outside for some air around 11:20pm — maybe twenty minutes. I needed to think. Then I went to bed."</div></div>
-    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You saw Tom Briggs near the main lodge at about 11:55pm — not in his shed as he claims. You also heard Victor arguing with a woman shortly before that.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je suis sortie prendre l'air vers 23 h 20 — peut-etre vingt minutes. J'avais besoin de penser. Ensuite, je suis allee me coucher."</div></div>
+    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous avez vu Tom Briggs derriere le lodge vers 23 h 55 — pas dans sa remise comme il le pretend. Vous avez aussi entendu Victor se disputer avec une femme juste avant.</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clues You Hold</span>
-      <p>Two things in your coat pocket:</p>
-      <span class="clue-quote">A diamond engagement ring. And a folded document — Victor's updated will, unsigned, leaving everything to "Nadia Voss."</span>
-      <p style="font-size:0.82rem; margin-top:0.5rem;">You decide when and whether to reveal these. They prove motive — but also mean Victor intended to protect you.</p>
+      <span class="clue-label">📄 Indices physiques que vous detenez</span>
+      <p>Deux objets dans votre manteau:</p>
+      <span class="clue-quote">Une bague de fiancailles en diamant. Et un document plie — le testament mis a jour de Victor, non signe, qui laisse tout a "Nadia Voss".</span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">C'est vous qui decidez quand les reveler. Ils donnent un mobile — mais montrent aussi que Victor voulait vous proteger.</p>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">I've worked for Victor for four years. I knew his schedule, his habits, his moods. I knew him better than most people here.</div>
-      <div class="line-item" style="margin-top:0.4rem;">I need some air. Can we open a window?</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">Je travaille pour Victor depuis quatre ans. Je connaissais son horaire, ses habitudes, ses humeurs. Je le connaissais mieux que bien du monde ici.</div>
+      <div class="line-item" style="margin-top:0.4rem;">J'ai besoin d'air. On peut ouvrir une fenetre?</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CHARACTER: TOM
-══════════════════════════════════════════ -->
 <div class="page" id="page-tom">
   <div class="card">
     <div class="char-header">
       <div class="char-initial">T</div>
       <div class="char-info">
-        <div class="section-label">Your Character</div>
+        <div class="section-label">Votre personnage</div>
         <h2>Tom Briggs</h2>
-        <div class="char-role">Cabin Caretaker · Age 61</div>
+        <div class="char-role">Gardien du chalet · 61 ans</div>
       </div>
     </div>
-    <p>Quiet. Weathered. You've taken care of Blackpine Lodge for fifteen years. You know every creak in every floorboard, every shortcut through the woods. This place is your home — the cottage at the edge of the property where you and your wife have lived since your kids left.</p>
-    <p>You found the body this morning. You wish you hadn't.</p>
+    <p>Silencieux. Use. Vous prenez soin du Refuge Prud'homme depuis quinze ans. Vous connaissez chaque craquement de plancher, chaque raccourci dans le bois. Cet endroit, c'est chez vous — la petite maison au bout du terrain ou vous vivez avec votre femme depuis le depart des enfants.</p>
+    <p>C'est vous qui avez trouve le corps ce matin. Vous auriez prefere ne jamais le voir.</p>
   </div>
 
   <div class="card">
     <div class="secret-box">
-      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
-      <p>Last week, Victor told you the lodge had been sold. Closing date: June 15th. You and your wife have six weeks to find somewhere to go. She has been sick — nothing serious yet, but serious enough that she needs routine and stability. You have nowhere to go and no savings.</p>
-      <p>At around 11:55pm last night, you left your shed and walked to the main lodge. You sat on the back steps for a while, just looking at the building. You weren't doing anything. You were just sitting. Nadia Voss walked past and you think she saw you.</p>
+      <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
+      <p>La semaine derniere, Victor vous a dit que le lodge etait vendu. Date de cloture: 15 juin. Vous et votre femme avez six semaines pour trouver un endroit ou aller. Elle est malade — rien d'immediatement fatal, mais assez pour avoir besoin de stabilite. Vous n'avez ni plan B, ni economies.</p>
+      <p>Vers 23 h 55 hier soir, vous avez quitte la remise et marche jusqu'au lodge. Vous vous etes assis sur les marches arriere, juste pour regarder le batiment. Vous ne faisiez rien. Vous etiez assis la. Nadia Voss est passee; vous pensez qu'elle vous a vu.</p>
     </div>
 
-    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was in my shed all night, working on the generator. It's been cutting out."</div></div>
-    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You weren't in your shed all night. You were at the lodge around 11:55pm. You also saw Sylvia exit through the French window a few minutes earlier, alone and calm. You haven't mentioned this because you didn't want to be involved.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"J'etais dans ma remise toute la nuit, a reparer la generatrice. Elle saute sans arret."</div></div>
+    <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous n'etiez pas dans la remise toute la nuit. Vous etiez au lodge vers 23 h 55. Vous avez aussi vu Sylvia sortir par la porte-fenetre quelques minutes plus tot, seule et calme. Vous n'en avez pas parle parce que vous ne vouliez pas etre implique.</div></div>
 
     <div class="clue-box">
-      <span class="clue-label">📄 Physical Clue You Hold</span>
-      <p>A real estate listing, printed by Victor, with a handwritten note you found on your doorstep.</p>
-      <span class="clue-quote">Blackpine Lodge — Asking: $1.2M. Closing: Jun 15. [Handwritten:] Tell Briggs by end of month. — VC</span>
+      <span class="clue-label">📄 Indice physique que vous detenez</span>
+      <p>Une annonce immobiliere imprimee par Victor, avec une note manuscrite trouvee sur votre pas de porte.</p>
+      <span class="clue-quote">Refuge Prud'homme — prix demande: 1,2 M$. Cloture: 15 juin. [Manuscrit:] Dire a Briggs d'ici la fin du mois. — VC</span>
     </div>
 
     <div class="lines-box">
-      <span class="lines-label">💬 Suggested Opening Lines</span>
-      <div class="line-item">I've been here fifteen years. I never asked for much. I don't know why anyone would do this.</div>
-      <div class="line-item" style="margin-top:0.4rem">The French window on the east side of the study was ajar this morning. Thought it was strange.</div>
+      <span class="lines-label">💬 Lignes d'ouverture suggerees</span>
+      <div class="line-item">Ca fait quinze ans que je suis ici. J'ai jamais demande grand-chose. Je sais pas pourquoi quelqu'un aurait fait ca.</div>
+      <div class="line-item" style="margin-top:0.4rem">La porte-fenetre a l'est du bureau etait entrouverte ce matin. J'ai trouve ca bizarre.</div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     CLUE CARDS
-══════════════════════════════════════════ -->
 <div class="page" id="page-clues">
   <div class="card host">
-    <div class="section-label">For the Host</div>
-    <h2>Clue Cards</h2>
-    <p>Read these aloud at the appropriate moment. Tear them apart, or use them as a script. These are discovered "facts" — physical evidence or testimony that has just come to light.</p>
+    <div class="section-label">Pour le MJ</div>
+    <h2>Cartes d'indices</h2>
+    <p>Lisez-les au bon moment. Decoupez-les ou utilisez-les comme script. Ce sont des "faits" nouvellement decouverts — preuves materielles ou temoignages.</p>
   </div>
 
   <div class="card">
-    <div class="round-header">— Round 1 Clues — Reveal After Introductions —</div>
+    <div class="round-header">— Indices manche 1 — A reveler apres les presentations —</div>
 
     <div class="clue-card">
-      <span class="clue-num">Clue 1-A · The Wine Glass</span>
-      The wine glass found beside Victor contains a faint white crystalline residue at the bottom. It is not wine sediment. Dr. Hale confirms it appears consistent with a dissolved substance.
+      <span class="clue-num">Indice 1-A · Le verre de vin</span>
+      Le verre trouve pres de Victor contient un faible residu cristallin blanchatre au fond. Ce n'est pas du depot de vin. Le Dr Hale confirme que ca ressemble a une substance dissoute.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Clue 1-B · The Locked Room</span>
-      The study door was locked from the inside. The only key was in Victor's own jacket pocket. However, the French window on the east wall was found slightly ajar this morning.
+      <span class="clue-num">Indice 1-B · La piece verrouillee</span>
+      La porte du bureau etait verrouillee de l'interieur. La seule cle etait dans la poche de la veste de Victor. Cependant, la porte-fenetre du mur est etait legerement entrouverte ce matin.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Clue 1-C · A Second Glass</span>
-      A second wine glass was found on the bookshelf near the window — wiped clean. Someone else was in that room with Victor. Someone who didn't want to leave a trace.
+      <span class="clue-num">Indice 1-C · Un deuxieme verre</span>
+      Un deuxieme verre de vin a ete retrouve sur l'etagere pres de la fenetre — essuye proprement. Quelqu'un d'autre etait dans la piece avec Victor. Quelqu'un qui ne voulait laisser aucune trace.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Clue 1-D · Victor's Calendar</span>
-      Victor's desk calendar, still open to Friday: at 11:30pm, an entry reads — <em>"S.M. — study."</em>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="round-header">— Round 2 Clues — Reveal After First Interrogation —</div>
-
-    <div class="clue-card">
-      <span class="clue-num">Clue 2-A · The Missing Medication</span>
-      Dr. Hale's potassium chloride solution — a cardiac medication he carries for patients — is half empty. He did not use it this weekend. In a sufficient dose, dissolved in liquid, it causes cardiac arrest within 30 minutes and is nearly untraceable.
-    </div>
-    <div class="clue-card">
-      <span class="clue-num">Clue 2-B · A Witness in the Dark</span>
-      Nadia confirms she saw Tom Briggs standing near the back of the main lodge at approximately 11:55pm — not in his shed as he claimed.
-    </div>
-    <div class="clue-card">
-      <span class="clue-num">Clue 2-C · The Lawsuit Papers</span>
-      Sylvia Marsh's legal papers are dated three days ago. She initially said she had "known for weeks and moved on." This was not true.
-    </div>
-    <div class="clue-card">
-      <span class="clue-num">Clue 2-D · The Argument Window</span>
-      Nadia confirms she heard Victor arguing with an unidentified woman at about 11:25pm from outside the study window — just minutes before Victor's 11:30pm meeting entry with S.M.
+      <span class="clue-num">Indice 1-D · L'agenda de Victor</span>
+      L'agenda de bureau de Victor, encore ouvert a vendredi: a 23 h 30, une entree indique — <em>"S.M. — bureau."</em>
     </div>
   </div>
 
   <div class="card">
-    <div class="round-header">— Round 3 Clues — Use if Needed Before Accusation —</div>
+    <div class="round-header">— Indices manche 2 — A reveler apres le premier interrogatoire —</div>
 
     <div class="clue-card">
-      <span class="clue-num">Clue 3-A · The Fingerprint</span>
-      A partial fingerprint was found on the wiped wine glass. After careful comparison — it matches Sylvia Marsh.
+      <span class="clue-num">Indice 2-A · Le medicament manquant</span>
+      Le chlorure de potassium du Dr Hale — un medicament cardiaque qu'il transporte — est a moitie vide. Il ne l'a pas utilise ce week-end. A dose suffisante dans un liquide, ca cause un arret cardiaque en moins de 30 minutes et c'est presque intraçable.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Clue 3-B · Victor's Last Text</span>
-      Victor's final text message, sent at 11:28pm to an unknown contact: <em>"She's here. Pathetic. Nothing she can do."</em> — sent two minutes before the calendar entry for his meeting with S.M.
+      <span class="clue-num">Indice 2-B · Un temoin dans l'ombre</span>
+      Nadia confirme avoir vu Tom Briggs derriere le lodge vers 23 h 55 — pas dans sa remise, contrairement a ce qu'il affirme.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Clue 3-C · Tom Finally Speaks</span>
-      When pressed about his movements, Tom Briggs admits: around 11:55pm, while sitting behind the lodge, he saw a woman exit through the French window on the east side of the study. She was alone. She appeared calm. She did not notice him. He recognizes her as Sylvia Marsh.
+      <span class="clue-num">Indice 2-C · Les papiers de poursuite</span>
+      Les documents juridiques de Sylvia Marsh sont dates d'il y a trois jours. Elle avait d'abord dit qu'elle etait au courant "depuis des semaines" et qu'elle avait "tourne la page". C'etait faux.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Indice 2-D · La dispute a la fenetre</span>
+      Nadia confirme avoir entendu Victor se disputer avec une femme non identifiee vers 23 h 25, depuis l'exterieur du bureau — quelques minutes avant l'entree "S.M." de 23 h 30 dans l'agenda.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="round-header">— Indices manche 3 — A utiliser si necessaire avant l'accusation —</div>
+
+    <div class="clue-card">
+      <span class="clue-num">Indice 3-A · L'empreinte</span>
+      Une empreinte partielle a ete retrouvee sur le verre essuye. Apres comparaison, elle correspond a Sylvia Marsh.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Indice 3-B · Le dernier texto de Victor</span>
+      Dernier message texte de Victor, envoye a 23 h 28 a un contact inconnu: <em>"Elle est ici. Pathetique. Elle ne peut rien faire."</em> — envoye deux minutes avant sa rencontre prevue avec S.M.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Indice 3-C · Tom finit par parler</span>
+      Pousse a expliquer ses deplacements, Tom Briggs admet que vers 23 h 55, alors qu'il etait assis derriere le lodge, il a vu une femme sortir par la porte-fenetre a l'est du bureau. Elle etait seule. Calme. Elle ne l'a pas remarque. Il l'identifie comme Sylvia Marsh.
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     ACCUSATION SHEET
-══════════════════════════════════════════ -->
 <div class="page" id="page-accuse">
   <div class="card">
-    <div class="section-label">Act 5</div>
-    <h2>The Accusation</h2>
-    <p>The roads are still closed. The fire is low. It is time.</p>
-    <p>Each player fills out this form privately and folds it. The host collects them all and reads each one aloud. The most complete correct answer wins.</p>
+    <div class="section-label">Acte 5</div>
+    <h2>L'accusation</h2>
+    <p>Les chemins sont encore mauvais. Le feu tombe. C'est le moment.</p>
+    <p>Chaque joueur remplit cette feuille en prive puis la plie. Le MJ les ramasse toutes et lit chaque accusation a voix haute. La reponse la plus complete et correcte gagne.</p>
   </div>
 
   <div class="card">
     <div class="accuse-form">
       <div class="form-field">
-        <label class="form-label">Your Name (as yourself, not your character)</label>
+        <label class="form-label">Votre nom (vous-meme, pas votre personnage)</label>
         <input class="form-line" type="text" placeholder="___________________________________________">
       </div>
       <div class="form-field">
-        <label class="form-label">I accuse…</label>
+        <label class="form-label">J'accuse...</label>
         <input class="form-line" type="text" placeholder="___________________________________________">
       </div>
       <div class="form-field">
-        <label class="form-label">The method of murder was…</label>
+        <label class="form-label">La methode du meurtre est...</label>
         <input class="form-line" type="text" placeholder="___________________________________________">
       </div>
       <div class="form-field">
-        <label class="form-label">Their motive was…</label>
-        <textarea class="form-area" placeholder="Explain why this person killed Victor Crane..."></textarea>
+        <label class="form-label">Le mobile est...</label>
+        <textarea class="form-area" placeholder="Expliquez pourquoi cette personne a tue Victor Crane..."></textarea>
       </div>
       <div class="form-field">
-        <label class="form-label">The key evidence against them is…</label>
-        <textarea class="form-area" placeholder="Which clues point to your suspect?"></textarea>
+        <label class="form-label">Les preuves cles contre cette personne sont...</label>
+        <textarea class="form-area" placeholder="Quels indices pointent vers votre suspect?"></textarea>
       </div>
     </div>
-    <button class="print-btn" onclick="window.print()">⎙ Print This Sheet</button>
+    <button class="print-btn" onclick="window.print()">⎙ Imprimer cette feuille</button>
   </div>
 
   <div class="card gold">
-    <h3>Scoring</h3>
-    <div class="detail-row"><div class="detail-label">3 points</div><div class="detail-val">Correct murderer</div></div>
-    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Correct method</div></div>
-    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Correct motive</div></div>
-    <div class="detail-row"><div class="detail-label">1 point each</div><div class="detail-val">Each correctly identified piece of key evidence (max 3)</div></div>
-    <div class="detail-row"><div class="detail-label">Bonus</div><div class="detail-val">+1 if you also correctly name the false alibi that helped crack the case</div></div>
+    <h3>Pointage</h3>
+    <div class="detail-row"><div class="detail-label">3 points</div><div class="detail-val">Bonne meurtriere</div></div>
+    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Bonne methode</div></div>
+    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Bon mobile</div></div>
+    <div class="detail-row"><div class="detail-label">1 point chacun</div><div class="detail-val">Chaque preuve cle correctement identifiee (max 3)</div></div>
+    <div class="detail-row"><div class="detail-label">Bonus</div><div class="detail-val">+1 si vous nommez aussi le faux alibi qui a permis de resoudre l'affaire</div></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════════
-     SOLUTION
-══════════════════════════════════════════ -->
 <div class="page" id="page-solution">
   <div class="card" style="text-align:center; padding: 1.5rem 1rem;">
     <div class="seal-icon">🔒</div>
-    <div class="section-label" style="text-align:center;">Do Not Open Until Accusation Round</div>
-    <h2 style="text-align:center;">The Solution</h2>
-    <div class="seal-text">Read aloud only after all accusations have been made.</div>
+    <div class="section-label" style="text-align:center;">Ne pas ouvrir avant le round d'accusation</div>
+    <h2 style="text-align:center;">La solution</h2>
+    <div class="seal-text">A lire a voix haute seulement apres toutes les accusations.</div>
   </div>
 
-  <div class="reveal-note">CLICK / TAP BELOW TO REVEAL — HOST ONLY</div>
-  <button class="reveal-btn" onclick="revealSolution()">⚷ UNSEAL THE TRUTH</button>
+  <div class="reveal-note">CLIQUEZ / TOUCHEZ CI-DESSOUS POUR REVELER — MJ SEULEMENT</div>
+  <button class="reveal-btn" onclick="revealSolution()">⚷ REVELER LA VERITE</button>
 
   <div class="solution-hidden" id="solution-content">
     <div class="card">
-      <div class="section-label">The Verdict</div>
+      <div class="section-label">Verdict</div>
       <div class="victim-name" style="color: var(--blood);">Sylvia Marsh</div>
-      <div class="victim-dates">The Murderer</div>
+      <div class="victim-dates">La meurtriere</div>
       <div class="scenario">
-        "Victor Crane was murdered by Sylvia Marsh, his former co-founder, using potassium chloride stolen from Dr. Owen Hale's medical bag — dissolved in his wine glass at approximately 11:45pm on Friday night, in the locked study of Blackpine Lodge."
+        "Victor Crane a ete assassine par Sylvia Marsh, son ancienne cofondatrice, a l'aide de chlorure de potassium vole dans la trousse medicale du Dr Owen Hale — dissous dans son verre de vin vers 23 h 45 vendredi soir, dans le bureau verrouille du Refuge Prud'homme."
       </div>
     </div>
 
     <div class="card">
-      <h3>How She Did It</h3>
+      <h3>Comment elle a fait</h3>
       <div class="timeline">
-        <div class="tl-item"><div class="tl-time">~9:00pm</div><div>While the group was at dinner and the hallway unattended, Sylvia removed a lethal quantity of potassium chloride from Dr. Hale's medical bag. She had looked it up: colorless, tasteless in wine, causes cardiac arrest. Nearly impossible to detect without a targeted autopsy.</div></div>
-        <div class="tl-item"><div class="tl-time">11:30pm</div><div>She went to the study as Victor had noted in his calendar. She made one final appeal: drop the lawsuit, let her live her life. He refused. He laughed.</div></div>
-        <div class="tl-item"><div class="tl-time">11:45pm</div><div>When Victor turned to look out the window, she dissolved the KCl into his wine glass and stirred it with her finger. She refilled her own glass to appear normal.</div></div>
-        <div class="tl-item"><div class="tl-time">11:50pm</div><div>She made a polite excuse, said goodnight, and exited via the French window on the east wall — which she pulled shut behind her (it latched, but not locked). She wiped her wine glass clean before leaving.</div></div>
-        <div class="tl-item"><div class="tl-time">~12:15am</div><div>Victor Crane's heart stopped. He was alone.</div></div>
+        <div class="tl-item"><div class="tl-time">~21 h 00</div><div>Pendant le souper et un moment sans surveillance dans le corridor, Sylvia prend une dose mortelle de chlorure de potassium dans la trousse du Dr Hale. Elle s'est renseignee: incolore, presque sans gout dans le vin, provoque un arret cardiaque. Difficile a detecter sans autopsie ciblee.</div></div>
+        <div class="tl-item"><div class="tl-time">23 h 30</div><div>Elle se rend au bureau, comme note dans l'agenda de Victor. Ultime tentative: retire la poursuite, laisse-moi vivre. Il refuse. Il rit.</div></div>
+        <div class="tl-item"><div class="tl-time">23 h 45</div><div>Pendant que Victor regarde dehors, elle dissout le KCl dans son verre de vin et remue avec son doigt. Elle remplit son propre verre pour rester credible.</div></div>
+        <div class="tl-item"><div class="tl-time">23 h 50</div><div>Elle trouve une excuse, dit bonne nuit, puis sort par la porte-fenetre est — qu'elle referme derriere elle (fermeture au loquet, sans verrou). Elle essuie son verre avant de partir.</div></div>
+        <div class="tl-item"><div class="tl-time">~0 h 15</div><div>Le coeur de Victor Crane s'arrete. Il est seul.</div></div>
       </div>
     </div>
 
     <div class="card">
-      <h3>Why She Did It</h3>
-      <p>Three days before the weekend, Sylvia received legal papers: Victor had filed a new civil suit seeking $4.7M in damages and a criminal fraud referral. If it proceeded, she would face bankruptcy and prison. She had spent six years rebuilding her life. Victor was taking it away again — for sport.</p>
-      <p>She had tried every legal avenue. She had no money left to fight. This was the only way she could see.</p>
+      <h3>Pourquoi elle l'a fait</h3>
+      <p>Trois jours avant le week-end, Sylvia recoit des papiers juridiques: Victor depose une poursuite civile reclamant 4,7 M$ et une recommandation criminelle pour fraude. Si ca avance, elle risque la faillite et la prison. Elle a passe six ans a se reconstruire. Victor lui enlevait tout — encore — pour le plaisir.</p>
+      <p>Elle avait essaye toutes les options legales. Elle n'avait plus les moyens de se battre. C'etait, selon elle, la seule issue.</p>
 
-      <h3>The Clues That Proved It</h3>
-      <div class="detail-row"><div class="detail-label">Calendar</div><div class="detail-val">"S.M. — study — 11:30pm" placed her in the room with the victim.</div></div>
-      <div class="detail-row"><div class="detail-label">Fingerprint</div><div class="detail-val">On the wiped wine glass she thought she had cleaned thoroughly.</div></div>
-      <div class="detail-row"><div class="detail-label">The Lie</div><div class="detail-val">She claimed to have "moved on" from the lawsuit — but the papers were three days old.</div></div>
-      <div class="detail-row"><div class="detail-label">The Witness</div><div class="detail-val">Tom saw her exit the French window around 11:55pm — calm, alone.</div></div>
-      <div class="detail-row"><div class="detail-label">The Medication</div><div class="detail-val">The KCl stolen from Owen's bag was the murder weapon. Sylvia had the knowledge and the access.</div></div>
-      <div class="detail-row"><div class="detail-label">Victor's Text</div><div class="detail-val">"She's here. Pathetic. Nothing she can do." — sent 2 minutes before her scheduled meeting. His last words.</div></div>
+      <h3>Les indices qui l'ont prouve</h3>
+      <div class="detail-row"><div class="detail-label">Agenda</div><div class="detail-val">"S.M. — bureau — 23 h 30" la place dans la piece avec la victime.</div></div>
+      <div class="detail-row"><div class="detail-label">Empreinte</div><div class="detail-val">Sur le verre essuye qu'elle croyait parfaitement nettoye.</div></div>
+      <div class="detail-row"><div class="detail-label">Mensonge</div><div class="detail-val">Elle disait avoir "tourne la page" de la poursuite — mais les papiers dataient de trois jours.</div></div>
+      <div class="detail-row"><div class="detail-label">Temoin</div><div class="detail-val">Tom l'a vue sortir par la porte-fenetre vers 23 h 55 — calme et seule.</div></div>
+      <div class="detail-row"><div class="detail-label">Medicament</div><div class="detail-val">Le KCl vole dans la trousse d'Owen est l'arme du meurtre. Sylvia avait l'acces et la connaissance.</div></div>
+      <div class="detail-row"><div class="detail-label">Dernier texto</div><div class="detail-val">"Elle est ici. Pathetique. Elle ne peut rien faire." — envoye 2 minutes avant leur rencontre. Ses derniers mots.</div></div>
     </div>
 
     <div class="card green">
-      <h3>Everyone Else Was Innocent</h3>
-      <p><strong>Maggie</strong> — genuinely asleep. The sleeping pill was real. She had motive but not opportunity.<br>
-      <strong>Owen</strong> — did not know his medication was taken. Asleep, likely guilty of nothing beyond the blackmail he endured.<br>
-      <strong>Rex</strong> — walked outside angry, but never entered the study. His alibi gap was suspicious, not fatal.<br>
-      <strong>Nadia</strong> — walked past the window, heard voices, and kept going. She didn't know what she'd heard.<br>
-      <strong>Tom</strong> — sat behind the lodge out of grief for a place he loved. He saw Sylvia leave and said nothing because he feared being blamed.</p>
+      <h3>Tous les autres etaient innocents</h3>
+      <p><strong>Maggie</strong> — vraiment endormie. Le somnifere etait reel. Elle avait un mobile, pas l'occasion.<br>
+      <strong>Owen</strong> — ignorait le vol de son medicament. Endormi. Probablement coupable de rien d'autre que d'avoir subi le chantage.<br>
+      <strong>Rex</strong> — est sorti marcher en colere, mais n'a jamais entre dans le bureau. Son trou d'alibi etait suspect, pas decisif.<br>
+      <strong>Nadia</strong> — a passe devant la fenetre, a entendu des voix, puis est repartie. Elle ne savait pas ce qu'elle venait d'entendre.<br>
+      <strong>Tom</strong> — etait assis derriere le lodge, detruit a l'idee de perdre sa maison. Il a vu Sylvia partir et s'est tu par peur d'etre accuse.</p>
 
       <div class="ornament">✦ ✦ ✦</div>
-      <p style="text-align:center; font-style:italic; color: #4a6b4e;">Victor Crane got what he deserved.<br>Whether justice does the same for Sylvia is another question entirely.</p>
+      <p style="text-align:center; font-style:italic; color: #4a6b4e;">Victor Crane a recu ce qu'il semait.<br>Reste a voir si la justice fera de meme pour Sylvia.</p>
     </div>
   </div>
 </div>
