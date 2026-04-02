@@ -52,7 +52,7 @@
     font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(2.2rem, 7vw, 4rem);
     font-weight: 900;
-    font-style: italic;
+    font-style: normal;
     line-height: 1.05;
     color: var(--paper);
     text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
@@ -60,9 +60,9 @@
   .header-title span { color: var(--blood); }
   .header-sub {
     font-family: 'Special Elite', monospace;
-    font-size: 0.85rem;
+    font-size: 0.92rem;
     letter-spacing: 0.25em;
-    color: var(--aged);
+    color: #dfc28d;
     margin-top: 0.6rem;
     text-transform: uppercase;
   }
@@ -91,18 +91,18 @@
   .nav-btn {
     background: none; border: none; cursor: pointer;
     font-family: 'Special Elite', monospace;
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #888;
+    color: #b3b3b3;
     padding: 0.75rem 0.9rem;
     border-bottom: 3px solid transparent;
     transition: all 0.2s;
     white-space: nowrap;
   }
   .nav-btn:hover { color: var(--aged); }
-  .nav-btn.active { color: var(--paper); border-bottom-color: var(--blood); }
-  .nav-btn.host-btn { color: var(--candle); }
+  .nav-btn.active { color: #fff6e7; border-bottom-color: var(--blood); }
+  .nav-btn.host-btn { color: #e2ad63; }
   .nav-btn.host-btn.active { border-bottom-color: var(--candle); }
 
   /* ─── PAGES ─── */
@@ -132,10 +132,10 @@
   /* ─── TYPOGRAPHY ─── */
   .section-label {
     font-family: 'Special Elite', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--aged);
+    color: #8a6827;
     margin-bottom: 0.3rem;
   }
   h2 {
@@ -156,23 +156,23 @@
   h3:first-child { margin-top: 0; }
   p { font-size: 0.97rem; line-height: 1.7; color: #2a1e0e; margin-bottom: 0.8rem; }
   p:last-child { margin-bottom: 0; }
-  em { font-style: italic; }
+  em { font-style: normal; }
   strong { font-weight: bold; color: var(--ink); }
 
   /* ─── VICTIM BLOCK ─── */
   .victim-name {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 2rem;
-    font-style: italic;
+    font-style: normal;
     font-weight: 900;
     color: var(--blood);
     line-height: 1;
   }
   .victim-dates {
     font-family: 'Special Elite', monospace;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    color: #888;
+    font-size: 0.86rem;
+    letter-spacing: 0.12em;
+    color: #6a5a42;
     margin: 0.2rem 0 0.8rem;
   }
 
@@ -183,7 +183,7 @@
     border-left: 4px solid var(--blood);
     padding: 1.2rem 1.4rem;
     font-family: 'IM Fell English', Georgia, serif;
-    font-style: italic;
+    font-style: normal;
     font-size: 1rem;
     line-height: 1.7;
     margin: 1rem 0;
@@ -201,10 +201,10 @@
   .detail-row:last-child { border-bottom: none; }
   .detail-label {
     font-family: 'Special Elite', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.15em;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--aged);
+    color: #7d5f24;
     flex-shrink: 0;
     width: 5.5rem;
     padding-top: 0.15rem;
@@ -220,7 +220,7 @@
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 3rem;
     font-weight: 900;
-    font-style: italic;
+    font-style: normal;
     color: var(--blood);
     line-height: 1;
     flex-shrink: 0;
@@ -229,10 +229,10 @@
   .char-info h2 { font-size: 1.4rem; margin-bottom: 0.1rem; }
   .char-role {
     font-family: 'Special Elite', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--aged);
+    color: #7b5f2c;
   }
 
   /* ─── SECRET BOX ─── */
@@ -271,7 +271,7 @@
     margin-bottom: 0.4rem;
   }
   .clue-quote {
-    font-style: italic;
+    font-style: normal;
     background: var(--paper-dark);
     padding: 0.5rem 0.8rem;
     border-left: 3px solid var(--aged);
@@ -299,7 +299,7 @@
   }
   .line-item {
     font-size: 0.88rem;
-    font-style: italic;
+    font-style: normal;
     padding: 0.2rem 0;
     color: #2a3a2c;
     line-height: 1.5;
@@ -333,9 +333,9 @@
   }
   .clue-num {
     font-family: 'Special Elite', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--aged);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    color: #7c5c20;
     display: block;
     margin-bottom: 0.2rem;
   }
@@ -352,7 +352,7 @@
   }
   .seal-text {
     font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
+    font-style: normal;
     font-size: 1.05rem;
     color: var(--aged);
   }
@@ -381,10 +381,10 @@
   .reveal-btn:hover { background: #a02020; }
   .reveal-note {
     font-family: 'Special Elite', monospace;
-    font-size: 0.65rem;
-    color: var(--aged);
+    font-size: 0.72rem;
+    color: #d7b47a;
     text-align: center;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     margin-bottom: 0.5rem;
   }
 
@@ -400,7 +400,7 @@
   .tl-item:last-child { border-bottom: none; }
   .tl-time {
     font-family: 'Special Elite', monospace;
-    font-size: 0.7rem;
+    font-size: 0.76rem;
     letter-spacing: 0.1em;
     color: var(--blood);
     flex-shrink: 0;
@@ -413,10 +413,10 @@
   .form-field { margin-bottom: 1.2rem; }
   .form-label {
     font-family: 'Special Elite', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.2em;
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--aged);
+    color: #7e6028;
     display: block;
     margin-bottom: 0.3rem;
   }
@@ -515,9 +515,9 @@
   }
   .player-item span {
     font-family: 'Special Elite', monospace;
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
-    color: var(--aged);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    color: #7b5f2e;
     text-transform: uppercase;
   }
 

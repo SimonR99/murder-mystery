@@ -10,7 +10,7 @@
 <body>
 
 <header class="site-header">
-  <div class="header-ornament">Jeu d'enquete pour 6 joueurs + 1 maitre du jeu</div>
+  <div class="header-ornament">Jeu d'enquete pour 6 joueurs + 1 hote</div>
   <h1 class="header-title"><span>Mort</span> au Refuge Prud'homme</h1>
   <div class="header-sub">Une nuit. Du reseau instable. Aucune sortie.</div>
   <div class="header-divider"><span>✦</span></div>
@@ -19,13 +19,13 @@
 <nav class="nav-wrap">
   <div class="nav" role="tablist">
     <button class="nav-btn host-btn active" onclick="showPage('intro')" id="tab-intro">📜 Intro</button>
-    <button class="nav-btn host-btn" onclick="showPage('host')" id="tab-host">🕯 Guide MJ</button>
-    <button class="nav-btn" onclick="showPage('maggie')" id="tab-maggie">Maggie</button>
-    <button class="nav-btn" onclick="showPage('owen')" id="tab-owen">Owen</button>
-    <button class="nav-btn" onclick="showPage('sylvia')" id="tab-sylvia">Sylvia</button>
-    <button class="nav-btn" onclick="showPage('rex')" id="tab-rex">Rex</button>
-    <button class="nav-btn" onclick="showPage('nadia')" id="tab-nadia">Nadia</button>
-    <button class="nav-btn" onclick="showPage('tom')" id="tab-tom">Tom</button>
+    <button class="nav-btn host-btn" onclick="showPage('host')" id="tab-host">🕯 Guide de l'hote</button>
+    <button class="nav-btn" onclick="showPage('maggie')" id="tab-maggie">Mado</button>
+    <button class="nav-btn" onclick="showPage('owen')" id="tab-owen">Luc</button>
+    <button class="nav-btn" onclick="showPage('sylvia')" id="tab-sylvia">Sylvie</button>
+    <button class="nav-btn" onclick="showPage('rex')" id="tab-rex">Remi</button>
+    <button class="nav-btn" onclick="showPage('nadia')" id="tab-nadia">Nadine</button>
+    <button class="nav-btn" onclick="showPage('tom')" id="tab-tom">Denis</button>
     <button class="nav-btn host-btn" onclick="showPage('clues')" id="tab-clues">🔍 Indices</button>
     <button class="nav-btn host-btn" onclick="showPage('accuse')" id="tab-accuse">⚖ Accusation</button>
     <button class="nav-btn host-btn" onclick="showPage('solution')" id="tab-solution">🔒 Solution</button>
@@ -41,8 +41,8 @@
     <div class="victim-dates">Chalet isole — Parc regional de la Foret Ouareau, Quebec</div>
     <div class="scenario">
       Nous sommes samedi matin, en plein milieu du printemps. Le poele a bois est eteint, la pluie cogne sur le toit de metal et le chemin forestier est rendu bouetteux.
-      Le reseau cellulaire apparait une barre, puis disparait. Victor Crane — votre hote, votre rival, votre bienfaiteur, votre bourreau —
-      a ete retrouve mort dans son bureau a 7 h 15 par le gardien, Tom Briggs.
+      Le reseau cellulaire apparait une barre, puis disparait. Victor Gagnon — votre hote, votre rival, votre bienfaiteur, votre bourreau —
+      a ete retrouve mort dans son bureau a 7 h 15 par le gardien, Denis Poirier.
       Une porte verrouillee. Un verre de vin a moitie vide. Et six personnes qui avaient toutes de bonnes raisons de le voir disparaitre.
     </div>
     <p>La ville la plus proche est a plus de trente minutes et le ruissellement de la nuit a rendu la route du parc presque impraticable. Personne n'arrivera rapidement. Vous devrez resoudre ca vous-memes.</p>
@@ -50,7 +50,7 @@
 
   <div class="card">
     <div class="section-label">La victime</div>
-    <div class="victim-name">Victor Crane</div>
+    <div class="victim-name">Victor Gagnon</div>
     <div class="victim-dates">52 ans · Entrepreneur techno · Proprietaire du Refuge Prud'homme</div>
     <p>Autodidacte, brillant, impitoyable. Victor a bati un empire techno et s'est fait des ennemis a chaque etape. Il a invite tout le monde ce week-end pour ce qu'il appelait un <em>"rassemblement d'adieu"</em>. Personne ne savait ce qu'il voulait dire. Maintenant, plus personne ne peut lui demander.</p>
     <p>On l'a trouve affaisse dans un fauteuil en cuir, dans son bureau verrouille. Un verre de vin a ses cotes. Cause du deces: arret cardiaque aigu, probablement provoque par un empoisonnement.</p>
@@ -61,76 +61,87 @@
     <h3>Qui est qui</h3>
     <div class="player-list">
       <div class="player-item">
-        <strong>Margaret "Maggie" Crane</strong>
+        <strong>Marianne "Mado" Gagnon</strong>
         <span>Epouse de Victor</span>
       </div>
       <div class="player-item">
-        <strong>Dr Owen Hale</strong>
+        <strong>Dr Luc Tremblay</strong>
         <span>Medecin et vieil ami</span>
       </div>
       <div class="player-item">
-        <strong>Sylvia Marsh</strong>
+        <strong>Sylvie Beaulieu</strong>
         <span>Ancienne cofondatrice</span>
       </div>
       <div class="player-item">
-        <strong>Rex Crane</strong>
+        <strong>Remi Gagnon</strong>
         <span>Frere de Victor</span>
       </div>
       <div class="player-item">
-        <strong>Nadia Voss</strong>
+        <strong>Nadine Lavoie</strong>
         <span>Assistante personnelle</span>
       </div>
       <div class="player-item">
-        <strong>Tom Briggs</strong>
+        <strong>Denis Poirier</strong>
         <span>Gardien du chalet</span>
       </div>
     </div>
     <p style="font-size:0.82rem; color:#777; margin-top:0.5rem;"><span class="tag gold">Repartition</span> 3 femmes et 3 hommes parmi les suspects.</p>
-    <p style="font-size:0.82rem; color:#777; margin-top:0.35rem;"><span class="tag gold">Role du MJ</span> Le maitre du jeu n'incarne pas de suspect. Il gere le rythme, la revelation des indices et la lecture finale du verdict.</p>
+    <p style="font-size:0.82rem; color:#777; margin-top:0.35rem;"><span class="tag gold">Role de l'hote</span> L'hote n'incarne pas de suspect. Il gere le rythme, la revelation des indices et la lecture finale du verdict.</p>
   </div>
 
   <div class="card">
     <div class="section-label">Comment jouer</div>
     <h3>Structure de la partie</h3>
-    <div class="detail-row"><div class="detail-label">Mise en place</div><div class="detail-val">Le MJ lit la scene d'ouverture a voix haute. Distribuez les fiches personnage (une par joueur). Accordez 10 minutes de lecture privee.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 1</div><div class="detail-val"><strong>Presentations et indices ouverts</strong> (~35 min) — Chaque joueur presente son personnage et montre son indice physique. Le MJ revele les indices du round 1.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 2</div><div class="detail-val"><strong>Interrogatoires en duo</strong> (~40 min) — Faites trois rotations de 12 minutes (attribuees par le MJ), plus les transitions. Chacun doit mettre de la pression sur quelqu'un d'autre que son rival evident.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 3</div><div class="detail-val"><strong>Confrontation de groupe</strong> (~35 min) — Accusations ouvertes, contre-arguments et reconstruction de la chronologie. Le MJ revele les indices du round 2 au milieu.</div></div>
-    <div class="detail-row"><div class="detail-label">Pause</div><div class="detail-val"><strong>Intermission</strong> (~10 min) — Pause hors personnage. Le MJ verifie discretement si quelqu'un est bloque et relance avec des questions cibles.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 4</div><div class="detail-val"><strong>Pression finale</strong> (~25 min) — Le MJ revele les indices du round 3 un par un. Chaque joueur a 90 secondes de plaidoirie finale.</div></div>
+    <div class="detail-row"><div class="detail-label">Mise en place</div><div class="detail-val">L'hote lit la scene d'ouverture a voix haute. Distribuez les fiches personnage (une par joueur). Accordez 10 minutes de lecture privee.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 1</div><div class="detail-val"><strong>Presentations et indices ouverts</strong> (~35 min) — Chaque joueur presente son personnage et montre son indice physique. L'hote revele les indices de la manche 1.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 2</div><div class="detail-val"><strong>Interrogatoires en duo</strong> (~40 min) — Faites trois rotations de 12 minutes (attribuees par l'hote), plus les transitions. Chacun doit mettre de la pression sur quelqu'un d'autre que son rival evident.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 3</div><div class="detail-val"><strong>Confrontation de groupe</strong> (~35 min) — Accusations ouvertes, contre-arguments et reconstruction de la chronologie. L'hote revele les indices de la manche 2 au milieu.</div></div>
+    <div class="detail-row"><div class="detail-label">Pause</div><div class="detail-val"><strong>Intermission</strong> (~10 min) — Pause hors personnage. L'hote verifie discretement si quelqu'un est bloque et relance avec des questions cibles.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 4</div><div class="detail-val"><strong>Pression finale</strong> (~25 min) — L'hote revele les indices de la manche 3 un par un. Chaque joueur a 90 secondes de plaidoirie finale.</div></div>
     <div class="detail-row"><div class="detail-label">Acte 5</div><div class="detail-val"><strong>L'accusation</strong> (~25 min) — Accusations ecrites (qui/comment/pourquoi/preuves), lecture dramatique, puis revelation de la solution.</div></div>
     <div class="detail-row"><div class="detail-label">Total</div><div class="detail-val"><strong>~170 a 180 minutes (cible: 3 heures)</strong></div></div>
 
     <h3>Regles</h3>
     <p>✦ Restez en personnage autant que possible, c'est plus le fun pour tout le monde.<br>
     ✦ Vous pouvez mentir sur votre secret, votre alibi, vos emotions — mais pas sur votre indice physique.<br>
-    ✦ La meurtriere ne doit pas avouer avant le round d'accusation.<br>
+    ✦ La meurtriere ne doit pas avouer avant la manche d'accusation.<br>
     ✦ Sortez les boissons. Allumez des chandelles. Jouez l'ambiance a fond.</p>
+  </div>
+
+  <div class="card green">
+    <div class="section-label">Ambiance</div>
+    <h3>Menu suggere (simple en refuge)</h3>
+    <div class="detail-row"><div class="detail-label">Apero</div><div class="detail-val">Noix grillees, cornichons, fromage en grains, craquelins.</div></div>
+    <div class="detail-row"><div class="detail-label">Soupe</div><div class="detail-val">Soupe a l'oignon ou potage de legumes en thermos.</div></div>
+    <div class="detail-row"><div class="detail-label">Plat</div><div class="detail-val">Chili maison avec pain de campagne (option vegetarienne possible).</div></div>
+    <div class="detail-row"><div class="detail-label">Extra</div><div class="detail-val">Plateau froid: charcuteries, marinades, fromage local.</div></div>
+    <div class="detail-row"><div class="detail-label">Dessert</div><div class="detail-val">Tarte au sucre ou pouding chomeur individuel.</div></div>
+    <div class="detail-row"><div class="detail-label">Boissons</div><div class="detail-val">Cafe filtre, tisane, eau petillante, vin rouge leger.</div></div>
   </div>
 </div>
 
 <div class="page" id="page-host">
   <div class="card host">
-    <div class="section-label">Pour les yeux du MJ seulement</div>
-    <h2>Guide du MJ</h2>
-    <p>Comme MJ, vous connaissez l'identite de la meurtriere. Votre role est d'animer, pas de jouer un personnage. Gardez l'intrigue coherente, maintenez la pression et protegez le rythme de 3 heures.</p>
+    <div class="section-label">Pour les yeux de l'hote seulement</div>
+    <h2>Guide de l'hote</h2>
+    <p>Comme hote, vous connaissez l'identite de la meurtriere. Votre role est d'animer, pas de jouer un personnage. Gardez l'intrigue coherente, maintenez la pression et protegez le rythme de 3 heures.</p>
   </div>
 
   <div class="card">
     <h3>Avant la partie</h3>
-    <p>Imprimez la page de chaque personnage et pliez-la pour cacher la section "Votre secret" — ou laissez chaque joueur ouvrir son onglet en prive. Assurez-vous que chacun ne lit que sa propre fiche avant le round 1.</p>
+    <p>Imprimez la page de chaque personnage et pliez-la pour cacher la section "Votre secret" — ou laissez chaque joueur ouvrir son onglet en prive. Assurez-vous que chacun ne lit que sa propre fiche avant la manche 1.</p>
     <p>Preparez un "indice physique" par personnage — note manuscrite, impression papier ou objet. Ils sont listes dans chaque onglet personnage. Des fiches Bristol font tres bien l'affaire.</p>
-    <p>Utilisez un chronometre visible. Si une scene s'etire, coupez avec un nouvel indice en restant dans l'ambiance. Ce scenario est calibre pour <strong>six suspects + un MJ</strong>; n'ajoutez pas d'autres personnages.</p>
+    <p>Utilisez un chronometre visible. Si une scene s'etire, coupez avec un nouvel indice en restant dans l'ambiance. Ce scenario est calibre pour <strong>six suspects + un hote</strong>; n'ajoutez pas d'autres personnages.</p>
   </div>
 
   <div class="card">
     <h3>Plan de rythme sur 3 heures</h3>
     <div class="detail-row"><div class="detail-label">00:00–00:15</div><div class="detail-val">Accueil, regles, lecture privee.</div></div>
-    <div class="detail-row"><div class="detail-label">00:15–00:50</div><div class="detail-val">Acte 1: Presentations + indices round 1.</div></div>
+    <div class="detail-row"><div class="detail-label">00:15–00:50</div><div class="detail-val">Acte 1: Presentations + indices manche 1.</div></div>
     <div class="detail-row"><div class="detail-label">00:50–01:30</div><div class="detail-val">Acte 2: Interrogatoires en duo (3 rotations).</div></div>
-    <div class="detail-row"><div class="detail-label">01:30–02:05</div><div class="detail-val">Acte 3: Confrontation de groupe + indices round 2.</div></div>
-    <div class="detail-row"><div class="detail-label">02:05–02:15</div><div class="detail-val">Pause et recalibrage du MJ.</div></div>
-    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Acte 4: Pression finale + indices round 3.</div></div>
+    <div class="detail-row"><div class="detail-label">01:30–02:05</div><div class="detail-val">Acte 3: Confrontation de groupe + indices manche 2.</div></div>
+    <div class="detail-row"><div class="detail-label">02:05–02:15</div><div class="detail-val">Pause et recalibrage de l'hote.</div></div>
+    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Acte 4: Pression finale + indices manche 3.</div></div>
     <div class="detail-row"><div class="detail-label">02:40–03:00</div><div class="detail-val">Acte 5: Accusations ecrites, lecture, solution.</div></div>
   </div>
 
@@ -139,9 +150,9 @@
     <div class="scenario">
       "Le souper d'hier a ete long et le vin coulait a flot. Victor a porte un toast aux vieilles amities et aux nouveaux departs. Tout le monde est alle se coucher a son heure.
       <br><br>
-      Ce matin, a 7 h 15, Tom Briggs — le gardien — a remarque que la lumiere du bureau etait restee allumee toute la nuit. Il a cogne. Aucune reponse. Il a utilise sa cle de secours et a trouve Victor dans le fauteuil, encore habille, froid au toucher. Le verre de vin sur la table d'appoint etait a moitie plein.
+      Ce matin, a 7 h 15, Denis Poirier — le gardien — a remarque que la lumiere du bureau etait restee allumee toute la nuit. Il a cogne. Aucune reponse. Il a utilise sa cle de secours et a trouve Victor dans le fauteuil, encore habille, froid au toucher. Le verre de vin sur la table d'appoint etait a moitie plein.
       <br><br>
-      Le Dr Owen Hale l'a confirme: Victor Crane est mort. Ce n'est pas naturel. Les sentiers sont en boue, la traversee de la riviere est risquee et le reseau cellulaire coupe sans arret. Vous etes tous ici. Et l'un de vous l'a fait."
+      Le Dr Luc Tremblay l'a confirme: Victor Gagnon est mort. Ce n'est pas naturel. Les sentiers sont en boue, la traversee de la riviere est risquee et le reseau cellulaire coupe sans arret. Vous etes tous ici. Et l'un de vous l'a fait."
     </div>
   </div>
 
@@ -149,16 +160,17 @@
     <h3>Faits cles a garder en tete</h3>
     <div class="detail-row"><div class="detail-label">Heure du deces</div><div class="detail-val">Environ 0 h 15, dans la nuit de vendredi a samedi. Victor a ete vu vivant vers 23 h 50.</div></div>
     <div class="detail-row"><div class="detail-label">Cause du deces</div><div class="detail-val">Chlorure de potassium (KCl) dissous dans son vin. Provoque un arret cardiaque. Incolore et presque sans gout dans le vin.</div></div>
-    <div class="detail-row"><div class="detail-label">La piece verrouillee</div><div class="detail-val">Le bureau etait verrouille de l'interieur. La seule cle etait dans la poche de la veste de Victor. (Sylvia est sortie par la porte-fenetre, qui s'est rabattue derriere elle — Tom peut confirmer qu'elle etait entrouverte ce matin.)</div></div>
-    <div class="detail-row"><div class="detail-label">La meurtriere</div><div class="detail-val"><strong>SYLVIA MARSH.</strong> Elle a vole le KCl dans la trousse d'Owen, a rencontre Victor a 23 h 30, a empoisonne son vin pendant qu'il regardait vers la fenetre, puis est sortie par la porte-fenetre laterale.</div></div>
-    <div class="detail-row"><div class="detail-label">Faux alibi</div><div class="detail-val">Tom Briggs a aussi menti — il etait bien pres du lodge vers 23 h 55 (Nadia l'a vu). Mais il est innocent; il surveillait simplement les lieux, bouleverse par la vente.</div></div>
+    <div class="detail-row"><div class="detail-label">La piece verrouillee</div><div class="detail-val">Le bureau etait verrouille de l'interieur. La seule cle etait dans la poche de la veste de Victor. (Sylvie est sortie par la porte-fenetre, qui s'est rabattue derriere elle — Denis peut confirmer qu'elle etait entrouverte ce matin.)</div></div>
+    <div class="detail-row"><div class="detail-label">La meurtriere</div><div class="detail-val"><strong>SYLVIE BEAULIEU.</strong> Elle a vole le KCl dans la trousse de Luc, a rencontre Victor a 23 h 30, a empoisonne son vin pendant qu'il regardait vers la fenetre, puis est sortie par la porte-fenetre laterale.</div></div>
+    <div class="detail-row"><div class="detail-label">Faux alibi</div><div class="detail-val">Denis Poirier a aussi menti — il etait bien pres du refuge vers 23 h 55 (Nadine l'a vu). Mais il est innocent; il surveillait simplement les lieux, bouleverse par la vente.</div></div>
 
     <h3>Conseils pour une excellente partie</h3>
     <p>✦ Si la confrontation ralentit, imposez 60 secondes maximum par reponse et sortez l'indice suivant plus tot.<br>
     ✦ Encouragez les joueurs a bouger dans la piece en restant en personnage.<br>
-    ✦ Si quelqu'un identifie trop tot la meurtriere, laissez Sylvia nier avec aplomb — ca fait partie du role.<br>
+    ✦ Si quelqu'un identifie trop tot la meurtriere, laissez Sylvie nier avec aplomb — ca fait partie du role.<br>
     ✦ Gardez l'oeil sur l'horloge. De courtes relances urgentes valent mieux que de longs silences.<br>
-    ✦ Le round d'accusation fonctionne mieux avec lecture dramatique de chaque feuille.</p>
+    ✦ La manche d'accusation fonctionne mieux avec lecture dramatique de chaque feuille.<br>
+    ✦ Pour garder le suspense, ne sortez pas d'emblee les indices 3-A et 3-C ensemble; gardez-en un en reserve si le groupe bloque.</p>
   </div>
 
   <div class="card">
@@ -166,17 +178,17 @@
     <div class="timeline">
       <div class="tl-item"><div class="tl-time">19 h 00</div><div>Tout le monde arrive. Verres sur la galerie. Victor est charmant, mais evasif sur le but du week-end.</div></div>
       <div class="tl-item"><div class="tl-time">20 h 30</div><div>Souper. Victor porte un toast: <em>"A chacun ce qu'il merite."</em> La tension monte.</div></div>
-      <div class="tl-item"><div class="tl-time">21 h 00</div><div>Sylvia passe dans le corridor et prend du KCl dans la trousse medicale d'Owen, laissee sans surveillance.</div></div>
-      <div class="tl-item"><div class="tl-time">22 h 00</div><div>Maggie confronte Victor en prive. Il la balaie d'un revers. Elle monte se coucher, secouee.</div></div>
-      <div class="tl-item"><div class="tl-time">23 h 00</div><div>Rex demande de l'argent a Victor. Victor lui remet une note manuscrite et le renvoie secherement.</div></div>
-      <div class="tl-item"><div class="tl-time">23 h 25</div><div>Nadia sort prendre l'air. En passant devant la fenetre du bureau, elle entend des voix fortes — Victor et une femme.</div></div>
+      <div class="tl-item"><div class="tl-time">21 h 00</div><div>Sylvie passe dans le corridor et prend du KCl dans la trousse medicale de Luc, laissee sans surveillance.</div></div>
+      <div class="tl-item"><div class="tl-time">22 h 00</div><div>Mado confronte Victor en prive. Il la balaie d'un revers. Elle monte se coucher, secouee.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 00</div><div>Remi demande de l'argent a Victor. Victor lui remet une note manuscrite et le renvoie secherement.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 25</div><div>Nadine sort prendre l'air. En passant devant la fenetre du bureau, elle entend des voix fortes — Victor et une femme.</div></div>
       <div class="tl-item"><div class="tl-time">23 h 28</div><div>Victor envoie un dernier texto a un contact inconnu: <em>"Elle est ici. Pathetique. Elle ne peut rien faire."</em></div></div>
-      <div class="tl-item"><div class="tl-time">23 h 30</div><div>Sylvia rencontre Victor au bureau (inscrit dans son agenda: "S.M. — bureau"). Il refuse de retirer la poursuite.</div></div>
-      <div class="tl-item"><div class="tl-time">23 h 45</div><div>Victor se tourne vers la fenetre. Sylvia dissout le KCl dans son vin. Il revient et boit.</div></div>
-      <div class="tl-item"><div class="tl-time">23 h 52</div><div>Sylvia s'excuse poliment et sort par la porte-fenetre. Elle essuie son propre verre.</div></div>
-      <div class="tl-item"><div class="tl-time">23 h 55</div><div>Tom Briggs — assis derriere le lodge — voit Sylvia sortir calmement. Il ne dit rien.</div></div>
-      <div class="tl-item"><div class="tl-time">0 h 15</div><div>Le coeur de Victor Crane cesse de battre. Il s'affaisse dans le fauteuil.</div></div>
-      <div class="tl-item"><div class="tl-time">7 h 15</div><div>Tom trouve le corps. La partie commence.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 30</div><div>Sylvie rencontre Victor au bureau (inscrit dans son agenda: "S.B. — bureau"). Il refuse de retirer la poursuite.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 45</div><div>Victor se tourne vers la fenetre. Sylvie dissout le KCl dans son vin. Il revient et boit.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 52</div><div>Sylvie s'excuse poliment et sort par la porte-fenetre. Elle essuie son propre verre.</div></div>
+      <div class="tl-item"><div class="tl-time">23 h 55</div><div>Denis Poirier — assis derriere le refuge — voit Sylvie sortir calmement. Il ne dit rien.</div></div>
+      <div class="tl-item"><div class="tl-time">0 h 15</div><div>Le coeur de Victor Gagnon cesse de battre. Il s'affaisse dans le fauteuil.</div></div>
+      <div class="tl-item"><div class="tl-time">7 h 15</div><div>Denis trouve le corps. La partie commence.</div></div>
     </div>
   </div>
 </div>
@@ -187,7 +199,7 @@
       <div class="char-initial">M</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Margaret "Maggie" Crane</h2>
+        <h2>Marianne "Mado" Gagnon</h2>
         <div class="char-role">Epouse de Victor · 49 ans</div>
       </div>
     </div>
@@ -203,7 +215,8 @@
     </div>
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je suis allee me coucher vers dix heures. J'ai pris un somnifere — j'etais a bout. Je n'ai rien entendu."</div></div>
-    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vers 23 h, vous avez entendu Victor et Rex se disputer depuis votre chambre. Rex avait l'air desespere.</div></div>
+    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vers 23 h, vous avez entendu Victor et Remi se disputer depuis votre chambre. Remi avait l'air desespere.</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Foulard chic + petit pilulier vintage.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous detenez</span>
@@ -226,7 +239,7 @@
       <div class="char-initial">O</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Dr Owen Hale</h2>
+        <h2>Dr Luc Tremblay</h2>
         <div class="char-role">Medecin et plus vieil ami de Victor · 54 ans</div>
       </div>
     </div>
@@ -243,11 +256,12 @@
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je lisais dans le fauteuil pres de la fenetre de ma chambre. J'ai peut-etre sommeille apres minuit. J'ai lu tres tard."</div></div>
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous savez exactement comment le chlorure de potassium tue. A forte dose dans un liquide, il arrete le coeur et laisse peu de traces si on ne sait pas quoi chercher. Vous n'avez pas dit aux autres que c'etait le KCl — vous avez seulement dit "empoisonnement".</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Trousse medicale en cuir + lunettes de lecture.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous detenez</span>
       <p>Votre trousse medicale — et surtout le flacon de KCl. Vous pouvez la montrer aux autres. Le flacon est a moitie vide, et vous ne savez pas pourquoi.</p>
-      <span class="clue-quote">Solution de chlorure de potassium — Dr O. Hale, MD — usage cardiaque seulement</span>
+      <span class="clue-quote">Solution de chlorure de potassium — Dr L. Tremblay, MD — usage cardiaque seulement</span>
     </div>
 
     <div class="lines-box">
@@ -264,7 +278,7 @@
       <div class="char-initial">S</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Sylvia Marsh</h2>
+        <h2>Sylvie Beaulieu</h2>
         <div class="char-role">Ancienne cofondatrice · 48 ans</div>
       </div>
     </div>
@@ -277,18 +291,19 @@
       <span class="secret-label">🔴 Votre secret — Vous etes la meurtriere</span>
       <p>Il y a trois jours, les avocats de Victor ont depose une nouvelle poursuite civile contre vous pour fraude financiere. Ca vous ruinerait et, pire, pourrait declencher une enquete criminelle. La prison. Vous etes venue ce week-end pour le supplier — en prive — de tout laisser tomber. Vous avez meme pense lui offrir de l'argent que vous n'avez pas.</p>
       <p>Au souper, Victor vous a regardee a travers la table et a souri. Ce sourire disait tout.</p>
-      <p>Apres le souper, quand vous avez vu votre chance, vous avez pris une fiole dans la trousse medicale laissee sans surveillance par le Dr Hale. Vous saviez ce que c'etait — vous aviez verifie. A 23 h 30, vous etes allee au bureau, comme note dans l'agenda de Victor. Vous avez tente une derniere fois. Il a ri de vous. Quand il s'est tourne vers la fenetre, vous avez dissous le contenu dans son verre de vin en remuant avec votre doigt. Vous avez parle encore quelques minutes, trouve une excuse polie, puis quitte par la porte-fenetre. Vous avez essuye votre verre avant de partir.</p>
+      <p>Apres le souper, quand vous avez vu votre chance, vous avez pris une fiole dans la trousse medicale laissee sans surveillance par le Dr Tremblay. Vous saviez ce que c'etait — vous aviez verifie. A 23 h 30, vous etes allee au bureau, comme note dans l'agenda de Victor. Vous avez tente une derniere fois. Il a ri de vous. Quand il s'est tourne vers la fenetre, vous avez dissous le contenu dans son verre de vin en remuant avec votre doigt. Vous avez parle encore quelques minutes, trouve une excuse polie, puis quitte par la porte-fenetre. Vous avez essuye votre verre avant de partir.</p>
       <p>Vous etes calme. Vous aviez un plan. Et vous ne ressentez, honnetement, pas grand-chose.</p>
     </div>
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je lisais pres du foyer jusqu'a environ onze heures, puis je suis allee me coucher. Je dors tres profondement."</div></div>
     <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous pretendez connaitre la poursuite "depuis des semaines" et avoir "tourne la page". En realite, vous avez recu les papiers il y a trois jours. Ne laissez pas ca vous echapper.</div></div>
-    <div class="detail-row"><div class="detail-label">Attention</div><div class="detail-val">L'entree d'agenda de Victor. L'empreinte. Tom. Nadia qui vous voit sortir. Restez calme — tout le monde ici a un mobile.</div></div>
+    <div class="detail-row"><div class="detail-label">Attention</div><div class="detail-val">L'entree d'agenda de Victor. L'empreinte. Denis. Nadine qui vous voit sortir. Restez calme — tout le monde ici a un mobile.</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Porte-documents mince + stylo plume.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous detenez</span>
       <p>Les papiers judiciaires. Vous devriez tenter de les cacher ou de les minimiser. S'ils sortent, ils prouvent que vous les avez recus il y a seulement trois jours — ce qui contredit votre version "j'ai tourne la page".</p>
-      <span class="clue-quote">Objet: Crane c. Marsh — avis de poursuite civile. Depose: [il y a 3 jours]. Dommages reclames: 4,7 M$ + signalement criminel.</span>
+      <span class="clue-quote">Objet: Gagnon c. Beaulieu — avis de poursuite civile. Depose: [il y a 3 jours]. Dommages reclames: 4,7 M$ + signalement criminel.</span>
     </div>
 
     <div class="lines-box">
@@ -305,7 +320,7 @@
       <div class="char-initial">R</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Rex Crane</h2>
+        <h2>Remi Gagnon</h2>
         <div class="char-role">Frere cadet de Victor · 44 ans</div>
       </div>
     </div>
@@ -322,11 +337,12 @@
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"J'etais dans ma chambre avec une bouteille et une rediffusion de hockey. Impossible de dormir."</div></div>
     <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous n'avez pas mentionne votre marche dehors (~minuit, ~20 min) ni la conversation avec Victor a 23 h.</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Vieille montre + paquet de cartes use.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous detenez</span>
       <p>Une note manuscrite recente de Victor — remise hier soir.</p>
-      <span class="clue-quote">Rex — C'est la derniere fois que je le dis. Pas un sou de plus, jamais. Ne te ridiculise pas ce week-end. — V</span>
+      <span class="clue-quote">Remi — C'est la derniere fois que je le dis. Pas un sou de plus, jamais. Ne te ridiculise pas ce week-end. — V</span>
     </div>
 
     <div class="lines-box">
@@ -343,7 +359,7 @@
       <div class="char-initial">N</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Nadia Voss</h2>
+        <h2>Nadine Lavoie</h2>
         <div class="char-role">Assistante personnelle et fiancee secrete · 31 ans</div>
       </div>
     </div>
@@ -353,18 +369,19 @@
   <div class="card">
     <div class="secret-box">
       <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
-      <p>Il y a trois mois, Victor vous a demandee en mariage. En secret. Il vous a donne une bague et a dit qu'il reglait "certaines complications personnelles" avant d'officialiser — c'est-a-dire Maggie. Il mettait a jour son testament pour tout vous laisser.</p>
-      <p>Maintenant, il est mort et vous avez une bague de fiancailles ainsi qu'un testament non signe dans vos poches. Si Maggie l'apprend, elle vous detruira.</p>
+      <p>Il y a trois mois, Victor vous a demandee en mariage. En secret. Il vous a donne une bague et a dit qu'il reglait "certaines complications personnelles" avant d'officialiser — c'est-a-dire Mado. Il mettait a jour son testament pour tout vous laisser.</p>
+      <p>Maintenant, il est mort et vous avez une bague de fiancailles ainsi qu'un testament non signe dans vos poches. Si Mado l'apprend, elle vous detruira.</p>
       <p>Aussi: vers 23 h 25, pendant votre "marche dehors", vous etes passee devant la fenetre du bureau et avez entendu des voix fortes — Victor et une femme. Vous n'avez pas pu voir a l'interieur. Vous avez continue votre chemin.</p>
     </div>
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je suis sortie prendre l'air vers 23 h 20 — peut-etre vingt minutes. J'avais besoin de penser. Ensuite, je suis allee me coucher."</div></div>
-    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous avez vu Tom Briggs derriere le lodge vers 23 h 55 — pas dans sa remise comme il le pretend. Vous avez aussi entendu Victor se disputer avec une femme juste avant.</div></div>
+    <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous avez vu Denis Poirier derriere le refuge vers 23 h 55 — pas dans sa remise comme il le pretend. Vous avez aussi entendu Victor se disputer avec une femme juste avant.</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Bague visible + petit carnet noir.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indices physiques que vous detenez</span>
       <p>Deux objets dans votre manteau:</p>
-      <span class="clue-quote">Une bague de fiancailles en diamant. Et un document plie — le testament mis a jour de Victor, non signe, qui laisse tout a "Nadia Voss".</span>
+      <span class="clue-quote">Une bague de fiancailles en diamant. Et un document plie — le testament mis a jour de Victor, non signe, qui laisse tout a "Nadine Lavoie".</span>
       <p style="font-size:0.82rem; margin-top:0.5rem;">C'est vous qui decidez quand les reveler. Ils donnent un mobile — mais montrent aussi que Victor voulait vous proteger.</p>
     </div>
 
@@ -382,7 +399,7 @@
       <div class="char-initial">T</div>
       <div class="char-info">
         <div class="section-label">Votre personnage</div>
-        <h2>Tom Briggs</h2>
+        <h2>Denis Poirier</h2>
         <div class="char-role">Gardien du chalet · 61 ans</div>
       </div>
     </div>
@@ -393,17 +410,18 @@
   <div class="card">
     <div class="secret-box">
       <span class="secret-label">🔴 Votre secret — Ne pas partager</span>
-      <p>La semaine derniere, Victor vous a dit que le lodge etait vendu. Date de cloture: 15 juin. Vous et votre femme avez six semaines pour trouver un endroit ou aller. Elle est malade — rien d'immediatement fatal, mais assez pour avoir besoin de stabilite. Vous n'avez ni plan B, ni economies.</p>
-      <p>Vers 23 h 55 hier soir, vous avez quitte la remise et marche jusqu'au lodge. Vous vous etes assis sur les marches arriere, juste pour regarder le batiment. Vous ne faisiez rien. Vous etiez assis la. Nadia Voss est passee; vous pensez qu'elle vous a vu.</p>
+      <p>La semaine derniere, Victor vous a dit que le refuge etait vendu. Date de cloture: 15 juin. Vous et votre femme avez six semaines pour trouver un endroit ou aller. Elle est malade — rien d'immediatement fatal, mais assez pour avoir besoin de stabilite. Vous n'avez ni plan B, ni economies.</p>
+      <p>Vers 23 h 55 hier soir, vous avez quitte la remise et marche jusqu'au refuge. Vous vous etes assis sur les marches arriere, juste pour regarder le batiment. Vous ne faisiez rien. Vous etiez assis la. Nadine Lavoie est passee; vous pensez qu'elle vous a vu.</p>
     </div>
 
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"J'etais dans ma remise toute la nuit, a reparer la generatrice. Elle saute sans arret."</div></div>
-    <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous n'etiez pas dans la remise toute la nuit. Vous etiez au lodge vers 23 h 55. Vous avez aussi vu Sylvia sortir par la porte-fenetre quelques minutes plus tot, seule et calme. Vous n'en avez pas parle parce que vous ne vouliez pas etre implique.</div></div>
+    <div class="detail-row"><div class="detail-label">Votre mensonge</div><div class="detail-val">Vous n'etiez pas dans la remise toute la nuit. Vous etiez au refuge vers 23 h 55. Vous avez aussi vu Sylvie sortir par la porte-fenetre quelques minutes plus tot, seule et calme. Vous n'en avez pas parle parce que vous ne vouliez pas etre implique.</div></div>
+    <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Trousseau de cles + lampe frontale.</div></div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous detenez</span>
       <p>Une annonce immobiliere imprimee par Victor, avec une note manuscrite trouvee sur votre pas de porte.</p>
-      <span class="clue-quote">Refuge Prud'homme — prix demande: 1,2 M$. Cloture: 15 juin. [Manuscrit:] Dire a Briggs d'ici la fin du mois. — VC</span>
+      <span class="clue-quote">Refuge Prud'homme — prix demande: 1,2 M$. Cloture: 15 juin. [Manuscrit:] Dire a Poirier d'ici la fin du mois. — VG</span>
     </div>
 
     <div class="lines-box">
@@ -416,7 +434,7 @@
 
 <div class="page" id="page-clues">
   <div class="card host">
-    <div class="section-label">Pour le MJ</div>
+    <div class="section-label">Pour l'hote</div>
     <h2>Cartes d'indices</h2>
     <p>Lisez-les au bon moment. Decoupez-les ou utilisez-les comme script. Ce sont des "faits" nouvellement decouverts — preuves materielles ou temoignages.</p>
   </div>
@@ -426,7 +444,7 @@
 
     <div class="clue-card">
       <span class="clue-num">Indice 1-A · Le verre de vin</span>
-      Le verre trouve pres de Victor contient un faible residu cristallin blanchatre au fond. Ce n'est pas du depot de vin. Le Dr Hale confirme que ca ressemble a une substance dissoute.
+      Le verre trouve pres de Victor contient un faible residu cristallin blanchatre au fond. Ce n'est pas du depot de vin. Le Dr Tremblay confirme que ca ressemble a une substance dissoute.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 1-B · La piece verrouillee</span>
@@ -438,7 +456,7 @@
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 1-D · L'agenda de Victor</span>
-      L'agenda de bureau de Victor, encore ouvert a vendredi: a 23 h 30, une entree indique — <em>"S.M. — bureau."</em>
+      L'agenda de bureau de Victor, encore ouvert a vendredi: a 23 h 30, une entree indique — <em>"S.B. — bureau."</em>
     </div>
   </div>
 
@@ -447,36 +465,36 @@
 
     <div class="clue-card">
       <span class="clue-num">Indice 2-A · Le medicament manquant</span>
-      Le chlorure de potassium du Dr Hale — un medicament cardiaque qu'il transporte — est a moitie vide. Il ne l'a pas utilise ce week-end. A dose suffisante dans un liquide, ca cause un arret cardiaque en moins de 30 minutes et c'est presque intraçable.
+      Le chlorure de potassium du Dr Tremblay — un medicament cardiaque qu'il transporte — est a moitie vide. Il ne l'a pas utilise ce week-end. A dose suffisante dans un liquide, ca cause un arret cardiaque en moins de 30 minutes et c'est presque indetectable.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 2-B · Un temoin dans l'ombre</span>
-      Nadia confirme avoir vu Tom Briggs derriere le lodge vers 23 h 55 — pas dans sa remise, contrairement a ce qu'il affirme.
+      Nadine confirme avoir vu Denis Poirier derriere le refuge vers 23 h 55 — pas dans sa remise, contrairement a ce qu'il affirme.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 2-C · Les papiers de poursuite</span>
-      Les documents juridiques de Sylvia Marsh sont dates d'il y a trois jours. Elle avait d'abord dit qu'elle etait au courant "depuis des semaines" et qu'elle avait "tourne la page". C'etait faux.
+      Les documents juridiques de Sylvie Beaulieu sont dates d'il y a trois jours. Elle avait d'abord dit qu'elle etait au courant "depuis des semaines" et qu'elle avait "tourne la page". C'etait faux.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 2-D · La dispute a la fenetre</span>
-      Nadia confirme avoir entendu Victor se disputer avec une femme non identifiee vers 23 h 25, depuis l'exterieur du bureau — quelques minutes avant l'entree "S.M." de 23 h 30 dans l'agenda.
+      Nadine confirme avoir entendu Victor se disputer avec une femme non identifiee vers 23 h 25, depuis l'exterieur du bureau — quelques minutes avant l'entree "S.B." de 23 h 30 dans l'agenda.
     </div>
   </div>
 
   <div class="card">
-    <div class="round-header">— Indices manche 3 — A utiliser si necessaire avant l'accusation —</div>
+    <div class="round-header">— Indices manche 3 — A utiliser si necessaire avant la manche d'accusation —</div>
 
     <div class="clue-card">
       <span class="clue-num">Indice 3-A · L'empreinte</span>
-      Une empreinte partielle a ete retrouvee sur le verre essuye. Apres comparaison, elle correspond a Sylvia Marsh.
+      Une empreinte partielle a ete retrouvee sur le verre essuye. Apres comparaison, elle correspond a Sylvie Beaulieu.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 3-B · Le dernier texto de Victor</span>
-      Dernier message texte de Victor, envoye a 23 h 28 a un contact inconnu: <em>"Elle est ici. Pathetique. Elle ne peut rien faire."</em> — envoye deux minutes avant sa rencontre prevue avec S.M.
+      Dernier message texte de Victor, envoye a 23 h 28 a un contact inconnu: <em>"Elle est ici. Pathetique. Elle ne peut rien faire."</em> — envoye deux minutes avant sa rencontre prevue avec S.B.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Indice 3-C · Tom finit par parler</span>
-      Pousse a expliquer ses deplacements, Tom Briggs admet que vers 23 h 55, alors qu'il etait assis derriere le lodge, il a vu une femme sortir par la porte-fenetre a l'est du bureau. Elle etait seule. Calme. Elle ne l'a pas remarque. Il l'identifie comme Sylvia Marsh.
+      <span class="clue-num">Indice 3-C · Denis finit par parler</span>
+      Pousse a expliquer ses deplacements, Denis Poirier admet que vers 23 h 55, alors qu'il etait assis derriere le refuge, il a vu une femme sortir par la porte-fenetre a l'est du bureau. Elle etait seule. Calme. Elle ne l'a pas remarque. Il l'identifie comme Sylvie Beaulieu.
     </div>
   </div>
 </div>
@@ -486,7 +504,7 @@
     <div class="section-label">Acte 5</div>
     <h2>L'accusation</h2>
     <p>Les chemins sont encore mauvais. Le feu tombe. C'est le moment.</p>
-    <p>Chaque joueur remplit cette feuille en prive puis la plie. Le MJ les ramasse toutes et lit chaque accusation a voix haute. La reponse la plus complete et correcte gagne.</p>
+    <p>Chaque joueur remplit cette feuille en prive puis la plie. L'hote les ramasse toutes et lit chaque accusation a voix haute. La reponse la plus complete et correcte gagne.</p>
   </div>
 
   <div class="card">
@@ -505,7 +523,7 @@
       </div>
       <div class="form-field">
         <label class="form-label">Le mobile est...</label>
-        <textarea class="form-area" placeholder="Expliquez pourquoi cette personne a tue Victor Crane..."></textarea>
+        <textarea class="form-area" placeholder="Expliquez pourquoi cette personne a tue Victor Gagnon..."></textarea>
       </div>
       <div class="form-field">
         <label class="form-label">Les preuves cles contre cette personne sont...</label>
@@ -528,59 +546,59 @@
 <div class="page" id="page-solution">
   <div class="card" style="text-align:center; padding: 1.5rem 1rem;">
     <div class="seal-icon">🔒</div>
-    <div class="section-label" style="text-align:center;">Ne pas ouvrir avant le round d'accusation</div>
+    <div class="section-label" style="text-align:center;">Ne pas ouvrir avant la manche d'accusation</div>
     <h2 style="text-align:center;">La solution</h2>
     <div class="seal-text">A lire a voix haute seulement apres toutes les accusations.</div>
   </div>
 
-  <div class="reveal-note">CLIQUEZ / TOUCHEZ CI-DESSOUS POUR REVELER — MJ SEULEMENT</div>
+  <div class="reveal-note">CLIQUEZ / TOUCHEZ CI-DESSOUS POUR REVELER — HOTE SEULEMENT</div>
   <button class="reveal-btn" onclick="revealSolution()">⚷ REVELER LA VERITE</button>
 
   <div class="solution-hidden" id="solution-content">
     <div class="card">
       <div class="section-label">Verdict</div>
-      <div class="victim-name" style="color: var(--blood);">Sylvia Marsh</div>
+      <div class="victim-name" style="color: var(--blood);">Sylvie Beaulieu</div>
       <div class="victim-dates">La meurtriere</div>
       <div class="scenario">
-        "Victor Crane a ete assassine par Sylvia Marsh, son ancienne cofondatrice, a l'aide de chlorure de potassium vole dans la trousse medicale du Dr Owen Hale — dissous dans son verre de vin vers 23 h 45 vendredi soir, dans le bureau verrouille du Refuge Prud'homme."
+        "Victor Gagnon a ete assassine par Sylvie Beaulieu, son ancienne cofondatrice, a l'aide de chlorure de potassium vole dans la trousse medicale du Dr Luc Tremblay — dissous dans son verre de vin vers 23 h 45 vendredi soir, dans le bureau verrouille du Refuge Prud'homme."
       </div>
     </div>
 
     <div class="card">
       <h3>Comment elle a fait</h3>
       <div class="timeline">
-        <div class="tl-item"><div class="tl-time">~21 h 00</div><div>Pendant le souper et un moment sans surveillance dans le corridor, Sylvia prend une dose mortelle de chlorure de potassium dans la trousse du Dr Hale. Elle s'est renseignee: incolore, presque sans gout dans le vin, provoque un arret cardiaque. Difficile a detecter sans autopsie ciblee.</div></div>
+        <div class="tl-item"><div class="tl-time">~21 h 00</div><div>Pendant le souper et un moment sans surveillance dans le corridor, Sylvie prend une dose mortelle de chlorure de potassium dans la trousse du Dr Tremblay. Elle s'est renseignee: incolore, presque sans gout dans le vin, provoque un arret cardiaque. Difficile a detecter sans autopsie ciblee.</div></div>
         <div class="tl-item"><div class="tl-time">23 h 30</div><div>Elle se rend au bureau, comme note dans l'agenda de Victor. Ultime tentative: retire la poursuite, laisse-moi vivre. Il refuse. Il rit.</div></div>
         <div class="tl-item"><div class="tl-time">23 h 45</div><div>Pendant que Victor regarde dehors, elle dissout le KCl dans son verre de vin et remue avec son doigt. Elle remplit son propre verre pour rester credible.</div></div>
         <div class="tl-item"><div class="tl-time">23 h 50</div><div>Elle trouve une excuse, dit bonne nuit, puis sort par la porte-fenetre est — qu'elle referme derriere elle (fermeture au loquet, sans verrou). Elle essuie son verre avant de partir.</div></div>
-        <div class="tl-item"><div class="tl-time">~0 h 15</div><div>Le coeur de Victor Crane s'arrete. Il est seul.</div></div>
+        <div class="tl-item"><div class="tl-time">~0 h 15</div><div>Le coeur de Victor Gagnon s'arrete. Il est seul.</div></div>
       </div>
     </div>
 
     <div class="card">
       <h3>Pourquoi elle l'a fait</h3>
-      <p>Trois jours avant le week-end, Sylvia recoit des papiers juridiques: Victor depose une poursuite civile reclamant 4,7 M$ et une recommandation criminelle pour fraude. Si ca avance, elle risque la faillite et la prison. Elle a passe six ans a se reconstruire. Victor lui enlevait tout — encore — pour le plaisir.</p>
+      <p>Trois jours avant le week-end, Sylvie recoit des papiers juridiques: Victor depose une poursuite civile reclamant 4,7 M$ et une recommandation criminelle pour fraude. Si ca avance, elle risque la faillite et la prison. Elle a passe six ans a se reconstruire. Victor lui enlevait tout — encore — pour le plaisir.</p>
       <p>Elle avait essaye toutes les options legales. Elle n'avait plus les moyens de se battre. C'etait, selon elle, la seule issue.</p>
 
       <h3>Les indices qui l'ont prouve</h3>
-      <div class="detail-row"><div class="detail-label">Agenda</div><div class="detail-val">"S.M. — bureau — 23 h 30" la place dans la piece avec la victime.</div></div>
+      <div class="detail-row"><div class="detail-label">Agenda</div><div class="detail-val">"S.B. — bureau — 23 h 30" la place dans la piece avec la victime.</div></div>
       <div class="detail-row"><div class="detail-label">Empreinte</div><div class="detail-val">Sur le verre essuye qu'elle croyait parfaitement nettoye.</div></div>
       <div class="detail-row"><div class="detail-label">Mensonge</div><div class="detail-val">Elle disait avoir "tourne la page" de la poursuite — mais les papiers dataient de trois jours.</div></div>
-      <div class="detail-row"><div class="detail-label">Temoin</div><div class="detail-val">Tom l'a vue sortir par la porte-fenetre vers 23 h 55 — calme et seule.</div></div>
-      <div class="detail-row"><div class="detail-label">Medicament</div><div class="detail-val">Le KCl vole dans la trousse d'Owen est l'arme du meurtre. Sylvia avait l'acces et la connaissance.</div></div>
+      <div class="detail-row"><div class="detail-label">Temoin</div><div class="detail-val">Denis l'a vue sortir par la porte-fenetre vers 23 h 55 — calme et seule.</div></div>
+      <div class="detail-row"><div class="detail-label">Medicament</div><div class="detail-val">Le KCl vole dans la trousse de Luc est l'arme du meurtre. Sylvie avait l'acces et la connaissance.</div></div>
       <div class="detail-row"><div class="detail-label">Dernier texto</div><div class="detail-val">"Elle est ici. Pathetique. Elle ne peut rien faire." — envoye 2 minutes avant leur rencontre. Ses derniers mots.</div></div>
     </div>
 
     <div class="card green">
       <h3>Tous les autres etaient innocents</h3>
-      <p><strong>Maggie</strong> — vraiment endormie. Le somnifere etait reel. Elle avait un mobile, pas l'occasion.<br>
-      <strong>Owen</strong> — ignorait le vol de son medicament. Endormi. Probablement coupable de rien d'autre que d'avoir subi le chantage.<br>
-      <strong>Rex</strong> — est sorti marcher en colere, mais n'a jamais entre dans le bureau. Son trou d'alibi etait suspect, pas decisif.<br>
-      <strong>Nadia</strong> — a passe devant la fenetre, a entendu des voix, puis est repartie. Elle ne savait pas ce qu'elle venait d'entendre.<br>
-      <strong>Tom</strong> — etait assis derriere le lodge, detruit a l'idee de perdre sa maison. Il a vu Sylvia partir et s'est tu par peur d'etre accuse.</p>
+      <p><strong>Mado</strong> — vraiment endormie. Le somnifere etait reel. Elle avait un mobile, pas l'occasion.<br>
+      <strong>Luc</strong> — ignorait le vol de son medicament. Endormi. Probablement coupable de rien d'autre que d'avoir subi le chantage.<br>
+      <strong>Remi</strong> — est sorti marcher en colere, mais n'a jamais entre dans le bureau. Son trou d'alibi etait suspect, pas decisif.<br>
+      <strong>Nadine</strong> — a passe devant la fenetre, a entendu des voix, puis est repartie. Elle ne savait pas ce qu'elle venait d'entendre.<br>
+      <strong>Denis</strong> — etait assis derriere le refuge, detruit a l'idee de perdre sa maison. Il a vu Sylvie partir et s'est tu par peur d'etre accuse.</p>
 
       <div class="ornament">✦ ✦ ✦</div>
-      <p style="text-align:center; font-style:italic; color: #4a6b4e;">Victor Crane a recu ce qu'il semait.<br>Reste a voir si la justice fera de meme pour Sylvia.</p>
+      <p style="text-align:center; font-style:italic; color: #4a6b4e;">Victor Gagnon a recu ce qu'il semait.<br>Reste a voir si la justice fera de meme pour Sylvie.</p>
     </div>
   </div>
 </div>
