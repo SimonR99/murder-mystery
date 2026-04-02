@@ -12,3 +12,12 @@
 ## Note
 
 Ces codes sont utilises pour debloquer les fiches personnages dans la page du jeu.
+
+## Matchup joueurs
+
+- Valerie -> Mado (Marianne "Mado" Gagnon)
+- Maxime -> Luc (Dr Luc Tremblay)
+- Elisabeth -> Sylvie Beaulieu
+- Daniel -> Remi Gagnon
+- Guido -> Denis Poirier
+- Rose -> Nadine Lavoie
