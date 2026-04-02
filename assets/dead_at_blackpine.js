@@ -1,10 +1,12 @@
   const PAGE_CODES = {
+    host: 'PATATE',
     maggie: 'MADO-49',
     owen: 'LUC-54',
     sylvia: 'SYLVIE-48',
     rex: 'REMI-44',
     nadia: 'NADINE-31',
-    tom: 'DENIS-61'
+    tom: 'DENIS-61',
+    solution: 'PATATE'
   };
 
   const unlockedPages = new Set(
