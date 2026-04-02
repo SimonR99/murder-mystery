@@ -9,6 +9,8 @@
     solution: 'PATATE'
   };
 
+  const MASTER_PASSWORD = 'PATATE';
+
   const unlockedPages = new Set(
     JSON.parse(sessionStorage.getItem('unlockedPages') || '[]')
   );
@@ -22,7 +24,8 @@
         return;
       }
 
-      if (entered.trim().toUpperCase() !== expectedCode) {
+      const normalized = entered.trim().toUpperCase();
+      if (normalized !== expectedCode && normalized !== MASTER_PASSWORD) {
         window.alert('Code invalide.');
         return;
       }
