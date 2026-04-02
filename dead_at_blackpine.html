@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dead at Blackpine Lodge — A Murder Mystery</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/dead_at_blackpine.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-ornament">A Murder Mystery for 8–9 Players</div>
+  <h1 class="header-title"><span>Dead</span> at Blackpine Lodge</h1>
+  <div class="header-sub">One night. No signal. No way out.</div>
+  <div class="header-divider"><span>✦</span></div>
+</header>
+
+<nav class="nav-wrap">
+  <div class="nav" role="tablist">
+    <button class="nav-btn host-btn active" onclick="showPage('intro')" id="tab-intro">📜 Intro</button>
+    <button class="nav-btn host-btn" onclick="showPage('host')" id="tab-host">🕯 Host Guide</button>
+    <button class="nav-btn" onclick="showPage('maggie')" id="tab-maggie">Maggie</button>
+    <button class="nav-btn" onclick="showPage('owen')" id="tab-owen">Owen</button>
+    <button class="nav-btn" onclick="showPage('sylvia')" id="tab-sylvia">Sylvia</button>
+    <button class="nav-btn" onclick="showPage('rex')" id="tab-rex">Rex</button>
+    <button class="nav-btn" onclick="showPage('nadia')" id="tab-nadia">Nadia</button>
+    <button class="nav-btn" onclick="showPage('tom')" id="tab-tom">Tom</button>
+    <button class="nav-btn" onclick="showPage('cleo')" id="tab-cleo">Cleo</button>
+    <button class="nav-btn" onclick="showPage('felix')" id="tab-felix">Felix</button>
+    <button class="nav-btn" onclick="showPage('jules')" id="tab-jules">Jules ★9</button>
+    <button class="nav-btn host-btn" onclick="showPage('clues')" id="tab-clues">🔍 Clues</button>
+    <button class="nav-btn host-btn" onclick="showPage('accuse')" id="tab-accuse">⚖ Accusation</button>
+    <button class="nav-btn host-btn" onclick="showPage('solution')" id="tab-solution">🔒 Solution</button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════
+     INTRO PAGE
+══════════════════════════════════════════ -->
+<div class="page active" id="page-intro">
+  <div class="intro-img">🦉</div>
+
+  <div class="card gold">
+    <div class="section-label">The Setting</div>
+    <div class="victim-name">Blackpine Lodge</div>
+    <div class="victim-dates">A Remote Cabin — Somewhere in the Quebec Wilderness</div>
+    <div class="scenario">
+      It is Saturday morning. The fire has gone cold. The roads are iced over. 
+      The phones have no signal. Victor Crane — your host, your rival, your benefactor, your tormentor — 
+      was found dead in his study at 7:15am by the caretaker, Tom Briggs. 
+      A locked door. A half-empty wine glass. And eight people who all had reason to want him gone.
+    </div>
+    <p>The nearest town is 40 kilometers away. No one is coming. You will need to figure this out yourselves.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">The Victim</div>
+    <div class="victim-name">Victor Crane</div>
+    <div class="victim-dates">Age 52 · Tech Entrepreneur · Owner of Blackpine Lodge</div>
+    <p>Self-made, brilliant, ruthless. Victor built a tech empire and made enemies at every step. He invited everyone here this weekend for what he called a <em>"farewell gathering."</em> Nobody knew what he meant. Now nobody can ask him.</p>
+    <p>He was found slumped in the leather armchair in his locked study. A wine glass beside him. Cause of death: acute cardiac arrest — likely induced by poisoning.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">The Suspects — 8 Players</div>
+    <h3>Who's Who</h3>
+    <div class="player-list">
+      <div class="player-item">
+        <strong>Margaret "Maggie" Crane</strong>
+        <span>Victor's wife</span>
+      </div>
+      <div class="player-item">
+        <strong>Dr. Owen Hale</strong>
+        <span>Physician & old friend</span>
+      </div>
+      <div class="player-item">
+        <strong>Sylvia Marsh</strong>
+        <span>Former co-founder</span>
+      </div>
+      <div class="player-item">
+        <strong>Rex Crane</strong>
+        <span>Victor's brother</span>
+      </div>
+      <div class="player-item">
+        <strong>Nadia Voss</strong>
+        <span>Personal assistant</span>
+      </div>
+      <div class="player-item">
+        <strong>Tom Briggs</strong>
+        <span>Cabin caretaker</span>
+      </div>
+      <div class="player-item">
+        <strong>Cleo Park</strong>
+        <span>Investigative journalist</span>
+      </div>
+      <div class="player-item">
+        <strong>Felix Laurent</strong>
+        <span>Business investor</span>
+      </div>
+    </div>
+    <p style="font-size:0.82rem; color:#777; margin-top:0.5rem;"><span class="tag gold">9th Player</span> Add <strong>Jules Fontaine</strong> (Victor's lawyer) for a 9-player game — see the Jules tab.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">How to Play</div>
+    <h3>The Structure</h3>
+    <div class="detail-row"><div class="detail-label">Setup</div><div class="detail-val">Host reads the opening scene aloud. Distribute character booklets (one per player). Allow 10 minutes to read privately.</div></div>
+    <div class="detail-row"><div class="detail-label">Round 1</div><div class="detail-val"><strong>First Impressions</strong> (~35 min) — Each player introduces their character publicly. Everyone reveals their physical clue. Host reads Round 1 clue cards.</div></div>
+    <div class="detail-row"><div class="detail-label">Round 2</div><div class="detail-val"><strong>Interrogation</strong> (~35 min) — Open questioning. Each player may ask any other player two direct questions. You must answer — but you may deflect or mislead once per round (no lying about physical clues you hold). Host reads Round 2 clue cards.</div></div>
+    <div class="detail-row"><div class="detail-label">Round 3</div><div class="detail-val"><strong>The Accusation</strong> (~20 min) — Each player secretly writes: who, how, and why. Host collects and reads aloud. Most complete correct answer wins.</div></div>
+    <div class="detail-row"><div class="detail-label">Total</div><div class="detail-val"><strong>~90–120 minutes</strong></div></div>
+
+    <h3>The Rules</h3>
+    <p>✦ Stay in character as much as possible — it's more fun for everyone.<br>
+    ✦ You may lie about your secret, your alibi, your feelings — but not about your physical clue.<br>
+    ✦ The murderer should not confess until the accusation round.<br>
+    ✦ Have drinks. Use candles. Lean into the atmosphere.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HOST GUIDE
+══════════════════════════════════════════ -->
+<div class="page" id="page-host">
+  <div class="card host">
+    <div class="section-label">For the Host's Eyes Only</div>
+    <h2>Host Guide</h2>
+    <p>As host, you know who the murderer is. Your role is to facilitate, not to play a character. You may play Jules (the 9th optional character) if you have 9 players and want to join in.</p>
+  </div>
+
+  <div class="card">
+    <h3>Before the Game</h3>
+    <p>Print each character's page and fold it so the "Your Secret" section faces inward — or simply have each player navigate to their own tab privately. Make sure each player only reads their own character sheet before Round 1.</p>
+    <p>Prepare one "physical clue" per character — a written note, printout, or object to represent it. These are listed in each character tab. You can write them on index cards.</p>
+  </div>
+
+  <div class="card">
+    <h3>Opening Scene — Read This Aloud</h3>
+    <div class="scenario">
+      "Last night's dinner was long and the wine flowed freely. Victor toasted to old friendships and new beginnings. Everyone went to bed at their own hour.
+      <br><br>
+      This morning, at 7:15am, Tom Briggs — the caretaker — noticed that the light in the study had been on all night. He knocked. No answer. He used his spare key and found Victor in the armchair, still dressed, cold to the touch. The wine glass on the side table was half full.
+      <br><br>
+      Dr. Owen Hale confirmed it: Victor Crane is dead. The cause is not natural. The roads are ice. The phones are dead. You are all here. And one of you did this."
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Key Facts to Keep Straight</h3>
+    <div class="detail-row"><div class="detail-label">Time of Death</div><div class="detail-val">Approximately midnight Friday. Victor was last seen alive at ~11pm.</div></div>
+    <div class="detail-row"><div class="detail-label">Cause of Death</div><div class="detail-val">Potassium chloride (KCl) dissolved in his wine. Causes cardiac arrest. Colorless and nearly tasteless in wine.</div></div>
+    <div class="detail-row"><div class="detail-label">The Locked Door</div><div class="detail-val">The study was locked from the inside. The key was in Victor's own jacket pocket. (Sylvia exited through the French window, which latched behind her — Tom can confirm the window was ajar this morning.)</div></div>
+    <div class="detail-row"><div class="detail-label">The Murderer</div><div class="detail-val"><strong>SYLVIA MARSH.</strong> She stole KCl from Owen's bag, met Victor at 11:30pm, poisoned his wine when he turned to the window, and exited via the side French door.</div></div>
+    <div class="detail-row"><div class="detail-label">False Alibi</div><div class="detail-val">Tom Briggs also lied — he WAS near the lodge at 11:30pm (Nadia saw him). But he's innocent; he was just checking on the building out of grief over the sale.</div></div>
+
+    <h3>Tips for a Great Game</h3>
+    <p>✦ If Round 2 is slow, introduce one of the Round 3 clue cards early.<br>
+    ✦ Encourage players to move around the room as their characters.<br>
+    ✦ If someone accidentally reveals the murderer early, have Sylvia deny it convincingly — it's part of her character!<br>
+    ✦ The accusation round works best with dramatic readings aloud by each player.</p>
+  </div>
+
+  <div class="card">
+    <h3>Victor's Final Night — Timeline</h3>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-time">7:00pm</div><div>Everyone arrives. Drinks on the porch. Victor is charming and vague about the weekend's purpose.</div></div>
+      <div class="tl-item"><div class="tl-time">8:30pm</div><div>Dinner. Victor makes a toast: <em>"To getting what you deserve."</em> Tension simmers.</div></div>
+      <div class="tl-item"><div class="tl-time">9:00pm</div><div>Sylvia slips into the hallway and takes KCl from Owen's unattended medical bag.</div></div>
+      <div class="tl-item"><div class="tl-time">10:00pm</div><div>Maggie confronts Victor privately. He brushes her off. She goes to bed, visibly upset.</div></div>
+      <div class="tl-item"><div class="tl-time">10:30pm</div><div>Felix discovers the bank statement on his phone and becomes very quiet.</div></div>
+      <div class="tl-item"><div class="tl-time">11:00pm</div><div>Rex asks Victor for money. Victor gives him the handwritten note and dismisses him coldly.</div></div>
+      <div class="tl-item"><div class="tl-time">11:15pm</div><div>Nadia steps outside for a walk. She passes the study window and hears raised voices — Victor and Sylvia.</div></div>
+      <div class="tl-item"><div class="tl-time">11:28pm</div><div>Victor texts an unknown contact: <em>"She's here. Pathetic. Nothing she can do."</em></div></div>
+      <div class="tl-item"><div class="tl-time">11:30pm</div><div>Sylvia meets Victor in the study (noted in his calendar: "S.M. — study"). He refuses to drop the lawsuit.</div></div>
+      <div class="tl-item"><div class="tl-time">11:45pm</div><div>Victor turns to the window. Sylvia dissolves KCl into his wine. He returns and drinks.</div></div>
+      <div class="tl-item"><div class="tl-time">11:50pm</div><div>Sylvia makes an excuse and leaves via the French window. She wipes her own glass clean.</div></div>
+      <div class="tl-item"><div class="tl-time">12:05am</div><div>Tom Briggs — walking near the lodge — sees Sylvia exit calmly. He says nothing.</div></div>
+      <div class="tl-item"><div class="tl-time">12:15am</div><div>Victor Crane's heart stops. He slumps in the armchair.</div></div>
+      <div class="tl-item"><div class="tl-time">7:15am</div><div>Tom finds the body. The game begins.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: MAGGIE
+══════════════════════════════════════════ -->
+<div class="page" id="page-maggie">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">M</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Margaret "Maggie" Crane</h2>
+        <div class="char-role">Victor's Wife · Age 49</div>
+      </div>
+    </div>
+    <p>Poised, composed, and quietly devastating. You've been Victor's wife for 22 years — through the startup years, the fortune, the affairs, and the cruelty dressed up as ambition. You run a charity foundation and you are very, very good at appearing unbothered.</p>
+    <p>You came this weekend because Victor demanded you be here. You still don't know why. Or rather — you're afraid you do.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>Three days ago, you found a note in Victor's coat pocket. He is planning to divorce you this week and he has already drafted a new will cutting you out of everything. You confronted him Friday evening before dinner. He said: <em>"You'll be comfortable. That's more than you earned."</em></p>
+      <p>You did not kill him. But you are not grieving. And you are terrified this looks like motive.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I went to bed at around ten o'clock. I took a sleeping pill — I've been stressed. I didn't hear anything."</div></div>
+    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You heard Victor and Rex arguing at around 11pm from your bedroom. Rex sounded desperate.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>A crumpled note, found in Victor's coat pocket. You've been carrying it all weekend.</p>
+      <span class="clue-quote">M — See my lawyer Monday. Don't make this harder than it needs to be. — V</span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">You may show this to others, or pretend you don't have it. Your choice.</p>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I have been married to this man for twenty-two years. I know what grief looks like. This isn't it.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Victor had many enemies. I was simply the one who had to live with him.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: OWEN
+══════════════════════════════════════════ -->
+<div class="page" id="page-owen">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">O</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Dr. Owen Hale</h2>
+        <div class="char-role">Physician & Victor's Oldest Friend · Age 54</div>
+      </div>
+    </div>
+    <p>Warm, professorial, slightly rumpled. You've known Victor since university. You were best men at each other's weddings. You've watched him become someone you no longer recognize — and you've stayed, because leaving felt like losing something of yourself too.</p>
+    <p>You are also the first person who examined the body this morning. You recognized the symptoms immediately. And now you're very, very afraid.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>In 2019, a patient of yours died from a prescription error you covered up. Victor found out — a mutual friend at the hospital told him. For five years, Victor has held this over you, occasionally asking for "favors": access to your prescriptions, medical records of people he wanted leverage on. You complied. You hated yourself for it.</p>
+      <p>This morning you noticed that your bottle of potassium chloride solution — a legitimate heart medication you carry for patients — is half empty. You didn't use it. Someone took it.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was reading in the armchair by the window in my room. I may have dozed off after midnight. I read until very late."</div></div>
+    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You know exactly how potassium chloride kills. In high doses dissolved in liquid, it stops the heart and leaves almost no trace unless you know to look. You did not tell the others this is what killed Victor — you said only "poisoning."</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>Your medical bag — and specifically, the KCl bottle inside it. You can show it to others. It is half empty, and you cannot explain why.</p>
+      <span class="clue-quote">Potassium Chloride Sol. — Dr. O. Hale, MD — FOR CARDIAC USE ONLY</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I've known Victor longer than anyone in this room. He was not a good man. But he was my friend, and someone took him from us.</div>
+      <div class="line-item" style="margin-top:0.4rem;">I can tell you what killed him. I cannot tell you who.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: SYLVIA
+══════════════════════════════════════════ -->
+<div class="page" id="page-sylvia">
+  <div class="card" style="border-top-color: var(--blood);">
+    <div class="char-header">
+      <div class="char-initial">S</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Sylvia Marsh</h2>
+        <div class="char-role">Former Co-Founder · Age 48</div>
+      </div>
+    </div>
+    <p>Brilliant. Controlled. You and Victor built the company from nothing in a borrowed office in 2009. He pushed you out in 2018 through a series of maneuvers that were, at minimum, deeply unethical — and possibly criminal on his part.</p>
+    <p>You've spent six years rebuilding. You thought you were close to being free of him. Then, three days ago, the papers arrived.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — You Are the Murderer</span>
+      <p>Three days ago: Victor's lawyers filed a new civil suit against you, alleging financial fraud. It would bankrupt you and, worse, trigger a criminal investigation. Prison. You came this weekend to beg him — quietly, privately — to drop it. You even considered offering him money you don't have.</p>
+      <p>At dinner, Victor looked at you across the table and smiled. That smile said everything.</p>
+      <p>After dinner, when you saw your chance, you took a vial from Dr. Hale's unattended medical bag. You knew what it was — you looked it up. At 11:30pm, you went to the study as Victor had noted in his calendar. You tried one last time. He laughed at you. When he turned to the window, you dissolved the contents into his wine glass and stirred it with your finger. Then you talked for a few minutes longer, made a polite excuse, and left through the French door. You wiped your wine glass before you left.</p>
+      <p>You are calm. You planned this. You feel, honestly, very little.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I sat by the fireplace reading until around eleven, then went straight to bed. I sleep very soundly."</div></div>
+    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You claim you've known about the lawsuit "for weeks and had already moved on." In fact, you received the papers three days ago. Don't let this slip.</div></div>
+    <div class="detail-row"><div class="detail-label">Watch Out For</div><div class="detail-val">Victor's calendar entry. The fingerprint. Tom. Nadia seeing you leave. Stay calm — every other person here had motive too.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>The legal papers. You should try to hide them or downplay them. If discovered, they prove you received them only three days ago — contradicting your "I've moved on" story.</p>
+      <span class="clue-quote">RE: Crane v. Marsh — Notice of Civil Suit. Filed: [3 days ago]. Damages sought: $4.7M + criminal referral.</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">Victor and I had a complicated history. I won't pretend otherwise. But I haven't been part of his world in years. I came this weekend out of — I suppose — habit.</div>
+      <div class="line-item" style="margin-top:0.4rem;">We should focus on who had something to gain. I had already made my peace with the past.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: REX
+══════════════════════════════════════════ -->
+<div class="page" id="page-rex">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">R</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Rex Crane</h2>
+        <div class="char-role">Victor's Younger Brother · Age 44</div>
+      </div>
+    </div>
+    <p>Charming, a little disheveled, with the kind of easy laugh that used to get you out of everything. You and Victor grew up scrapping for the same scraps, and somehow he got everything. You're not bitter — you just have very large debts and very little time.</p>
+    <p>You had a conversation with Victor at 11pm last night. You haven't mentioned this yet.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>You owe €60,000 to people who are not patient. Victor was your last option. He cut you from the will last year after you borrowed and never repaid $80,000. At 11pm, you went to him and asked one more time — not for charity, just a loan. He handed you the note and told you to go to bed.</p>
+      <p>You did not kill him. But you did leave the card game with Felix briefly around midnight — you went for a walk, furious, for about 20 minutes. You didn't mention this because it looks bad.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"Felix and I played cards by the fire all night, easy until two in the morning. Ask him."</div></div>
+    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You didn't mention the gap in the card game (~midnight, ~20 min) or the conversation with Victor at 11pm.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>A handwritten note, clearly recent, from Victor — handed to you last night.</p>
+      <span class="clue-quote">Rex — This is the last time I'll say it. Not one more cent, not ever. Don't embarrass yourself this weekend. — V</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">He was my brother. I know what everyone thinks. But I loved him, even when he made it very difficult.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Felix will tell you we were up playing cards all night. It was a good game, considering.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: NADIA
+══════════════════════════════════════════ -->
+<div class="page" id="page-nadia">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">N</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Nadia Voss</h2>
+        <div class="char-role">Personal Assistant & Secret Fiancée · Age 31</div>
+      </div>
+    </div>
+    <p>Efficient, professional, quietly devoted. You've worked for Victor for four years. Everyone in this room knows you as the assistant. No one — except Victor — knows the rest.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>Three months ago, Victor proposed. Secretly. He gave you a ring and said he was sorting out "some personal complications" before he could make it public — meaning Maggie. He had been updating his will to leave you everything.</p>
+      <p>Now he's dead and you are holding an engagement ring and an unsigned will, and if Maggie finds out, she will destroy you.</p>
+      <p>Also: at midnight, during your "walk outside," you passed the study window and heard raised voices — Victor and a woman. You couldn't see inside. You kept walking.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I stepped outside for some air around midnight — maybe twenty minutes. I needed to think. Then I went to bed."</div></div>
+    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">You saw Tom Briggs near the main lodge at 11:30pm — not in his shed as he claims. You also heard Victor arguing with a woman around midnight.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clues You Hold</span>
+      <p>Two things in your coat pocket:</p>
+      <span class="clue-quote">A diamond engagement ring. And a folded document — Victor's updated will, unsigned, leaving everything to "Nadia Voss."</span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">You decide when and whether to reveal these. They prove motive — but also mean Victor intended to protect you.</p>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I've worked for Victor for four years. I knew his schedule, his habits, his moods. I knew him better than most people here.</div>
+      <div class="line-item" style="margin-top:0.4rem;">I need some air. Can we open a window?</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: TOM
+══════════════════════════════════════════ -->
+<div class="page" id="page-tom">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">T</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Tom Briggs</h2>
+        <div class="char-role">Cabin Caretaker · Age 61</div>
+      </div>
+    </div>
+    <p>Quiet. Weathered. You've taken care of Blackpine Lodge for fifteen years. You know every creak in every floorboard, every shortcut through the woods. This place is your home — the cottage at the edge of the property where you and your wife have lived since your kids left.</p>
+    <p>You found the body this morning. You wish you hadn't.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>Last week, Victor told you the lodge had been sold. Closing date: February 15th. You and your wife have six weeks to find somewhere to go. She has been sick — nothing serious yet, but serious enough that she needs routine and stability. You have nowhere to go and no savings.</p>
+      <p>At 11:30pm last night, you left your shed and walked to the main lodge. You sat on the back steps for a while, just looking at the building. You weren't doing anything. You were just sitting. Nadia Voss walked past and you think she saw you.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was in my shed all night, working on the generator. It's been cutting out."</div></div>
+    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You weren't in your shed all night. You were at the lodge at 11:30pm. You also saw Sylvia exit through the French window at about 12:05am, alone and calm. You haven't mentioned this because you didn't want to be involved.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>A real estate listing, printed by Victor, with a handwritten note you found on your doorstep.</p>
+      <span class="clue-quote">Blackpine Lodge — Asking: $1.2M. Closing: Feb 15. [Handwritten:] Tell Briggs by end of month. — VC</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I've been here fifteen years. I never asked for much. I don't know why anyone would do this.</div>
+      <div class="line-item" style="margin-top:0.4rem">The French window on the east side of the study was ajar this morning. Thought it was strange.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: CLEO
+══════════════════════════════════════════ -->
+<div class="page" id="page-cleo">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">C</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Cleo Park</h2>
+        <div class="char-role">Investigative Journalist · Age 36</div>
+      </div>
+    </div>
+    <p>Sharp, observant, and very hard to lie to. You work for a Montreal publication and you've been digging into Victor Crane's company finances for eight months. You followed the money. The money went somewhere it shouldn't have.</p>
+    <p>Victor invited you this weekend. You came because it seemed like a story. It turned out to be more of a story than you expected.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>Victor invited you here specifically to offer you a bribe — money to kill your investigation. Over drinks on Friday evening, he made the offer clearly. You recorded him doing it.</p>
+      <p>You haven't decided whether to take the money. You were trying to reach your editor Friday night to tell her the story was ready to publish — before you had a chance to be tempted. You had no signal. You gave up around midnight and went to bed.</p>
+      <p>Your motive for killing Victor would be: he finds out you're publishing the story and threatens to ruin you. Except you didn't kill him. He was going to make you rich.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I was in my room trying to call my editor. The signal is useless out here. I gave up and went to sleep around midnight."</div></div>
+    <div class="detail-row"><div class="detail-label">What You Know</div><div class="detail-val">Felix Laurent was investigating Victor too — you noticed him on his phone at dinner, his face going very pale at something he read.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>A voice memo on your phone, recorded Friday evening. You can play it for others.</p>
+      <span class="clue-quote">[Victor's voice, clearly:] "Name your price, Cleo. Everyone has one. I've found that out about everyone I've ever met."</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I'm going to be honest with you all — I'm a journalist and this is now the most important story I've ever been inside. I'll be asking questions. I suggest you answer them.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Victor Crane had an interesting relationship with the truth. I've been documenting it for eight months.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: FELIX
+══════════════════════════════════════════ -->
+<div class="page" id="page-felix">
+  <div class="card">
+    <div class="char-header">
+      <div class="char-initial">F</div>
+      <div class="char-info">
+        <div class="section-label">Your Character</div>
+        <h2>Felix Laurent</h2>
+        <div class="char-role">Business Investor · Age 41</div>
+      </div>
+    </div>
+    <p>Polished. Controlled. Montreal old money with a new-money hustle. Six months ago, you invested $2 million in Victor's latest venture — a deal you believed in, a deal you shook hands on with genuine excitement.</p>
+    <p>Two days ago, you found out where your money actually went.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>While reviewing your accounts two days ago, you found a paper trail: your $2 million had been quietly moved into Victor's personal offshore account in the Cayman Islands. Fraud. Not negligence — deliberate, calculated theft. You printed the bank statement. You came this weekend intending to confront him quietly and demand repayment. You managed to stay composed through dinner.</p>
+      <p>At approximately midnight, you left the card game with Rex "for a smoke." You actually went to look for Victor. His study was dark and quiet. You stood outside for ten minutes, then went back inside. You found Rex asleep over his cards.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"Rex and I played cards until well past two. Neither of us slept much."</div></div>
+    <div class="detail-row"><div class="detail-label">Your Lie</div><div class="detail-val">You left the card game for about 20 minutes around midnight. You didn't go inside the study. But you were there.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clue You Hold</span>
+      <p>A printed bank statement from two days ago.</p>
+      <span class="clue-quote">Transfer: $2,000,000.00 → VC Personal Holdings (Cayman Islands). Ref: "Investment Reallocation." Date: [6 months ago].</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">Victor was a visionary. He was also a man who believed rules didn't apply to him. I have documentation of that belief.</div>
+      <div class="line-item" style="margin-top:0.4rem;">Rex, tell them what time we went to bed. Actually — don't. It doesn't matter.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CHARACTER: JULES (9th optional)
+══════════════════════════════════════════ -->
+<div class="page" id="page-jules">
+  <div class="card gold">
+    <div class="section-label">Optional 9th Character</div>
+    <div class="char-header">
+      <div class="char-initial">J</div>
+      <div class="char-info">
+        <h2>Jules Fontaine</h2>
+        <div class="char-role">Victor's Personal Lawyer · Age 45</div>
+      </div>
+    </div>
+    <p>You drove up Saturday morning when you couldn't reach Victor by phone. You had business to discuss — specifically, a will that needed to be signed this weekend. You did not expect to find him dead.</p>
+    <p>As his lawyer, you know things others don't. You are not a suspect — you weren't here last night — but you carry information that could change everything.</p>
+  </div>
+
+  <div class="card">
+    <div class="secret-box">
+      <span class="secret-label">🔴 Your Secret — Do Not Share</span>
+      <p>You were supposed to have Victor sign a new will this weekend. It leaves his entire estate to Nadia Voss and cuts Maggie out entirely. You also know every lawsuit Victor has filed or threatened — including the devastating new case against Sylvia Marsh, which you personally drafted. You felt uncomfortable with it. It felt like it was designed to destroy her, not recover damages.</p>
+    </div>
+
+    <div class="detail-row"><div class="detail-label">Your Alibi</div><div class="detail-val">"I only arrived this morning. I was in Montreal last night — you can check the hotel."</div></div>
+    <div class="detail-row"><div class="detail-label">Your Role</div><div class="detail-val">You are a <em>truth arbiter</em>. When other players make legal or factual claims, you can confirm or deny them. Use this power carefully.</div></div>
+
+    <div class="clue-box">
+      <span class="clue-label">📄 Physical Clues You Hold</span>
+      <span class="clue-quote">Victor's unsigned will (leaving everything to Nadia Voss). And a full list of active lawsuits — including "Crane v. Marsh" with full details.</span>
+    </div>
+
+    <div class="lines-box">
+      <span class="lines-label">💬 Suggested Opening Lines</span>
+      <div class="line-item">I'm here in a professional capacity. Victor's affairs are complex. I'll share what's relevant — and only what's relevant.</div>
+      <div class="line-item" style="margin-top:0.4rem;">There's a will. It hasn't been signed. Which means the estate reverts to the previous one. This changes things for several of you.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     CLUE CARDS
+══════════════════════════════════════════ -->
+<div class="page" id="page-clues">
+  <div class="card host">
+    <div class="section-label">For the Host</div>
+    <h2>Clue Cards</h2>
+    <p>Read these aloud at the appropriate moment. Tear them apart, or use them as a script. These are discovered "facts" — physical evidence or testimony that has just come to light.</p>
+  </div>
+
+  <div class="card">
+    <div class="round-header">— Round 1 Clues — Reveal After Introductions —</div>
+
+    <div class="clue-card">
+      <span class="clue-num">Clue 1-A · The Wine Glass</span>
+      The wine glass found beside Victor contains a faint white crystalline residue at the bottom. It is not wine sediment. Dr. Hale confirms it appears consistent with a dissolved substance.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 1-B · The Locked Room</span>
+      The study door was locked from the inside. The only key was in Victor's own jacket pocket. However, the French window on the east wall was found slightly ajar this morning.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 1-C · A Second Glass</span>
+      A second wine glass was found on the bookshelf near the window — wiped clean. Someone else was in that room with Victor. Someone who didn't want to leave a trace.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 1-D · Victor's Calendar</span>
+      Victor's desk calendar, still open to Friday: at 11:30pm, an entry reads — <em>"S.M. — study."</em>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="round-header">— Round 2 Clues — Reveal After First Interrogation —</div>
+
+    <div class="clue-card">
+      <span class="clue-num">Clue 2-A · The Missing Medication</span>
+      Dr. Hale's potassium chloride solution — a cardiac medication he carries for patients — is half empty. He did not use it this weekend. In a sufficient dose, dissolved in liquid, it causes cardiac arrest within 30 minutes and is nearly untraceable.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 2-B · A Witness in the Dark</span>
+      Nadia confirms she saw Tom Briggs standing near the back of the main lodge at approximately 11:30pm — not in his shed as he claimed.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 2-C · The Lawsuit Papers</span>
+      Sylvia Marsh's legal papers are dated three days ago. She initially said she had "known for weeks and moved on." This was not true.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 2-D · A Gap in the Alibi</span>
+      Rex confirms that Felix Laurent left the card game "for a smoke" between approximately 11:45pm and 12:15am. He was gone for about half an hour.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="round-header">— Round 3 Clues — Use if Needed Before Accusation —</div>
+
+    <div class="clue-card">
+      <span class="clue-num">Clue 3-A · The Fingerprint</span>
+      A partial fingerprint was found on the wiped wine glass. After careful comparison — it matches Sylvia Marsh.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 3-B · Victor's Last Text</span>
+      Victor's final text message, sent at 11:28pm to an unknown contact: <em>"She's here. Pathetic. Nothing she can do."</em> — sent two minutes before the calendar entry for his meeting with S.M.
+    </div>
+    <div class="clue-card">
+      <span class="clue-num">Clue 3-C · Tom Finally Speaks</span>
+      When pressed about his movements, Tom Briggs admits: at approximately 12:05am, while sitting behind the lodge, he saw a woman exit through the French window on the east side of the study. She was alone. She appeared calm. She did not notice him. He recognizes her as Sylvia Marsh.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ACCUSATION SHEET
+══════════════════════════════════════════ -->
+<div class="page" id="page-accuse">
+  <div class="card">
+    <div class="section-label">Round 3</div>
+    <h2>The Accusation</h2>
+    <p>The roads are still closed. The fire is low. It is time.</p>
+    <p>Each player fills out this form privately and folds it. The host collects them all and reads each one aloud. The most complete correct answer wins.</p>
+  </div>
+
+  <div class="card">
+    <div class="accuse-form">
+      <div class="form-field">
+        <label class="form-label">Your Name (as yourself, not your character)</label>
+        <input class="form-line" type="text" placeholder="___________________________________________">
+      </div>
+      <div class="form-field">
+        <label class="form-label">I accuse…</label>
+        <input class="form-line" type="text" placeholder="___________________________________________">
+      </div>
+      <div class="form-field">
+        <label class="form-label">The method of murder was…</label>
+        <input class="form-line" type="text" placeholder="___________________________________________">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Their motive was…</label>
+        <textarea class="form-area" placeholder="Explain why this person killed Victor Crane..."></textarea>
+      </div>
+      <div class="form-field">
+        <label class="form-label">The key evidence against them is…</label>
+        <textarea class="form-area" placeholder="Which clues point to your suspect?"></textarea>
+      </div>
+    </div>
+    <button class="print-btn" onclick="window.print()">⎙ Print This Sheet</button>
+  </div>
+
+  <div class="card gold">
+    <h3>Scoring</h3>
+    <div class="detail-row"><div class="detail-label">3 points</div><div class="detail-val">Correct murderer</div></div>
+    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Correct method</div></div>
+    <div class="detail-row"><div class="detail-label">2 points</div><div class="detail-val">Correct motive</div></div>
+    <div class="detail-row"><div class="detail-label">1 point each</div><div class="detail-val">Each correctly identified piece of key evidence (max 3)</div></div>
+    <div class="detail-row"><div class="detail-label">Bonus</div><div class="detail-val">+1 if you also correctly name the false alibi that helped crack the case</div></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SOLUTION
+══════════════════════════════════════════ -->
+<div class="page" id="page-solution">
+  <div class="card" style="text-align:center; padding: 1.5rem 1rem;">
+    <div class="seal-icon">🔒</div>
+    <div class="section-label" style="text-align:center;">Do Not Open Until Accusation Round</div>
+    <h2 style="text-align:center;">The Solution</h2>
+    <div class="seal-text">Read aloud only after all accusations have been made.</div>
+  </div>
+
+  <div class="reveal-note">CLICK / TAP BELOW TO REVEAL — HOST ONLY</div>
+  <button class="reveal-btn" onclick="revealSolution()">⚷ UNSEAL THE TRUTH</button>
+
+  <div class="solution-hidden" id="solution-content">
+    <div class="card">
+      <div class="section-label">The Verdict</div>
+      <div class="victim-name" style="color: var(--blood);">Sylvia Marsh</div>
+      <div class="victim-dates">The Murderer</div>
+      <div class="scenario">
+        "Victor Crane was murdered by Sylvia Marsh, his former co-founder, using potassium chloride stolen from Dr. Owen Hale's medical bag — dissolved in his wine glass at approximately 11:45pm on Friday night, in the locked study of Blackpine Lodge."
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>How She Did It</h3>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-time">~9:00pm</div><div>While the group was at dinner and the hallway unattended, Sylvia removed a lethal quantity of potassium chloride from Dr. Hale's medical bag. She had looked it up: colorless, tasteless in wine, causes cardiac arrest. Nearly impossible to detect without a targeted autopsy.</div></div>
+        <div class="tl-item"><div class="tl-time">11:30pm</div><div>She went to the study as Victor had noted in his calendar. She made one final appeal: drop the lawsuit, let her live her life. He refused. He laughed.</div></div>
+        <div class="tl-item"><div class="tl-time">11:45pm</div><div>When Victor turned to look out the window, she dissolved the KCl into his wine glass and stirred it with her finger. She refilled her own glass to appear normal.</div></div>
+        <div class="tl-item"><div class="tl-time">11:50pm</div><div>She made a polite excuse, said goodnight, and exited via the French window on the east wall — which she pulled shut behind her (it latched, but not locked). She wiped her wine glass clean before leaving.</div></div>
+        <div class="tl-item"><div class="tl-time">~12:15am</div><div>Victor Crane's heart stopped. He was alone.</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Why She Did It</h3>
+      <p>Three days before the weekend, Sylvia received legal papers: Victor had filed a new civil suit seeking $4.7M in damages and a criminal fraud referral. If it proceeded, she would face bankruptcy and prison. She had spent six years rebuilding her life. Victor was taking it away again — for sport.</p>
+      <p>She had tried every legal avenue. She had no money left to fight. This was the only way she could see.</p>
+
+      <h3>The Clues That Proved It</h3>
+      <div class="detail-row"><div class="detail-label">Calendar</div><div class="detail-val">"S.M. — study — 11:30pm" placed her in the room with the victim.</div></div>
+      <div class="detail-row"><div class="detail-label">Fingerprint</div><div class="detail-val">On the wiped wine glass she thought she had cleaned thoroughly.</div></div>
+      <div class="detail-row"><div class="detail-label">The Lie</div><div class="detail-val">She claimed to have "moved on" from the lawsuit — but the papers were three days old.</div></div>
+      <div class="detail-row"><div class="detail-label">The Witness</div><div class="detail-val">Tom saw her exit the French window at 12:05am — calm, alone.</div></div>
+      <div class="detail-row"><div class="detail-label">The Medication</div><div class="detail-val">The KCl stolen from Owen's bag was the murder weapon. Sylvia had the knowledge and the access.</div></div>
+      <div class="detail-row"><div class="detail-label">Victor's Text</div><div class="detail-val">"She's here. Pathetic. Nothing she can do." — sent 2 minutes before her scheduled meeting. His last words.</div></div>
+    </div>
+
+    <div class="card green">
+      <h3>Everyone Else Was Innocent</h3>
+      <p><strong>Maggie</strong> — genuinely asleep. The sleeping pill was real. She had motive but not opportunity.<br>
+      <strong>Owen</strong> — did not know his medication was taken. Asleep, likely guilty of nothing beyond the blackmail he endured.<br>
+      <strong>Rex</strong> — walked outside angry, but never entered the study. His alibi gap was innocent.<br>
+      <strong>Nadia</strong> — walked past the window, heard voices, and kept going. She didn't know what she'd heard.<br>
+      <strong>Tom</strong> — sat behind the lodge out of grief for a place he loved. He saw Sylvia leave and said nothing because he didn't understand what he'd seen.<br>
+      <strong>Cleo</strong> — tried to reach her editor to publish a story. Victor's death makes the story bigger, not less publishable.<br>
+      <strong>Felix</strong> — went looking for Victor at midnight, found nothing. Went back to bed $2M poorer and angrier.</p>
+
+      <div class="ornament">✦ ✦ ✦</div>
+      <p style="text-align:center; font-style:italic; color: #4a6b4e;">Victor Crane got what he deserved.<br>Whether justice does the same for Sylvia is another question entirely.</p>
+    </div>
+  </div>
+</div>
+
+<script src="assets/dead_at_blackpine.js"></script>
+
+</body>
+</html>
