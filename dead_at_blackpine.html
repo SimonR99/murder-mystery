@@ -26,6 +26,7 @@
     <button class="nav-btn" onclick="showPage('rex')" id="tab-rex">Remi</button>
     <button class="nav-btn" onclick="showPage('nadia')" id="tab-nadia">Nadine</button>
     <button class="nav-btn" onclick="showPage('tom')" id="tab-tom">Denis</button>
+    <button class="nav-btn host-btn" onclick="showPage('actions')" id="tab-actions">🎴 Actions</button>
     <button class="nav-btn host-btn" onclick="showPage('clues')" id="tab-clues">🔍 Indices</button>
     <button class="nav-btn host-btn" onclick="showPage('accuse')" id="tab-accuse">⚖ Accusation</button>
     <button class="nav-btn host-btn" onclick="showPage('solution')" id="tab-solution">🔒 Solution</button>
@@ -92,12 +93,14 @@
   <div class="card">
     <div class="section-label">Comment jouer</div>
     <h3>Structure de la partie</h3>
+    <p><strong>Important:</strong> les <strong>actes</strong> sont les grandes phases de jeu. Les <strong>manches</strong> sont les vagues d'indices que l'hôte revele entre ces phases pour relancer l'enquete.</p>
     <div class="detail-row"><div class="detail-label">Mise en place</div><div class="detail-val">L'hôte lit la scène d'ouverture a voix haute. Distribuez les fiches personnage (une par joueur). Accordez 10 minutes de lecture privée.</div></div>
     <div class="detail-row"><div class="detail-label">Acte 1</div><div class="detail-val"><strong>Présentations et indices ouverts</strong> (~35 min) — Chaque joueur prèsente son personnage et montre son indice physique. L'hôte revele les indices de la manche 1.</div></div>
     <div class="detail-row"><div class="detail-label">Acte 2</div><div class="detail-val"><strong>Interrogatoires en duo</strong> (~40 min) — Faites trois rotations de 12 minutes (attribuees par l'hôte), plus les transitions. Chacun doit mettre de la pression sur quelqu'un d'autre que son rival evident.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 3</div><div class="detail-val"><strong>Confrontation de groupe</strong> (~35 min) — Accusations ouvertes, contre-arguments et reconstruction de la chronologie. L'hôte revele les indices de la manche 2 au milieu.</div></div>
+    <div class="detail-row"><div class="detail-label">Transition</div><div class="detail-val"><strong>Manche 2</strong> — Après les interrogatoires en duo et juste avant la confrontation de groupe, l'hôte revele la deuxieme vague d'indices.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 3</div><div class="detail-val"><strong>Confrontation de groupe</strong> (~35 min) — Accusations ouvertes, contre-arguments et reconstruction de la chronologie a partir des indices deja sortis.</div></div>
     <div class="detail-row"><div class="detail-label">Pause</div><div class="detail-val"><strong>Intermission</strong> (~10 min) — Pause hors personnage. L'hôte verifie discrètement si quelqu'un est bloque et relance avec des questions cibles.</div></div>
-    <div class="detail-row"><div class="detail-label">Acte 4</div><div class="detail-val"><strong>Pression finale</strong> (~25 min) — L'hôte revele les indices de la manche 3 un par un. Chaque joueur a 90 secondes de plaidoirie finale.</div></div>
+    <div class="detail-row"><div class="detail-label">Acte 4</div><div class="detail-val"><strong>Pression finale</strong> (~25 min) — Si necessaire, l'hôte revele les indices de la manche 3 un par un avant les plaidoiries finales. Chaque joueur a ensuite 90 secondes de plaidoirie finale.</div></div>
     <div class="detail-row"><div class="detail-label">Acte 5</div><div class="detail-val"><strong>L'accusation</strong> (~25 min) — Accusations écrites (qui/comment/pourquoi/preuves), lecture dramatique, puis révélation de la solution.</div></div>
     <div class="detail-row"><div class="detail-label">Total</div><div class="detail-val"><strong>~170 a 180 minutes (cible: 3 heures)</strong></div></div>
 
@@ -105,7 +108,18 @@
     <p>✦ Restez en personnage autant que possible, c'est plus le fun pour tout le monde.<br>
     ✦ Vous pouvez mentir sur votre secret, votre alibi, vos emotions — mais pas sur votre indice physique.<br>
     ✦ Le ou la coupable ne doit pas avouer avant la manche d'accusation.<br>
+    ✦ Les objectifs secrets ne doivent jamais demander de toucher a la vraie nourriture, aux verres ou aux effets personnels d'un autre joueur.<br>
     ✦ Sortez les boissons. Allumez des chandelles. Jouez l'ambiance a fond.</p>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Option de jeu</div>
+    <h3>Module d'objectifs secrets</h3>
+    <p>Pour rendre chaque fiche plus active, l'hôte peut utiliser un objectif secret par personnage. Ces missions ne remplacent pas l'enquete: elles servent a provoquer des confidences, des confrontations et des tete-a-tete utiles.</p>
+    <div class="detail-row"><div class="detail-label">Quand</div><div class="detail-val">Distribuez les objectifs en meme temps que les fiches, avant les 10 minutes de lecture privee.</div></div>
+    <div class="detail-row"><div class="detail-label">But</div><div class="detail-val">Chaque objectif doit pousser un joueur a parler, mentir, confronter ou proteger quelqu'un — jamais a "gagner" tout seul.</div></div>
+    <div class="detail-row"><div class="detail-label">Limites</div><div class="detail-val">Pas de deuxieme meurtre, pas de vrai sabotage de nourriture ou de boisson, pas de disparition d'objet reel. Tout doit rester verbal, social et jouable autour de la table.</div></div>
+    <div class="detail-row"><div class="detail-label">Effet</div><div class="detail-val">Utilises correctement, les objectifs donnent plus de contenu aux innocents, gardent tout le monde implique et rendent la solution plus satisfaisante sans la rendre impossible.</div></div>
   </div>
 
   <div class="card green">
@@ -136,9 +150,10 @@
     <div class="detail-row"><div class="detail-label">00:00–00:15</div><div class="detail-val">Accueil, règles, lecture privée.</div></div>
     <div class="detail-row"><div class="detail-label">00:15–00:50</div><div class="detail-val">Acte 1: Présentations + indices manche 1.</div></div>
     <div class="detail-row"><div class="detail-label">00:50–01:30</div><div class="detail-val">Acte 2: Interrogatoires en duo (3 rotations).</div></div>
-    <div class="detail-row"><div class="detail-label">01:30–02:05</div><div class="detail-val">Acte 3: Confrontation de groupe + indices manche 2.</div></div>
+    <div class="detail-row"><div class="detail-label">01:30–01:35</div><div class="detail-val">Transition: révélation des indices manche 2.</div></div>
+    <div class="detail-row"><div class="detail-label">01:35–02:05</div><div class="detail-val">Acte 3: Confrontation de groupe.</div></div>
     <div class="detail-row"><div class="detail-label">02:05–02:15</div><div class="detail-val">Pause et recalibrage de l'hôte.</div></div>
-    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Acte 4: Pression finale + indices manche 3.</div></div>
+    <div class="detail-row"><div class="detail-label">02:15–02:40</div><div class="detail-val">Acte 4: Pression finale. Sortez les indices manche 3 seulement si le groupe bloque ou s'il manque une derniere poussee avant l'accusation.</div></div>
     <div class="detail-row"><div class="detail-label">02:40–03:00</div><div class="detail-val">Acte 5: Accusations écrites, lecture, solution.</div></div>
   </div>
 
@@ -151,12 +166,32 @@
   </div>
 
   <div class="card">
+    <h3>Module d'objectifs secrets — mode d'emploi</h3>
+    <p>Recommande pour une table qui aime davantage le roleplay. Chaque joueur garde sa mission privee jusqu'a la fin. Ne comptez pas les objectifs comme des points obligatoires: servez-vous-en pour mettre la table en mouvement.</p>
+    <div class="detail-row"><div class="detail-label">Distribution</div><div class="detail-val">Donnez une seule mission par personnage. La meurtrière en reçoit aussi une, mais elle doit surtout l'aider a detourner les soupcons ou a ralentir une revelation.</div></div>
+    <div class="detail-row"><div class="detail-label">Rythme</div><div class="detail-val">Si un objectif n'a pas encore bouge a mi-partie, rappelez au joueur en prive qu'il peut le tenter durant le prochain duo ou la prochaine confrontation.</div></div>
+    <div class="detail-row"><div class="detail-label">Equilibre</div><div class="detail-val">Une bonne mission force une discussion, une confidence ou une accusation. Elle ne doit jamais exiger de prouver quelque chose seul, ni de bloquer toute l'enquete.</div></div>
+    <div class="detail-row"><div class="detail-label">Securite</div><div class="detail-val">Interdisez toute manipulation de vraie nourriture, boisson, couteaux, medicaments ou effets personnels. Les "actions" restent narratives et sociales.</div></div>
+  </div>
+
+  <div class="card">
     <h3>Relances minutées pour garder la tension</h3>
     <p>Si la table ralentit, déclénchez une relance sans sortir du role. Ces impulsions évitent les temps morts.</p>
     <div class="detail-row"><div class="detail-label">+25 min</div><div class="detail-val">Annonce hôte: "Vous avez 8 minutes pour confronter quelqu'un que vous n'avez pas encore accuse."</div></div>
     <div class="detail-row"><div class="detail-label">+55 min</div><div class="detail-val">Interdiction de rester assis: tous les joueurs changent de place et reprennent une discussion avec un nouveau suspect.</div></div>
     <div class="detail-row"><div class="detail-label">+95 min</div><div class="detail-val">Chaque joueur doit donner une version horodatée de sa tranche 23 h 20 a 0 h 05 en 45 secondes max.</div></div>
     <div class="detail-row"><div class="detail-label">+130 min</div><div class="detail-val">Tour de table eclair: "Qui ment le plus ce soir, et pourquoi?" (20 secondes par joueur).</div></div>
+  </div>
+
+  <div class="card">
+    <h3>Questions ciblees si un joueur se fait discret</h3>
+    <p>Utilisez une seule question a la fois. Le but est de redonner de l'espace de jeu a un joueur silencieux, pas de lui arracher sa fiche complete.</p>
+    <div class="detail-row"><div class="detail-label">Mado</div><div class="detail-val">"Qu'est-ce que Victor comptait vous enlever cette semaine?" ou "Pourquoi Nadine vous met-elle autant sur les nerfs?"</div></div>
+    <div class="detail-row"><div class="detail-label">Luc</div><div class="detail-val">"Qui savait que vous transportiez du KCl?" ou "Qu'est-ce qui vous effraie le plus dans cette mort?"</div></div>
+    <div class="detail-row"><div class="detail-label">Sylvie</div><div class="detail-val">"Pourquoi vos papiers juridiques ont-ils l'air plus recents que vous ne le dites?" ou "Pourquoi Victor vous aurait-il revue seul a seul?"</div></div>
+    <div class="detail-row"><div class="detail-label">Remi</div><div class="detail-val">"Quand avez-vous parle a Victor pour la derniere fois?" ou "Pourquoi etiez-vous encore reveille autour de minuit?"</div></div>
+    <div class="detail-row"><div class="detail-label">Nadine</div><div class="detail-val">"Pourquoi votre promenade a dure si longtemps?" ou "Qu'est-ce que vous cachez dans votre manteau?"</div></div>
+    <div class="detail-row"><div class="detail-label">Denis</div><div class="detail-val">"Qui connaissait la serrure defectueuse?" ou "Pourquoi etiez-vous si proche du chalet cette nuit-la?"</div></div>
   </div>
 
   <div class="card">
@@ -233,6 +268,12 @@
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vers 23 h, vous avez entendu Victor et Remi se disputer depuis votre chambre. Remi avait l'air desespere.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Foulard chic + petit pilulier vintage.</div></div>
 
+    <div class="objective-box">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Avant la fin de l'acte 3, obtenez une conversation privee de deux minutes avec Nadine. Votre but est de la pousser a admettre qu'elle cache quelque chose sur Victor, sur sa bague ou sur ce qu'elle espere recevoir de lui.</p>
+      <p class="objective-note">Si elle nie tout, ramenez ensuite la tension au groupe en la confrontant publiquement sur son lien reel avec Victor.</p>
+    </div>
+
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous détenez</span>
       <p>Une note froissee, trouvee dans la poche du manteau de Victor. Vous l'avez sur vous depuis tout le week-end.</p>
@@ -272,6 +313,12 @@
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je lisais dans le fauteuil près de la fenêtre de ma chambre. J'ai peut-etre sommeille après minuit. J'ai lu tres tard."</div></div>
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous savez exactement comment le chlorure de potassium tue. A forte dose dans un liquide, il arrête le cœur et laisse peu de traces si on ne sait pas quoi chercher. Vous n'avez pas dit aux autres que c'etait le KCl — vous avez seulement dit "empoisonnement". Par ailleurs, au souper, vous avez remarque que Nadine portait une bague en diamant a la main gauche — etrange pour une assistante. Elle l'a retiree discrètement quand elle a vu que vous regardiez.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Trousse medicale en cuir + lunettes de lecture.</div></div>
+
+    <div class="objective-box">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Avant l'acte 4, identifiez publiquement au moins une personne qui pouvait approcher votre trousse medicale vers 21 h. Votre but n'est pas d'accuser parfaitement, mais de faire parler ceux qui circulaient dans le corridor.</p>
+      <p class="objective-note">Essayez aussi d'obtenir d'un autre joueur une confidence sur ce qu'il sait du KCl sans reveler trop tot l'etendue de vos propres fautes passees.</p>
+    </div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous détenez</span>
@@ -315,6 +362,12 @@
     <div class="detail-row"><div class="detail-label">Attention</div><div class="detail-val">L'entree d'agenda de Victor. L'empreinte. Denis. Nadine qui vous voit sortir. Restez calme — tout le monde ici a un mobile.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Porte-documents mince + stylo plume.</div></div>
 
+    <div class="objective-box danger">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Avant la manche 3, faites en sorte qu'au moins un autre joueur soupconne surtout Luc ou Denis. Vous devez orienter la table vers un autre mensonge, une autre peur ou une autre presence nocturne que la votre.</p>
+      <p class="objective-note">Gardez vos papiers caches le plus longtemps possible et tentez d'affaiblir la parole de Nadine si elle parle de la dispute ou de la femme entendue près du bureau.</p>
+    </div>
+
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous détenez</span>
       <p>Les papiers judiciaires. Vous devriez tenter de les cacher ou de les minimiser. S'ils sortent, ils prouvent que vous les avez recus il y a seulement trois jours — ce qui contredit votre version "j'ai tourne la page".</p>
@@ -355,6 +408,12 @@
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Pendant votre marche, vous êtes passe du côté est du chalet. La porte-fenêtre du bureau etait entrouverte et la lumiere etait encore allumee, mais vous n'avez pas regarde a l'intérieur. En revenant, vous avez apercu Denis Poirier assis sur les marches arriere du chalet — pas dans sa remise.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Vieille montre + paquet de cartes use.</div></div>
 
+    <div class="objective-box">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Avant la fin de l'acte 3, poussez Denis a admettre qu'il etait près du chalet cette nuit-la. Vous pouvez le faire en prive ou en public, mais essayez d'y arriver sans reveler tout de suite votre propre marche dehors.</p>
+      <p class="objective-note">Si vous sentez la pression monter sur vous, changez d'angle et confrontez quelqu'un d'autre sur une dette, un heritage ou une humiliation de Victor.</p>
+    </div>
+
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous détenez</span>
       <p>Une note manuscrite recente de Victor — remise hier soir.</p>
@@ -393,6 +452,12 @@
     <div class="detail-row"><div class="detail-label">Votre alibi</div><div class="detail-val">"Je suis sortie prendre l'air vers 23 h 20 — peut-etre vingt minutes. J'avais besoin de penser. Ensuite, je suis allee me coucher."</div></div>
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous avez vu Denis Poirier derrière le chalet vers 23 h 55 — pas dans sa remise comme il le prétend. Vous avez aussi entendu Victor se disputer avec une femme juste avant.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Bague visible + petit carnet noir.</div></div>
+
+    <div class="objective-box">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Choisissez une seule personne a qui montrer discretement la bague ou le testament avant la fin de l'acte 3. Servez-vous ensuite de cette confidence pour obtenir une alliance temporaire, une protection ou une promesse de discretion.</p>
+      <p class="objective-note">Votre meilleur levier est souvent Mado: soit vous la defiez, soit vous cherchez a negocier avec elle avant que quelqu'un d'autre ne parle.</p>
+    </div>
 
     <div class="clue-box">
       <span class="clue-label">📄 Indices physiques que vous détenez</span>
@@ -435,6 +500,12 @@
     <div class="detail-row"><div class="detail-label">Ce que vous savez</div><div class="detail-val">Vous connaissez chaque recoin du chalet. La serrure de la porte-fenêtre du bureau est brisee depuis des semaines — vous l'aviez signalee a Victor, qui n'a jamais fait reparer. N'importe qui le sachant pouvait entrer ou sortir par la. Aussi, après le souper, vous avez remarque la trousse medicale du Dr Tremblay ouverte dans le corridor, sans surveillance.</div></div>
     <div class="detail-row"><div class="detail-label">Accessoire suggere</div><div class="detail-val">Trousseau de clés + lampe frontale.</div></div>
 
+    <div class="objective-box">
+      <span class="objective-label">Objectif secret de jeu</span>
+      <p>Avant la fin de l'acte 3, amenez au moins une personne a l'ecart ou dehors pour parler de la porte-fenêtre ou de la vente du chalet. Votre but est de faire circuler l'idee qu'une sortie discrète etait possible sans reveler d'emblee tout ce que vous avez vu.</p>
+      <p class="objective-note">Vous etes plus fort dans les conversations calmes que dans les grandes accusations. Utilisez cela.</p>
+    </div>
+
     <div class="clue-box">
       <span class="clue-label">📄 Indice physique que vous détenez</span>
       <p>Une annonce immobiliere imprimee par Victor, avec une note manuscrite trouvee sur votre pas de porte.</p>
@@ -449,11 +520,116 @@
   </div>
 </div>
 
+<div class="page" id="page-actions">
+  <div class="card host">
+    <div class="section-label">Pour l'hôte</div>
+    <h2>Paquet de cartes d'actions</h2>
+    <p>Imprimez cette page et decoupez les cartes, ou lisez-les a voix basse a un joueur. Elles servent a relancer le roleplay, faire bouger l'information et donner quelque chose a faire aux joueurs plus silencieux.</p>
+  </div>
+
+  <div class="card">
+    <h3>Comment les utiliser</h3>
+    <div class="detail-row"><div class="detail-label">Quand</div><div class="detail-val">Donnez 1 carte a deux ou trois joueurs au debut de l'acte 2, puis 1 ou 2 autres plus tard seulement si le rythme baisse.</div></div>
+    <div class="detail-row"><div class="detail-label">But</div><div class="detail-val">Chaque carte doit creer une discussion, une confidence, une accusation ou une nouvelle tension. Aucune carte ne doit resoudre l'affaire a elle seule.</div></div>
+    <div class="detail-row"><div class="detail-label">Limite</div><div class="detail-val">Ne donnez pas plus de 2 cartes a la meme personne dans une partie normale. Si un joueur est deja tres actif, favorisez plutot les plus discrets.</div></div>
+    <div class="detail-row"><div class="detail-label">Securite</div><div class="detail-val">Tout reste verbal et narratif. On ne touche pas a la vraie nourriture, aux verres, aux medicaments, aux telephones ou aux effets personnels des autres.</div></div>
+    <button class="print-btn" onclick="window.print()">⎙ Imprimer les cartes</button>
+  </div>
+
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="action-type">Confrontation</div>
+      <h3>Vieille rancune</h3>
+      <p>Choisissez un joueur et confrontez-le dans les 10 prochaines minutes sur une blessure du passe, qu'elle soit liee ou non au meurtre.</p>
+      <div class="action-prompt">Exemples: trahison, argent, humiliation, promesse brisee, jalousie.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Confidence</div>
+      <h3>Verite partielle</h3>
+      <p>Revelez une partie de votre secret a une seule personne, mais pas au groupe entier. Cette confidence doit vous rendre plus humain ou plus suspect.</p>
+      <div class="action-prompt">Ne mentez pas completement: donnez au moins un vrai morceau d'information.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Pression</div>
+      <h3>Minute par minute</h3>
+      <p>Forcez un autre joueur a raconter sa tranche entre 23 h 20 et 0 h 05 avec le plus de precision possible.</p>
+      <div class="action-prompt">S'il hesite, revenez sur un detail: lieu, heure, bruit, personne croisee.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Isolement</div>
+      <h3>Tete-a-tete</h3>
+      <p>Partez parler deux minutes a l'ecart avec un autre joueur. Votre but est d'obtenir un aveu, une peur ou une contradiction.</p>
+      <div class="action-prompt">Vous pouvez revenir ensuite au groupe et choisir ce que vous revelez.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Revelation</div>
+      <h3>Montrez une preuve</h3>
+      <p>Montrez votre indice physique a une seule personne, pas a toute la table. Voyez comment elle reagit avant de decider si vous rendez l'information publique.</p>
+      <div class="action-prompt">Ideal pour creer une alliance temporaire ou semer la panique.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Accusation</div>
+      <h3>Mettre la table en feu</h3>
+      <p>Lancez publiquement une accusation forte contre quelqu'un dans les 5 prochaines minutes, meme si vous n'etes pas certain.</p>
+      <div class="action-prompt">Vous devez nommer au moins une raison concrete: mobile, mensonge ou occasion.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Alliance</div>
+      <h3>Marché discret</h3>
+      <p>Proposez un marche a un autre joueur: silence contre information, protection contre confidence, ou soutien public contre aide privee.</p>
+      <div class="action-prompt">Le marche peut etre sincere ou manipulateur.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Detour</div>
+      <h3>Changez l'angle</h3>
+      <p>Redirigez la conversation vers l'argent, l'heritage, la poursuite, la vente du chalet ou un autre enjeu lourd que le groupe evite.</p>
+      <div class="action-prompt">Votre objectif est d'ouvrir une nouvelle piste, pas de clore le debat.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Observation</div>
+      <h3>Qui ment le plus?</h3>
+      <p>Choisissez un joueur et dites devant tout le monde pourquoi sa version vous semble fausse, incomplete ou trop propre.</p>
+      <div class="action-prompt">Appuyez-vous sur un ton, un trou d'alibi ou un detail qui cloche.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Relance</div>
+      <h3>Question impossible</h3>
+      <p>Posez a un joueur une question qu'il ne veut pas entendre. Il doit vous repondre tout de suite, meme s'il choisit de mentir.</p>
+      <div class="action-prompt">Exemples: "Qu'est-ce que Victor avait sur toi?" ou "Qu'est-ce que tu caches depuis cette nuit?"</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Deplacement</div>
+      <h3>Dehors, maintenant</h3>
+      <p>Amenez symboliquement un autre joueur "dehors" ou a l'ecart pour une courte scene. Parlez du chalet, du terrain, de la fenêtre ou de la nuit.</p>
+      <div class="action-prompt">Parfaite carte pour Denis, Nadine ou Remi, mais utile a tout le monde.</div>
+    </div>
+
+    <div class="action-card">
+      <div class="action-type">Rebond</div>
+      <h3>Retour de flamme</h3>
+      <p>Si quelqu'un vous accuse, vous devez immediatement retourner la pression sur une autre personne avec une vraie contradiction ou un vrai soupcon.</p>
+      <div class="action-prompt">Ne niez pas seulement: renvoyez l'attaque avec une piste concrete.</div>
+    </div>
+  </div>
+</div>
+
 <div class="page" id="page-clues">
   <div class="card host">
     <div class="section-label">Pour l'hôte</div>
     <h2>Cartes d'indices</h2>
     <p>Lisez-les au bon moment. Decoupez-les ou utilisez-les comme script. Ce sont des "faits" nouvellement decouverts — preuves materielles ou temoignages.</p>
+    <p><strong>Repere rapide:</strong> manche 1 après les présentations, manche 2 après les interrogatoires en duo et juste avant la confrontation de groupe, manche 3 seulement en fin de partie si vous avez besoin d'une relance.</p>
+    <p><strong>Important:</strong> les preuves materielles ou "neutres" se lisent a voix haute par l'hôte. En revanche, quand un indice repose sur ce qu'un personnage a vu, entendu ou cache depuis le debut, faites d'abord sortir l'information du joueur concerne. Servez-vous de la carte comme relance si la table bloque ou si personne n'ose parler.</p>
   </div>
 
   <div class="card">
@@ -478,28 +654,28 @@
   </div>
 
   <div class="card">
-    <div class="round-header">— Indices manche 2 — A révéler après le premier interrogatoire —</div>
+    <div class="round-header">— Indices manche 2 — A révéler après les interrogatoires en duo, juste avant la confrontation de groupe —</div>
 
     <div class="clue-card">
       <span class="clue-num">Indice 2-A · Le medicament manquant</span>
-      Le chlorure de potassium du Dr Tremblay — un medicament cardiaque qu'il transporte — est a moitié vide. Il ne l'a pas utilise ce week-end. A dose suffisante dans un liquide, ca cause un arret cardiaque en moins de 30 minutes et c'est presque indétectable.
+      Priorite au joueur: laissez d'abord Luc expliquer que son flacon de chlorure de potassium est a moitié vide et ce que ce produit peut faire. S'il ne le revele pas de lui-meme, l'hôte peut lire ceci comme indice officiel: le chlorure de potassium du Dr Tremblay — un medicament cardiaque qu'il transporte — est a moitié vide. Il ne l'a pas utilise ce week-end. A dose suffisante dans un liquide, ca cause un arret cardiaque en moins de 30 minutes et c'est presque indétectable.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Indice 2-B · Un temoin dans l'ombre</span>
-      Nadine confirme avoir vu Denis Poirier derrière le chalet vers 23 h 55 — pas dans sa remise, contrairement a ce qu'il affirme.
+      <span class="clue-num">Indice 2-B · Revelation de Nadine</span>
+      Faites d'abord parler Nadine. Elle doit pouvoir reveler qu'elle a vu Denis Poirier derrière le chalet vers 23 h 55 — pas dans sa remise, contrairement a ce qu'il affirme. Si elle garde le silence, transformez cette carte en temoignage officiel.
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 2-C · Les papiers de poursuite</span>
       Les documents juridiques de Sylvie Beaulieu sont dates d'il y a trois jours. Elle avait d'abord dit qu'elle etait au courant "depuis des semaines" et qu'elle avait "tourne la page". C'etait faux.
     </div>
     <div class="clue-card">
-      <span class="clue-num">Indice 2-D · La dispute a la fenêtre</span>
-      Nadine confirme avoir entendu Victor se disputer avec une femme non identifiee vers 23 h 25, depuis l'extérieur du bureau — quelques minutes avant l'entree "S.B." de 23 h 30 dans l'agenda.
+      <span class="clue-num">Indice 2-D · Ce que Nadine a entendu</span>
+      Faites d'abord parler Nadine. Elle doit pouvoir raconter qu'elle a entendu Victor se disputer avec une femme non identifiee vers 23 h 25, depuis l'extérieur du bureau — quelques minutes avant l'entree "S.B." de 23 h 30 dans l'agenda. Si elle ne sort pas l'information, l'hôte peut ensuite la lire comme temoignage etabli.
     </div>
   </div>
 
   <div class="card">
-    <div class="round-header">— Indices manche 3 — A utiliser si necessaire avant la manche d'accusation —</div>
+    <div class="round-header">— Indices manche 3 — A utiliser si necessaire pendant la pression finale, avant l'accusation —</div>
 
     <div class="clue-card">
       <span class="clue-num">Indice 3-A · L'empreinte</span>
@@ -511,7 +687,7 @@
     </div>
     <div class="clue-card">
       <span class="clue-num">Indice 3-C · Denis finit par parler</span>
-      Pousse a expliquer ses deplacements, Denis Poirier admet que vers 23 h 55, alors qu'il etait assis derrière le chalet, il a vu une femme sortir par la porte-fenêtre a l'est du bureau. Elle etait seule. Calme. Elle ne l'a pas remarque. Il l'identifie comme Sylvie Beaulieu.
+      Ne lisez pas cette carte tout de suite. Servez-vous-en pour coincer Denis et lui faire dire lui-meme ce qu'il a vu. S'il craque, il doit admettre que vers 23 h 55, alors qu'il etait assis derrière le chalet, il a vu une femme sortir par la porte-fenêtre a l'est du bureau. Elle etait seule. Calme. Elle ne l'a pas remarque. Il l'identifie comme Sylvie Beaulieu. Si la table reste bloquee, l'hôte peut formaliser ensuite ce temoignage.
     </div>
   </div>
 </div>

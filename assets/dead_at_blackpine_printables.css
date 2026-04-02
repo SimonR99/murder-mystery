@@ -1,0 +1,281 @@
+:root {
+  --bg: #efe6d7;
+  --ink: #1f1a16;
+  --muted: #6c5d50;
+  --paper: #fffdf8;
+  --line: #d8cdbd;
+  --accent: #6e1f1f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--bg);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1rem;
+}
+
+.screen-header {
+  border-bottom: 1px solid #d8cab5;
+  background: linear-gradient(to bottom, #f6efe3, #efe6d7);
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.intro {
+  max-width: 50rem;
+  line-height: 1.6;
+}
+
+.actions {
+  margin: 1rem 0 1.25rem;
+}
+
+.print-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.prep-list {
+  margin: 0 0 0 1.2rem;
+  padding: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.print-pack {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+.sheet {
+  break-after: page;
+  page-break-after: always;
+  min-height: 95vh;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+.sheet-label {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.note-paper,
+.document,
+.med-label {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.note-paper {
+  min-height: 340px;
+  padding: 3rem 3rem 2.5rem;
+  transform: rotate(-1deg);
+}
+
+.handwritten,
+.signature {
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 2rem;
+  line-height: 1.45;
+  margin: 0.25rem 0;
+}
+
+.signature {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.med-label {
+  max-width: 520px;
+  padding: 1.5rem;
+  border: 2px dashed #888;
+}
+
+.rx-top,
+.doc-header,
+.listing-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.rx-mark {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.rx-clinic,
+.rx-line.small,
+.doc-footer,
+.listing-badge {
+  color: var(--muted);
+}
+
+.med-label h2,
+.document h2 {
+  margin: 1rem 0 0.75rem;
+  font-size: 1.7rem;
+}
+
+.rx-line {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}
+
+.document {
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.document p {
+  margin: 0.7rem 0;
+}
+
+.legal-doc h2,
+.will-doc h2,
+.listing-doc h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.doc-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.beneficiary {
+  margin: 1.3rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.signature-block {
+  margin-top: 2.2rem;
+}
+
+.sig-line {
+  margin-top: 1rem;
+}
+
+.listing-badge {
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.listing-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.listing-note {
+  margin-top: 2rem;
+  padding: 1rem 1.2rem;
+  border: 1px dashed #8b7d6b;
+  background: #faf6ee;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: 1.8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .note-paper,
+  .document,
+  .med-label {
+    width: 100%;
+  }
+
+  .note-paper,
+  .document {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .doc-header,
+  .listing-top,
+  .doc-footer {
+    flex-direction: column;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-pack {
+    max-width: none;
+    padding: 0;
+  }
+
+  .sheet {
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .note-paper,
+  .document,
+  .med-label {
+    width: 100%;
+    box-shadow: none;
+  }
+}

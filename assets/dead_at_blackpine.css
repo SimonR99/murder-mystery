@@ -283,6 +283,46 @@
     display: block;
   }
 
+  /* ─── OBJECTIVES ─── */
+  .objective-box {
+    background: rgba(44,74,50,0.09);
+    border: 1px solid rgba(44,74,50,0.25);
+    border-left: 4px solid var(--green-mid);
+    padding: 0.9rem 1.1rem;
+    margin: 0.9rem 0;
+    border-radius: 2px;
+  }
+  .objective-box.danger {
+    background: rgba(139,26,26,0.07);
+    border-color: rgba(139,26,26,0.22);
+    border-left-color: var(--blood);
+  }
+  .objective-label {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    display: block;
+    margin-bottom: 0.45rem;
+  }
+  .objective-box.danger .objective-label {
+    color: var(--blood);
+  }
+  .objective-box p {
+    margin-bottom: 0.55rem;
+  }
+  .objective-box p:last-child {
+    margin-bottom: 0;
+  }
+  .objective-note {
+    font-size: 0.88rem;
+    color: #314635;
+  }
+  .objective-box.danger .objective-note {
+    color: #5a2424;
+  }
+
   /* ─── LINES BOX ─── */
   .lines-box {
     background: rgba(44,74,50,0.07);
@@ -341,6 +381,46 @@
     color: #7c5c20;
     display: block;
     margin-bottom: 0.2rem;
+  }
+
+  /* ─── ACTION CARDS ─── */
+  .action-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .action-card {
+    background: var(--paper);
+    border: 1px solid var(--paper-dark);
+    border-top: 3px solid var(--candle);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.14);
+    padding: 1rem 1rem 0.9rem;
+    break-inside: avoid;
+    min-height: 12rem;
+  }
+  .action-type {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a6827;
+    margin-bottom: 0.4rem;
+  }
+  .action-card h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.15rem;
+  }
+  .action-card p {
+    margin-bottom: 0.7rem;
+    font-size: 0.93rem;
+    line-height: 1.55;
+  }
+  .action-prompt {
+    font-size: 0.84rem;
+    line-height: 1.45;
+    color: #5c4930;
+    border-top: 1px dashed rgba(0,0,0,0.15);
+    padding-top: 0.55rem;
   }
 
   /* ─── SOLUTION ─── */
@@ -526,18 +606,34 @@
 
   /* ─── PRINT ─── */
   @media print {
-    body { background: white; }
-    .nav-wrap, .print-btn { display: none; }
-    .page { display: block !important; page-break-after: always; padding: 1rem; }
-    .site-header { background: white; color: var(--ink); border-bottom: 2px solid var(--ink); }
-    .header-title { color: var(--ink); }
+  body { background: white; }
+  .site-header, .nav-wrap, .print-btn { display: none !important; }
+  .page {
+    display: none !important;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .page.active {
+    display: block !important;
+    page-break-after: auto;
+  }
     .solution-hidden { filter: none !important; }
     .reveal-btn { display: none; }
+  .reveal-note { display: none; }
     .card { box-shadow: none; border: 1px solid #ccc; }
+    .action-grid { gap: 0.7rem; }
+    .action-card {
+      box-shadow: none;
+      border: 1px solid #bbb;
+      min-height: 10.5rem;
+      page-break-inside: avoid;
+    }
   }
 
   @media (max-width: 400px) {
     .player-list { grid-template-columns: 1fr; }
     .card { padding: 1.3rem 1.1rem; }
     .char-initial { font-size: 2.2rem; width: 2.2rem; }
+    .action-grid { grid-template-columns: 1fr; }
   }
