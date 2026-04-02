@@ -209,6 +209,9 @@
     width: 5.5rem;
     padding-top: 0.15rem;
   }
+  .card.green .detail-label {
+    width: 8rem;
+  }
   .detail-val { color: #2a1e0e; }
 
   /* ─── CHARACTER HEADER ─── */
