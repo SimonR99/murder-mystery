@@ -1,5 +1,6 @@
   const PAGE_CODES = {
     host: 'PATATE',
+    clues: 'PATATE',
     maggie: 'MADO-49',
     owen: 'LUC-54',
     sylvia: 'SYLVIE-48',
