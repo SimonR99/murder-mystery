@@ -13,9 +13,50 @@
 
   const MASTER_PASSWORD = 'PATATE';
 
-  const unlockedPages = new Set(
-    JSON.parse(sessionStorage.getItem('unlockedPages') || '[]')
-  );
+function getStorage() {
+  try {
+    return window.sessionStorage;
+  } catch (error) {
+    return null;
+  }
+}
+
+function loadUnlockedPages() {
+  const storage = getStorage();
+  if (!storage) {
+    return [];
+  }
+
+  try {
+    return JSON.parse(storage.getItem('unlockedPages') || '[]');
+  } catch (error) {
+    return [];
+  }
+}
+
+function saveUnlockedPages() {
+  const storage = getStorage();
+  if (!storage) {
+    return;
+  }
+
+  try {
+    storage.setItem('unlockedPages', JSON.stringify([...unlockedPages]));
+  } catch (error) {
+    // Ignore storage issues on browsers with restricted storage access.
+  }
+}
+
+function normalizeCode(value) {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[\u2010-\u2015\u2212]/g, '-')
+    .replace(/\s+/g, '')
+    .toUpperCase();
+}
+
+const unlockedPages = new Set(loadUnlockedPages());
 
   function showPage(id) {
     const expectedCode = PAGE_CODES[id];
@@ -26,14 +67,17 @@
         return;
       }
 
-      const normalized = entered.trim().toUpperCase();
-      if (normalized !== expectedCode && normalized !== MASTER_PASSWORD) {
+      const normalized = normalizeCode(entered);
+      if (
+        normalized !== normalizeCode(expectedCode) &&
+        normalized !== normalizeCode(MASTER_PASSWORD)
+      ) {
         window.alert('Code invalide.');
         return;
       }
 
       unlockedPages.add(id);
-      sessionStorage.setItem('unlockedPages', JSON.stringify([...unlockedPages]));
+      saveUnlockedPages();
     }
 
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
